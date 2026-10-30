@@ -132,9 +132,40 @@ cz evidence --last 5             # what ran and why
 Without installing: `./cz ask "..."`. The engine runs commands on **Linux** (NetworkManager/systemd for the
 home-network pack). Answers-only packs work anywhere.
 
-**Optional 1B router** via [Ollama](https://ollama.com): `cz ask --model llama3.2:1b "..."` works out of the box.
-To use the fine-tuned router, train it with `runpod/finetune.sh` (or your own GPU via `runpod/finetune.py`) and
-`ollama create` the GGUF. The weights are not in this repository. Index-only is the default.
+### Get the router model (optional, recommended)
+
+Index-only mode works with no model at all. For the best accuracy, add one of the two **fine-tuned 1B routers**
+published in [Release v0.1.0](https://github.com/TheRealBrofessor/cortexzero-engine/releases/tag/v0.1.0). Both
+need [Ollama](https://ollama.com).
+
+| | router | held-out v4 | download | license |
+|---|---|---|---|---|
+| **default** | `cz-router-lfm2.5` (LFM2.5-1.2B, fine-tuned) | 0.876 | 731 MB | LFM Open License v1.0 |
+| | `llama-3.2-1b-cz-router` (Llama 3.2 1B, fine-tuned) | 0.897 | 808 MB | Llama 3.2 Community License |
+
+The two are **statistically tied** (2 messages apart out of 97). The LFM one is the default because its license is
+simpler.
+
+```bash
+cz model get lfm                                   # downloads, checks SHA-256, runs `ollama create`
+cz ask --model cz-router-lfm2.5 "my wifi keeps dropping"
+```
+
+Other ways to get a router:
+- **By hand:** download the `.gguf`, its `Modelfile.*` and the license files from the release, then
+  `ollama create cz-router-lfm2.5 -f Modelfile.lfm`.
+- **Untuned base models** (less accurate: 0.804 / 0.660 on v4): `ollama pull hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M`
+  or `ollama pull llama3.2:1b`, then pass that name to `--model`.
+- **Train your own:** `runpod/finetune.sh` (about $0.30 on a rented GPU) or `runpod/finetune.py` on your own GPU.
+  The exact training files are in the release (`router-train.jsonl`, `router-val.jsonl`); the model card explains how they were built.
+
+**Model licenses.** The router weights are *not* covered by this repository's Apache-2.0 license.
+- `cz-router-lfm2.5` is a modified version of Liquid AI's LFM2.5-1.2B-Instruct, under the
+  [LFM Open License v1.0](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE): free, including
+  commercial use, except for entities with USD 10M+ annual revenue.
+- `llama-3.2-1b-cz-router` is **Built with Llama**. Llama 3.2 is licensed under the Llama 3.2 Community License,
+  Copyright © Meta Platforms, Inc. All Rights Reserved. Use must follow Meta's
+  [Acceptable Use Policy](https://www.llama.com/llama3_2/use-policy).
 
 **Optional online sources** (`--online`): an answer may name one https page; when switched on, a short cited, dated
 and cached excerpt is appended after the pack's own text. Off by default; the offline answer is always complete.
@@ -204,8 +235,8 @@ research bench.
 Full plan: [docs/MULTI_LANGUAGE_PLAN.md](docs/MULTI_LANGUAGE_PLAN.md). Progress: see the
 [tracking issue #1](https://github.com/TheRealBrofessor/cortexzero-engine/issues/1).
 
-Also planned: a fresh held-out set with more out-of-scope messages, more real phrasings for new packs, a fine-tuned
-router per pack, and publishing the fine-tuned router weights.
+Also planned: a fresh held-out set with more out-of-scope messages, more real phrasings for new packs, and a
+fine-tuned router per pack.
 
 ## License
 

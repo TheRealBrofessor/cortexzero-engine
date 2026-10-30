@@ -383,3 +383,17 @@ def test_cross_pack_synonym_conflict_keeps_both_meanings(tmp_path):
     assert e.index.conflicts == {"freezing": {"lag", "cold"}}
     assert e.ask("zoom calls keep freezing").route["branch_id"] == "pa.calls"
     assert e.ask("my kid is freezing and shivering").route["branch_id"] == "pb.cold"
+
+
+def test_model_get_verifies_checksum_and_never_keeps_a_bad_file(tmp_path, monkeypatch):
+    from czengine import models
+    monkeypatch.setattr(models, "DEST", tmp_path)
+    good = models.ROUTERS["lfm"]
+
+    def fake_fetch(url, out):
+        out.write_bytes(b"not the model" if url.endswith(".gguf") else b"text")
+    with pytest.raises(SystemExit, match="checksum mismatch"):
+        models.get("lfm", fetch=fake_fetch, register=False)
+    assert not (tmp_path / good["gguf"]).exists()
+    with pytest.raises(SystemExit, match="unknown router"):
+        models.get("gpt5", fetch=fake_fetch, register=False)

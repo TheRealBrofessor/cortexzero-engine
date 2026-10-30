@@ -6,6 +6,7 @@
   cz compile                                             precompile packs for fast startup
   cz pack list | validate [DIR...] | new NAME | tree     pack tools
   cz evidence --last 10                                  what the engine did, from the evidence log
+  cz model get lfm | llama · cz model list              download + verify + register a fine-tuned router
 Options: --model <ollama tag> (omit = index only, no model) · --online (fetch cited online sources; off by default)
 """
 from __future__ import annotations
@@ -118,7 +119,7 @@ def cmd_evidence(a) -> int:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="cz", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["ask", "repl", "suggest", "compile", "pack", "evidence"])
+    ap.add_argument("cmd", choices=["ask", "repl", "suggest", "compile", "pack", "evidence", "model"])
     ap.add_argument("text", nargs="*")
     ap.add_argument("--model")
     ap.add_argument("--url", default="http://127.0.0.1:11434")
@@ -137,6 +138,13 @@ def main(argv=None) -> int:
         return cmd_pack(a)
     if a.cmd == "evidence":
         return cmd_evidence(a)
+    if a.cmd == "model":
+        from czengine import models
+        if a.text[:1] == ["get"] and len(a.text) == 2:
+            models.get(a.text[1])
+            return 0
+        print(models.listing())
+        return 0
     if a.cmd == "compile":
         from czengine.compiled import compile_packs
         s = compile_packs(pack_dirs(a), Path(a.compiled))
