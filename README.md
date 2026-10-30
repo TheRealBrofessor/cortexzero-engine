@@ -10,7 +10,7 @@ text, the commands that check your computer, the safety rules, and the decision 
 This repository is the **Python reference implementation**: the engine, two packs, the full benchmark data, the scored
 results with charts, and the scripts that fine-tuned the 1B router.
 
-![pipeline](docs/diagrams/1-pipeline.svg)
+[![pipeline](docs/diagrams/png/1-pipeline.png)](docs/diagrams/1-pipeline.svg)
 
 ---
 
@@ -56,7 +56,7 @@ model chooses none of it.
 
 ## How it works
 
-![routing](docs/diagrams/2-routing-decision.svg)
+[![routing](docs/diagrams/png/2-routing-decision.png)](docs/diagrams/2-routing-decision.svg)
 
 1. **Safety rules first.** Regular expressions from every pack, run on the raw text: crisis → 988, emergencies → 911,
    phone/tech-support scams, plus any rules a pack adds. They are never routed and never model-dependent.
@@ -73,7 +73,7 @@ model chooses none of it.
    into a sentence. `action` shows a preview, asks for consent, runs, and verifies; it stops at the first failure.
 6. **Evidence log** (JSON lines). `cz evidence --last 5` shows it.
 
-![packs](docs/diagrams/3-packs-and-execution-boundary.svg)
+[![packs](docs/diagrams/png/3-packs-and-execution-boundary.png)](docs/diagrams/3-packs-and-execution-boundary.svg)
 
 **Execution boundary.** Pack steps are argv lists checked against an allowlist (`czengine/policy.py`). Shells,
 interpreters and launchers are refused everywhere. Read-only checks may only use read-only programs and
@@ -90,7 +90,7 @@ before any tuning on it**, and only then became a development set. The raw runs 
 [`bench/scored/`](bench/scored), and the full lab notebook, including failures, is
 [`bench/RESULTS.md`](bench/RESULTS.md).
 
-![results](docs/diagrams/4-results-heldout.svg)
+[![results](docs/diagrams/png/4-results-heldout.png)](docs/diagrams/4-results-heldout.svg)
 
 | held-out set | index only | + LFM2.5-1.2B | + llama3.2-1B | + gemma3-1B | **fine-tuned LFM** | **fine-tuned llama** |
 |---|---|---|---|---|---|---|
@@ -112,7 +112,7 @@ What we learned:
   out-of-scope messages, so refusal is only weakly measured. A brand-new pack with hand-written patterns starts
   around 0.55 until real phrasings are added.
 
-![process](docs/diagrams/5-evaluation-process.svg)
+[![process](docs/diagrams/png/5-evaluation-process.png)](docs/diagrams/5-evaluation-process.svg)
 
 We also had the engine reviewed independently. A separate code-review agent filed 17 findings; 16 were reproduced
 and fixed with regression tests (the 17th is a fail-safe behaviour we chose to keep). A red-team agent wrote 80

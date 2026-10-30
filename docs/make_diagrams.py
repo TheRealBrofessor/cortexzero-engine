@@ -2,7 +2,7 @@
 """Generates the CortexZero diagrams (SVG) in docs/diagrams. The results chart reads the raw scored runs in
 bench/scored/*.json (each held-out set scored exactly once), so it can't drift from the data.
 
-  python3 docs/make_diagrams.py
+  python3 docs/make_diagrams.py          (PNG copies in docs/diagrams/png/ need `pip install cairosvg`)
 """
 from html import escape as esc
 from pathlib import Path
@@ -61,14 +61,14 @@ def text(x, y, t, size=12, col=MUTED, anchor="start", weight="normal"):
 def legend(x, y, items):
     s = ""
     for i, (k, lab) in enumerate(items):
-        s += f"<rect x='{x + i * 170}' y='{y}' width='14' height='14' rx='3' fill='{FILL[k]}' stroke='{EDGE[k]}'/>"
-        s += text(x + i * 170 + 20, y + 11.5, lab, 12)
+        s += f"<rect x='{x + i * 205}' y='{y}' width='14' height='14' rx='3' fill='{FILL[k]}' stroke='{EDGE[k]}'/>"
+        s += text(x + i * 205 + 20, y + 11.5, lab, 12)
     return s
 
 
 # 1. pipeline -------------------------------------------------------------------------------------------
 def pipeline():
-    W, MX, MW = 1040, 190, 520   # main column x / width
+    W, MX, MW = 1120, 200, 580   # main column x / width
     b = text(W / 2, 34, "CortexZero engine: one message, end to end", 20, INK, "middle", "bold")
     b += text(W / 2, 56, "The 1B model only picks a branch id from a short list. Everything else is code and reviewed data.", 13, MUTED, "middle")
     steps = [
@@ -92,16 +92,16 @@ def pipeline():
     for i, lab, k in exits:
         y = y0 + i * (h + gap) + h / 2
         b += arrow(MX + MW, y, MX + MW + 36, y)
-        b += box(MX + MW + 38, y - 20, 300, 40, [lab], k, 12)
-    b += box(10, y0 + 4 * (h + gap) - 4, 140, 72, ["1B router", "only when unsure", "LFM2.5 · llama3.2 · gemma3"], "model", 12)
-    b += arrow(140, y0 + 4 * (h + gap) + 32, MX, y0 + 4 * (h + gap) + 32, "")
-    b += box(10, y0 + 3 * (h + gap) - 4, 140, 72, ["Packs (YAML)", "or compiled JSON", "cz compile"], "data", 12)
-    b += arrow(140, y0 + 3 * (h + gap) + 32, MX, y0 + 3 * (h + gap) + 32)
-    b += box(10, y0 + 5 * (h + gap) - 4, 140, 72, ["LocalRunner", "argv only, no shell", "policy-checked"], "safety", 12)
-    b += arrow(140, y0 + 5 * (h + gap) + 32, MX, y0 + 5 * (h + gap) + 32)
+        b += box(MX + MW + 38, y - 20, 320, 40, [lab], k, 12)
+    b += box(10, y0 + 4 * (h + gap) - 4, 160, 72, ["1B router", "only when unsure", "LFM2.5 / Llama 3.2"], "model", 12)
+    b += arrow(170, y0 + 4 * (h + gap) + 32, MX, y0 + 4 * (h + gap) + 32, "")
+    b += box(10, y0 + 3 * (h + gap) - 4, 160, 72, ["Packs (YAML)", "or compiled JSON", "cz compile"], "data", 12)
+    b += arrow(170, y0 + 3 * (h + gap) + 32, MX, y0 + 3 * (h + gap) + 32)
+    b += box(10, y0 + 5 * (h + gap) - 4, 160, 72, ["LocalRunner", "argv only, no shell", "policy-checked"], "safety", 12)
+    b += arrow(170, y0 + 5 * (h + gap) + 32, MX, y0 + 5 * (h + gap) + 32)
     H = y0 + 7 * (h + gap) + 30
-    b += legend(110, H - 26, [("code", "deterministic code"), ("model", "1B model (routing only)"), ("safety", "safety boundary"), ("data", "data / log"), ("out", "what the user sees")])
-    return svg(W + 20, H, b, "CortexZero pipeline")
+    b += legend(70, H - 26, [("code", "deterministic code"), ("model", "1B model (routing only)"), ("safety", "safety boundary"), ("data", "data / log"), ("out", "what the user sees")])
+    return svg(W + 50, H, b, "CortexZero pipeline")
 
 
 # 2. router decision -----------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ def router():
         (386, "clear winner? (≥0.55 & margin 0.12, or ≥0.60 & lead 0.25)", "index", "the leader branch", "code"),
         (466, "no model loaded?", "index-only", "leader if ≥ 0.60, else none", "code"),
         (546, "otherwise: 1B model chooses top-3 | none | ask", "model", "its pick (ask → leader if ≥ 0.60)", "model"),
-        (626, "branch acts on this computer/router but message names another device?", "other-device", "not in library", "out"),
+        (626, "computer/router-only branch, but another device named?", "other-device", "not in library", "out"),
     ]
     for i, (y, q, by, res, k) in enumerate(rows):
         kk = "model" if by == "model" else "gray"
@@ -212,12 +212,12 @@ def results():
 # 5. work process --------------------------------------------------------------------------------------
 def process():
     W = 1000
-    b = text(W / 2, 34, "How the numbers were produced (no self-reported passes)", 20, INK, "middle", "bold")
+    b = text(W / 2, 34, "How the numbers were produced (only code-checked results count)", 20, INK, "middle", "bold")
     b += box(30, 70, 200, 70, ["Hermes czcasewriter", "writes NEW messages", "(never sees labels)"], "model", 12.5)
     b += box(290, 60, 200, 40, ["czlabela (nemotron)"], "model", 12.5)
     b += box(290, 110, 200, 40, ["czlabelb (gpt-oss-20b)"], "model", 12.5)
     b += arrow(230, 95, 290, 80) + arrow(230, 105, 290, 130)
-    b += box(550, 70, 200, 70, ["build_heldout_from_hermes.py", "keep only 2-label agreement", "disputes → owner"], "code", 12)
+    b += box(550, 70, 200, 70, ["agreement filter", "keep only messages both", "labellers agreed on"], "code", 12)
     b += arrow(490, 80, 550, 95) + arrow(490, 130, 550, 115)
     b += box(800, 70, 180, 70, ["score ONCE", "index + 3 local 1Bs", "→ RESULTS.md"], "data", 12.5)
     b += arrow(750, 105, 800, 105)
@@ -229,7 +229,21 @@ def process():
     return svg(W, 350, b, "Evaluation process")
 
 
+def to_png(svg_path: Path) -> None:
+    """PNG copy for places that don't show SVG well (README on some clients, slides). Needs `pip install cairosvg`."""
+    try:
+        import cairosvg
+    except ImportError:
+        print("  (skipping PNG: pip install cairosvg)")
+        return
+    out = OUT / "png" / (svg_path.stem + ".png")
+    out.parent.mkdir(exist_ok=True)
+    cairosvg.svg2png(url=str(svg_path), write_to=str(out), scale=2, background_color="white")
+    print("wrote", out)
+
+
 for name, fn in [("1-pipeline", pipeline), ("2-routing-decision", router), ("3-packs-and-execution-boundary", packs),
                  ("4-results-heldout", results), ("5-evaluation-process", process)]:
     (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8")
     print("wrote", OUT / f"{name}.svg")
+    to_png(OUT / f"{name}.svg")
