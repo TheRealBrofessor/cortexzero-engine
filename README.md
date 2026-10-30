@@ -184,11 +184,28 @@ tests/           engine tests (fake runner, fake model)
 ## Status and roadmap
 
 This is a **reference implementation**: correct, tested and measured, not yet a polished product.
-- Next: a fresh held-out set with more out-of-scope messages; more real phrasings for new packs; a fine-tuned router
-  per pack.
-- Later: a single-binary runtime (Rust, with llama.cpp embedded) that must produce the same routes as this Python
-  engine on every benchmark case before it replaces it. This Python version stays as the reference and the research
-  bench.
+
+### 🚧 Coming next: the multi-language build
+
+Work has started on a native build, where each part uses the language that suits it best:
+
+| part | language |
+|---|---|
+| runtime engine: routing, safety, command runner, evidence log | **Rust**, one offline binary with no Python needed |
+| 1B router | **llama.cpp**, built into the binary (Ollama stays optional) |
+| packs | YAML → compiled JSON bundles |
+| pack compiler, benchmarks, fine-tuning | **Python** (this code) |
+| optional UI | TypeScript, talking to `cz serve` |
+
+The rule for the port: **the Rust engine ships only when it gives the same route as this Python engine on every
+benchmark case.** A conformance harness checks this in CI. This Python version stays as the reference and the
+research bench.
+
+Full plan: [docs/MULTI_LANGUAGE_PLAN.md](docs/MULTI_LANGUAGE_PLAN.md). Progress: see the
+[tracking issue](../../issues?q=is%3Aissue+label%3Aroadmap).
+
+Also planned: a fresh held-out set with more out-of-scope messages, more real phrasings for new packs, a fine-tuned
+router per pack, and publishing the fine-tuned router weights.
 
 ## License
 
