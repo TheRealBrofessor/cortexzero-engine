@@ -138,7 +138,8 @@ Before this the pack had only its author's own dev set (36/36 — optimistic, as
 | index only, all packs | 0.574 | 22/43 | 9/11 | 2 |
 
 Honest reading: a new 14-branch pack with ~8 patterns per branch refuses safely but misses half of real phrasings.
-It is now camping dev2 (`packs/family-camping/cases/dev2.yaml`).
+It is now camping dev2. (The family-camping pack and its case files are held back from the public repo until a
+qualified person reviews them; the raw scored run is in `bench/scored/camping-heldout1-*.json`.)
 
 # State after P6 fixes (2026-10-30) — tuning-set numbers only (index-only)
 | set | home-network+safety | all 4 packs |

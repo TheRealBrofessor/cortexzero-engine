@@ -121,8 +121,8 @@ adversarial messages, which led to the device-scope rule.
 ## Quickstart
 
 ```bash
-git clone <this repo> && cd cortexzero-engine
-pip install -e .                 # Python ≥ 3.10; the only dependency is PyYAML
+git clone https://github.com/TheRealBrofessor/cortexzero-engine.git && cd cortexzero-engine
+pip install -e .                 # Python ≥ 3.10; the only dependency is PyYAML (use -e: packs are read from the checkout)
 cz pack list                     # installed packs, version, review status
 cz ask "is my firewall on"
 cz repl                          # conversation; hints appear as you type, Tab takes one
@@ -202,7 +202,7 @@ benchmark case.** A conformance harness checks this in CI. This Python version s
 research bench.
 
 Full plan: [docs/MULTI_LANGUAGE_PLAN.md](docs/MULTI_LANGUAGE_PLAN.md). Progress: see the
-[tracking issue](../../issues?q=is%3Aissue+label%3Aroadmap).
+[tracking issue #1](https://github.com/TheRealBrofessor/cortexzero-engine/issues/1).
 
 Also planned: a fresh held-out set with more out-of-scope messages, more real phrasings for new packs, a fine-tuned
 router per pack, and publishing the fine-tuned router weights.

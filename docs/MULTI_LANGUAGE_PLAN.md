@@ -43,7 +43,7 @@ in `schema/`, each with a `format` version number:
 
 ## 3. Conformance harness: what makes this safe
 
-`bench/conformance.py` runs **both** engines on every case set (dev 1–4, the held-out sets as scored, the red-team
+`bench/conformance.py` (to be written in phase 1) runs **both** engines on every case set (dev 1–4, the held-out sets as scored, the red-team
 set, the safety regression phrases) with `--json` output and compares them turn by turn:
 
 | field | must match |

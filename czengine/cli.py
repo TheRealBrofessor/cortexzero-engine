@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -28,7 +29,11 @@ COMPILED = CACHE / "packs.compiled.json"
 def pack_dirs(args) -> list[Path]:
     if args.pack:
         return [Path(p).resolve() for p in args.pack]
-    return sorted(p.resolve() for p in (ROOT / "packs").iterdir() if (p / "pack.yaml").exists())
+    base = Path(os.environ["CZ_PACKS"]).expanduser() if os.environ.get("CZ_PACKS") else ROOT / "packs"
+    if not base.is_dir():
+        sys.exit(f"cz: no packs folder at {base}. Install with `pip install -e .` from a checkout, "
+                 "set CZ_PACKS=/path/to/packs, or pass --pack DIR.")
+    return sorted(p.resolve() for p in base.iterdir() if (p / "pack.yaml").exists())
 
 
 def build(args) -> Engine:
