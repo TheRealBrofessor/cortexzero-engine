@@ -1,0 +1,228 @@
+# DEV set: tune thresholds on this only.
+# Single author (Claude); branches written by the same author — treat as a draft benchmark.
+- id: q001
+  report: My internet is really slow. What's wrong?
+  expect:
+  - net.speed
+  - net.packet-loss
+  - net.no-internet
+- id: q002
+  report: It says I'm connected to Wi-Fi but nothing loads.
+  expect:
+  - net.no-internet
+- id: q003
+  report: What's my IP address and where do I find it?
+  expect:
+  - net.my-ip
+- id: q004
+  report: Someone asked for my public IP. What is that?
+  expect:
+  - net.public-ip
+- id: q005
+  report: How do I restart my router the right way?
+  expect:
+  - net.router-restart
+- id: q006
+  report: How do I change my Wi-Fi password?
+  expect:
+  - net.wifi-password-change
+- id: q007
+  report: Is someone stealing my Wi-Fi?
+  expect:
+  - net.devices
+- id: q008
+  report: My Wi-Fi keeps cutting out.
+  expect:
+  - net.wifi-reconnect
+  - net.wifi-signal
+- id: q009
+  report: My Wi-Fi doesn't reach my bedroom.
+  expect:
+  - net.wifi-signal
+- id: q010
+  report: How do I make a separate Wi-Fi for guests?
+  expect:
+  - net.guest-wifi
+- id: q011
+  report: It says DNS server not responding. What does that mean?
+  expect:
+  - net.dns-flush
+  - net.no-internet
+- id: q012
+  report: Someone told me to change my DNS. Should I?
+  expect:
+  - net.dns-change
+- id: q013
+  report: A website won't load, but my phone opens it fine.
+  expect:
+  - net.site-check
+  - net.dns-flush
+- id: q014
+  report: Am I getting the internet speed I pay for?
+  expect:
+  - net.speed
+- id: q015
+  report: My video calls freeze and break up.
+  expect:
+  - net.packet-loss
+- id: q016
+  report: My games lag. How do I fix it?
+  expect:
+  - net.packet-loss
+- id: q017
+  report: Tech support told me to run a traceroute. How?
+  expect:
+  - net.traceroute
+- id: q018
+  report: It says This site can't be reached.
+  expect:
+  - net.site-check
+  - net.no-internet
+- id: q019
+  report: My game or camera says I need to open a port.
+  expect:
+  - net.port-forward
+- id: q020
+  report: My Xbox says Strict NAT.
+  expect:
+  - net.port-forward
+- id: q021
+  report: My device says failed to obtain IP address.
+  expect:
+  - net.renew-ip
+- id: q022
+  report: What are all these devices on my network?
+  expect:
+  - net.devices
+- id: q023
+  report: Where do I find my device's MAC address?
+  expect:
+  - net.mac
+- id: q024
+  report: My computer can't see my printer anymore.
+  expect:
+  - net.printer
+- id: q025
+  report: Is my VPN actually on?
+  expect:
+  - net.vpn-status
+- id: q026
+  report: How do I turn on a firewall?
+  expect:
+  - net.firewall-status
+- id: q027
+  report: Something is eating all my bandwidth.
+  expect:
+  - net.bandwidth-hog
+- id: q028
+  report: How do I make my home network safe?
+  expect:
+  - net.secure-network
+- id: q029
+  report: My browser says Your connection is not private. Is that dangerous?
+  expect:
+  - net.cert-check
+- id: q030
+  report: Is a cable better than Wi-Fi? Is my ethernet cable broken?
+  expect:
+  - net.ethernet
+- id: q031
+  report: My wired internet is stuck at 100 Mbps.
+  expect:
+  - net.ethernet
+- id: q032
+  report: which wifi channel should i use
+  expect:
+  - net.wifi-networks
+- id: q033
+  report: whats my routers ip
+  expect:
+  - net.router-address
+- id: q034
+  report: which dns am i using
+  expect:
+  - net.dns-which
+- id: q035
+  report: is port 8080 open on this computer
+  expect:
+  - net.port-listening
+- id: q036
+  report: my interent is down
+  expect:
+  - net.no-internet
+- id: q037
+  report: wifi connectd but no internt
+  expect:
+  - net.no-internet
+- id: q038
+  report: is youtube.com down or is it just me
+  expect:
+  - net.site-check
+- id: q039
+  report: flush my dns plz
+  expect:
+  - net.dns-flush
+- id: q040
+  report: reconect my wifi
+  expect:
+  - net.wifi-reconnect
+- id: q041
+  report: Write me a poem about my dog.
+  expect:
+  - none
+- id: q042
+  report: What's the weather tomorrow in Savannah?
+  expect:
+  - none
+- id: q043
+  report: How do I bake banana bread?
+  expect:
+  - none
+- id: q044
+  report: Can you help me with my math homework?
+  expect:
+  - none
+- id: q045
+  report: My laptop screen is cracked.
+  expect:
+  - none
+- id: q046
+  report: How do I reset my Gmail password?
+  expect:
+  - none
+- id: q047
+  report: What's the best phone to buy?
+  expect:
+  - none
+- id: q048
+  report: My car is making a weird noise.
+  expect:
+  - none
+- id: q049
+  report: Set a reminder for my dentist appointment.
+  expect:
+  - none
+- id: q050
+  report: How do I set up a Raspberry Pi as a NAS?
+  expect:
+  - none
+- id: q051
+  report: How do I host a website from home with nginx?
+  expect:
+  - none
+- id: q052
+  report: Translate hello into Spanish.
+  expect:
+  - none
+- id: q053
+  report: Who won the game last night?
+  expect:
+  - none
+- id: q054
+  report: How do I get the padlock HTTPS on my website for free?
+  expect:
+  - none
+- id: q055
+  report: My printer is out of ink.
+  expect:
+  - none

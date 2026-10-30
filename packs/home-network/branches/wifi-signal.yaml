@@ -1,0 +1,52 @@
+id: net.wifi-signal
+title: Wi-Fi signal and band
+kind: check
+description: Show the Wi-Fi network, signal strength, and band (2.4 or 5 GHz).
+patterns:
+- how strong is my wifi signal
+- which wifi band am i on
+- am i on 2.4 or 5 ghz
+- wifi doesnt reach my room
+- weak wifi signal
+- what wifi am i connected to
+- wifi is weak in the bedroom
+- bad wifi upstairs
+- wifi signal is bad in one room
+- how good is my wifi signal
+- wifi drops in the back room
+- which network am i connected to
+- wifi bars are low
+- why am i on 2.4ghz not 5ghz
+- stuck on 2.4ghz instead of 5ghz
+keywords:
+- wifi
+- signal
+- band
+- weak
+steps:
+- id: sig
+  argv:
+  - nmcli
+  - -t
+  - -f
+  - ACTIVE,SSID,SIGNAL,FREQ
+  - dev
+  - wifi
+  extract: ^yes:(.*):(\d+):(\d+ MHz)$
+  fmt: '{1} — signal {2}%, {3}'
+  first_only: true
+rules:
+- step: sig
+  empty: true
+  say: This computer isn't connected to Wi-Fi right now.
+default: 'Connected to {sig}. Signal under ~40% is weak: move closer, remove obstacles, or add a mesh point.'
+core:
+- - wifi
+  - signal
+  - band
+  - ghz
+  - weak
+  - bars
+  - 5ghz
+  - network
+  - connected

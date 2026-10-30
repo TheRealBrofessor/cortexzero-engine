@@ -1,0 +1,69 @@
+id: net.wifi-reconnect
+title: Reconnect Wi-Fi
+kind: action
+risk: 1
+description: Turn Wi-Fi off and on to reconnect.
+patterns:
+- reconnect my wifi
+- wifi keeps disconnecting
+- restart wifi
+- turn wifi off and on
+- wifi dropped
+- wifi keeps dropping
+- wifi disconnects every few minutes
+- laptop keeps losing wifi
+- wifi drops out randomly
+- reconnect to the wifi
+- wifi keeps kicking me off
+keywords:
+- reconnect
+- disconnecting
+- dropped
+steps:
+- id: 'off'
+  argv:
+  - nmcli
+  - radio
+  - wifi
+  - 'off'
+- id: wait1
+  argv:
+  - sleep
+  - '2'
+- id: 'on'
+  argv:
+  - nmcli
+  - radio
+  - wifi
+  - 'on'
+- id: wait2
+  argv:
+  - sleep
+  - '8'
+  timeout: 12
+default: Wi-Fi was turned off and on.
+verify:
+  id: online
+  argv:
+  - ping
+  - -c
+  - '2'
+  - -W
+  - '3'
+  - 1.1.1.1
+  timeout: 10
+rules:
+- step: 'on'
+  rc_nonzero: true
+  say: Couldn't turn Wi-Fi back on ({on}). Turn it on from the network menu.
+core:
+- - wifi
+  - connection
+  - internet
+- - reconnect
+  - drops
+  - restart
+  - 'off'
+  - reconnecting
+  - reconnects
+scope: computer

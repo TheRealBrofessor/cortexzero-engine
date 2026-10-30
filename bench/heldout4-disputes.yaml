@@ -1,0 +1,150 @@
+# Labeller disagreements: owner review, not used for scoring.
+- id: v015
+  report: phone looses wifi constantly have to toggle it off and on
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
+- id: v021
+  report: my vpn subscription expired what now
+  labeller_a:
+  - none
+  labeller_b:
+  - net.vpn-status
+- id: v027
+  report: My new smart thermostat keeps loosing connection to the app. It shows online in the router but the app
+    says offline. I have reset it three times and re-paired it but within an hour it drops again. The thermostat
+    is only twenty feet from the router with one wall between. Could this be a bandwidth issue or is the thermostat
+    just junk? I am about to return it.
+  labeller_a:
+  - none
+  labeller_b:
+  - net.bandwidth-hog
+- id: v028
+  report: restarted router twice still no internet what else can i try um
+  labeller_a:
+  - net.no-internet
+  labeller_b:
+  - net.router-restart
+- id: v031
+  report: ethernet cable plugged in but browser says no internet connection
+  labeller_a:
+  - net.no-internet
+  labeller_b:
+  - net.ethernet
+- id: v032
+  report: moved roter upstairs now downstairs devices barely get one bar
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal
+- id: v034
+  report: my phone wont conect to wifi
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-networks
+- id: v039
+  report: why is my internet so slow lately
+  labeller_a:
+  - net.bandwidth-hog
+  - net.speed
+  labeller_b:
+  - net.speed
+- id: v042
+  report: thinking about getting a mesh wifi system because the dead zones in this house are ridiculous the bedroom
+    gets zero signal and the backyard is a black hole but mesh systems are expensive and i see people saying they
+    cause more problems than they solve should i just get a powerful single router instead or maybe powerline adapters
+    i am so confused by all the options
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-networks
+- id: v043
+  report: vpn subscription expired should i renew or try different provider now
+  labeller_a:
+  - none
+  labeller_b:
+  - net.vpn-status
+- id: v054
+  report: netflix keeps buffering on smart tv
+  labeller_a:
+  - none
+  labeller_b:
+  - net.speed
+- id: v061
+  report: see tons of neighbor networks but mine keeps dropping signal
+  labeller_a:
+  - net.wifi-networks
+  - net.wifi-signal
+  labeller_b:
+  - net.wifi-signal
+- id: v066
+  report: The PlayStation says NAT type 3 and my multiplayer games keep disconnecting. I looked up port forwarding
+    for PlayStation but the router has no UPnP option and the port numbers in the guide do not match what the console
+    shows. Sony says put it in DMZ but that sounds dangerous. Is there a safe way to fix the NAT type without opening
+    the whole network?
+  labeller_a:
+  - none
+  labeller_b:
+  - net.port-forward
+- id: v070
+  report: ring doorbell keeps losing connection chime works but video feed fails um
+  labeller_a:
+  - none
+  labeller_b:
+  - net.no-internet
+- id: v072
+  report: isp login portal wont accept credentials even after reset yesterday morning
+  labeller_a:
+  - none
+  labeller_b:
+  - net.site-check
+- id: v079
+  report: home assistant cant see smart bulbs on same netwrok segment now
+  labeller_a:
+  - none
+  labeller_b:
+  - net.devices
+- id: v080
+  report: cant remember wifii password wrote it down somewhere and lost it
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-password-change
+- id: v089
+  report: I cannot figure out why my streaming app says this show is not available in my network. I pay for the
+    premium tier and it works on my phone but not on the TV. The error mentions network restrictions but I am on
+    the same wifi. Could this be a location thing or does the app think I am sharing my account? Customer support
+    is useless.
+  labeller_a:
+  - none
+  labeller_b:
+  - net.site-check
+- id: v092
+  report: I cannot get into my email account on this computer but it works fine on my phone. The password is definitely
+    right because I just changed it yesterday. The browser keeps spinning and then says connection timed out. Other
+    websites load normally. Is there something on this machine blocking just the mail server? I have important messages
+    I need to check right now.
+  labeller_a:
+  - none
+  labeller_b:
+  - net.site-check
+- id: v108
+  report: websites load old versions even after i clear browser cache
+  labeller_a:
+  - net.dns-flush
+  labeller_b:
+  - net.site-check
+- id: v110
+  report: forgot router admin password cant get into settings page now
+  labeller_a:
+  - none
+  labeller_b:
+  - net.router-address
+- id: v117
+  report: smart tv keeps disconnecting from wifi but phone works just fine um
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal

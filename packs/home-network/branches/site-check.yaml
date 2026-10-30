@@ -1,0 +1,59 @@
+id: net.site-check
+title: Is a website down or just me
+kind: check
+slots:
+  host: host
+description: 'Check one website: does its name resolve and does it answer.'
+patterns:
+- is example.com down
+- is this website down or just me
+- only one website wont load
+- this site cant be reached
+- website wont load but others do
+- check if a site is up
+- connection refused for a website
+- connection timed out on a website
+- is that website down right now
+- one website wont open
+- a site wont load but everything else works
+- is the problem the website or me
+- check if a website is working
+- why cant i open this one site
+keywords:
+- site
+- down
+- reached
+- load
+steps:
+- id: dns
+  argv:
+  - getent
+  - hosts
+  - '{host}'
+  extract: ^(\S+)
+  first_only: true
+  timeout: 8
+- id: http
+  argv:
+  - curl
+  - -s
+  - -o
+  - /dev/null
+  - -w
+  - '%{http_code}'
+  - --max-time
+  - '8'
+  - https://{host}
+  timeout: 10
+rules:
+- step: dns
+  rc_nonzero: true
+  say: '{host} doesn''t resolve: the name is wrong, the domain expired, or DNS is failing on your side.'
+- step: http
+  contains: '000'
+  say: '{host} resolves ({dns}) but doesn''t answer on HTTPS: it''s down, blocked, or timing out.'
+default: '{host} is up (address {dns}, HTTP status {http}). If it still fails for you, try "flush DNS" or another
+  browser.'
+# core: the branch can only win if each group has a word in the message (synonyms count)
+core:
+- ["site", "google", "load", "loads", "reached", "down", "broken", "open"]

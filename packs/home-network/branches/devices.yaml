@@ -1,0 +1,49 @@
+id: net.devices
+title: Devices on my network
+kind: check
+description: List devices this computer has seen on the local network.
+patterns:
+- what devices are on my network
+- who is connected to my wifi
+- is someone stealing my wifi
+- see who is on my network
+- list all devices on my network
+- is there a device i dont recognize
+- who is on our wifi
+- how many devices are connected
+- is a neighbor using our wifi
+- is someone else on my network
+- list everything connected to the wifi
+- strange device on the wifi
+- see all the gadgets on our internet
+keywords:
+- devices
+- connected
+- stealing
+- neighbors
+steps:
+- id: dev
+  argv:
+  - ip
+  - neigh
+  extract: ^(\S+) .*lladdr (\S+)
+  fmt: '{1}  {2}'
+rules:
+- step: dev
+  empty: true
+  say: This computer hasn't seen other devices yet. Your router's settings page (ask "router address") lists every
+    connected device.
+default: 'Devices this computer has recently talked to (address, hardware ID):
+
+  {dev:all}
+
+  For a complete list with names, open your router''s settings page.'
+core:
+- - devices
+  - connected
+  - stealing
+  - phones
+  - laptops
+  - who
+  - neighbor
+  - see

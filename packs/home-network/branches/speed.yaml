@@ -1,0 +1,50 @@
+id: net.speed
+title: Internet speed test
+kind: check
+description: Measure current download speed.
+patterns:
+- how fast is my internet
+- run a speed test
+- am i getting the speed i pay for
+- internet is slow
+- test my internet speed
+- why is my internet so slow
+- internet feels really slow today
+- how fast is the internet here
+- check our internet speed
+- downloads take forever
+- is our internet fast enough
+- internet slower than usual
+keywords:
+- speed
+- slow
+- fast
+steps:
+- id: down
+  argv:
+  - curl
+  - -s
+  - -o
+  - /dev/null
+  - -w
+  - '%{speed_download}'
+  - --max-time
+  - '15'
+  - https://speed.cloudflare.com/__down?bytes=25000000
+  transform: mbps_from_bytes_per_s
+  timeout: 20
+rules:
+- step: down
+  contains: '0.0'
+  say: The speed test couldn't download anything. Check "no internet" first.
+default: 'Download speed right now: about {down} Mbps. Compare with your plan; test with a cable near the router
+  to rule out Wi-Fi.'
+core:
+- - speed
+  - slow
+  - fast
+  - mbps
+  - speedtest
+  - gbps
+  - downloads
+  - forever

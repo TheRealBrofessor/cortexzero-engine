@@ -1,0 +1,41 @@
+id: net.bandwidth-hog
+title: What is using my bandwidth
+kind: answer
+description: How to find what's using the connection.
+patterns:
+- what is using all my bandwidth
+- which app is using all the bandwidth
+- something is eating my data
+- kids use up all the data
+- who is using all the internet
+- which device hogs the bandwidth
+- something is eating our internet
+- kids streaming uses all the internet
+- what is using my data
+- see who is hogging the wifi
+- check what is eating all the speed
+- someone is downloading and hogging the internet
+- videos buffer because someone is hogging the bandwidth
+- could a device be using too much bandwidth
+- check what is using too much bandwidth
+keywords:
+- bandwidth
+- data
+- hog
+text: 'On this computer: `sudo nethogs` shows internet use per program (install with `sudo apt install nethogs`).
+
+  For the whole house: your router''s settings usually show traffic per device; many routers can limit a device''s
+  bandwidth (QoS).'
+core:
+- - bandwidth
+  - data
+  - hog
+  - hogging
+  - eating
+  - downloading
+  - download
+  - streaming
+  - usage
+  - uses
+  - slow
+  - who

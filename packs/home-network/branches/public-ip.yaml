@@ -1,0 +1,38 @@
+id: net.public-ip
+title: What is my public IP
+kind: check
+description: Show the internet-facing (public) IP address.
+patterns:
+- what is my public ip
+- external ip address
+- tech support asked for my ip
+- internet ip address
+- whats my public ip address
+- what ip does the internet see
+- my outside ip address
+- what ip am i coming from
+- ip address for my home internet line
+- what is our external address
+keywords:
+- public
+- external
+steps:
+- id: pub
+  argv:
+  - curl
+  - -s
+  - --max-time
+  - '10'
+  - https://api.ipify.org
+  timeout: 14
+rules:
+- step: pub
+  rc_nonzero: true
+  say: I couldn't reach the lookup service. Are you online? Try "no internet".
+default: Your public IP address is {pub}. Only share it with people you trust.
+core:
+- - ip
+  - public
+  - external
+  - address
+scope: computer

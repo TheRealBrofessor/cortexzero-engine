@@ -1,0 +1,64 @@
+id: net.cert-check
+title: Is a site's certificate valid
+kind: check
+slots:
+  host: host
+description: Check a website's HTTPS certificate (not secure / not private warnings).
+patterns:
+- is the certificate for example.com valid
+- site says not secure
+- your connection is not private
+- ssl certificate error
+- check https certificate
+- browser says the site is not secure
+- privacy error on a website
+- certificate warning on our website
+- site shows a security warning
+- is this website certificate valid
+keywords:
+- certificate
+- secure
+- private
+steps:
+- id: cert
+  argv: &id001
+  - openssl
+  - s_client
+  - -servername
+  - '{host}'
+  - -verify_hostname
+  - '{host}'
+  - -verify_return_error
+  - -connect
+  - '{host}:443'
+  extract: 'NotAfter: (.+? GMT)'
+  max_lines: 1
+  timeout: 12
+  first_only: true
+- id: verify
+  argv: *id001
+  extract: verify error:num=\d+:([^\n]+)
+  max_lines: 1
+  timeout: 12
+  first_only: true
+rules:
+- step: verify
+  rc_nonzero: true
+  empty: false
+  say: 'The certificate for {host} is NOT valid ({verify}). The browser warning is real: don''t enter passwords
+    or card numbers there.'
+- step: cert
+  rc_nonzero: true
+  say: 'I couldn''t get a certificate from {host}: the site may be down, blocked, or not use HTTPS.'
+default: The certificate for {host} checks out (trusted chain, name matches). It expires {cert}. If you still see
+  a warning, check the computer's date and time, or the exact address you typed.
+core:
+- - certificate
+  - secure
+  - private
+  - padlock
+  - lock
+  - expired
+  - expiring
+  - warning
+  - https

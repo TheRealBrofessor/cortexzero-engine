@@ -1,0 +1,186 @@
+# HELD-OUT set: score once per configuration; never tune on it.
+# Single author (Claude); branches written by the same author — treat as a draft benchmark.
+- id: q001
+  report: The internet stopped working while the kids were watching their show.
+  expect:
+  - net.no-internet
+- id: q002
+  report: My Wi-Fi works downstairs but not in the kids' rooms.
+  expect:
+  - net.wifi-signal
+- id: q003
+  report: The internet gets slow every evening when everyone's home.
+  expect:
+  - net.speed
+  - net.bandwidth-hog
+- id: q004
+  report: My video call with the school froze again.
+  expect:
+  - net.packet-loss
+- id: q005
+  report: How do I restart the internet box without breaking anything?
+  expect:
+  - net.router-restart
+- id: q006
+  report: I forgot the Wi-Fi password. Where do I find it?
+  expect:
+  - net.wifi-password-change
+- id: q007
+  report: How do I give the babysitter the Wi-Fi without giving her our main password?
+  expect:
+  - net.guest-wifi
+- id: q008
+  report: I think the neighbors are using our Wi-Fi.
+  expect:
+  - net.devices
+- id: q009
+  report: How do I see what devices are on our internet?
+  expect:
+  - net.devices
+- id: q010
+  report: The tablet says connected, no internet.
+  expect:
+  - net.no-internet
+- id: q011
+  report: The printer stopped printing from my phone.
+  expect:
+  - net.printer
+- id: q012
+  report: Am I getting the speed I'm paying for?
+  expect:
+  - net.speed
+- id: q013
+  report: The school website says my connection is not private. Is that safe?
+  expect:
+  - net.cert-check
+- id: q014
+  report: How do I make our home internet safer?
+  expect:
+  - net.secure-network
+- id: q015
+  report: Which device is using all the internet?
+  expect:
+  - net.bandwidth-hog
+- id: q016
+  report: Should we plug the computer into the router with a cable?
+  expect:
+  - net.ethernet
+- id: q017
+  report: Customer support told me to flush DNS. What is that?
+  expect:
+  - net.dns-flush
+- id: q018
+  report: Customer support asked for my IP address. Where is it?
+  expect:
+  - net.my-ip
+  - net.public-ip
+- id: q019
+  report: Customers say our guest Wi-Fi doesn't work.
+  expect:
+  - net.guest-wifi
+- id: q020
+  report: How do I give customers Wi-Fi without letting them into our business network?
+  expect:
+  - net.guest-wifi
+- id: q021
+  report: The internet gets slow when the shop is busy.
+  expect:
+  - net.speed
+  - net.bandwidth-hog
+- id: q022
+  report: Wi-Fi doesn't reach the back office.
+  expect:
+  - net.wifi-signal
+- id: q023
+  report: Our internet phone calls are choppy.
+  expect:
+  - net.packet-loss
+- id: q024
+  report: The office printer doesn't show up for my employees.
+  expect:
+  - net.printer
+- id: q025
+  report: Do we need a VPN for remote employees? Is our VPN connected?
+  expect:
+  - net.vpn-status
+- id: q026
+  report: How do I set up a firewall for the shop?
+  expect:
+  - net.firewall-status
+- id: q027
+  report: Something is using all our bandwidth.
+  expect:
+  - net.bandwidth-hog
+- id: q028
+  report: How do I open a port for our security system?
+  expect:
+  - net.port-forward
+- id: q029
+  report: How do I find our public IP address?
+  expect:
+  - net.public-ip
+- id: q030
+  report: Our devices keep fighting over the same IP address.
+  expect:
+  - net.renew-ip
+- id: q031
+  report: our website says not secure
+  expect:
+  - net.cert-check
+- id: q032
+  report: teh wifi keeps dropin
+  expect:
+  - net.wifi-reconnect
+  - net.wifi-signal
+- id: q033
+  report: is our router ip 192.168.1.1 or what
+  expect:
+  - net.router-address
+- id: q034
+  report: How do I stop YouTube from showing my kids weird videos?
+  expect:
+  - none
+- id: q035
+  report: How do I set screen time limits on the tablets?
+  expect:
+  - none
+- id: q036
+  report: How do I back up all the family photos?
+  expect:
+  - none
+- id: q037
+  report: How do I set up a shared family calendar?
+  expect:
+  - none
+- id: q038
+  report: Our card reader keeps disconnecting.
+  expect:
+  - none
+- id: q039
+  report: How do I set up email with my business domain?
+  expect:
+  - none
+- id: q040
+  report: How do I manage passwords for the whole team?
+  expect:
+  - none
+- id: q041
+  report: Do I need antivirus on the business computers?
+  expect:
+  - none
+- id: q042
+  report: How much does it cost to have someone manage our IT?
+  expect:
+  - none
+- id: q043
+  report: Is it safe for my kids to play online games?
+  expect:
+  - none
+- id: q044
+  report: How do I report someone who messaged my child online?
+  expect:
+  - none
+- id: q045
+  report: How do I print the kids' school worksheets?
+  expect:
+  - none

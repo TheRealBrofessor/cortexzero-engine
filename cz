@@ -1,0 +1,6 @@
+#!/bin/sh
+# Thin launcher: run the engine from this checkout without installing (needs Python >= 3.10 and PyYAML).
+DIR="$(cd "$(dirname "$0")" && pwd)"
+PY="${CZ_PYTHON:-python3}"
+[ -x "$DIR/.venv/bin/python" ] && PY="$DIR/.venv/bin/python"
+PYTHONPATH="$DIR${PYTHONPATH:+:$PYTHONPATH}" exec "$PY" -m czengine.cli "$@"

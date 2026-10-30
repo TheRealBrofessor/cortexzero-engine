@@ -1,0 +1,392 @@
+# HELD-OUT v2: written by Hermes czcasewriter, blind-labelled by czlabela + czlabelb; only agreed labels.
+# 75/90 agreed (19 none). Never tune on this file.
+- id: m001
+  report: my internet is so slow lately, like videos keep buffering every few seconds and i swear nobody else is
+    using it but maybe the kids are downloading something on their tablets idk how to check what's eating all the
+    speed
+  expect:
+  - net.bandwidth-hog
+- id: m002
+  report: hey so netflix keeps freezing on the smart tv and my wife says its been like this all week, is there a
+    way to see whos hogging the wifi? i'm not super techy sorry
+  expect:
+  - net.bandwidth-hog
+- id: m003
+  report: getting that not secure warning on my bank website again, the little lock icon has a red line through
+    it and chrome says connection is not private, this happen before but i forgot what i did to fix it
+  expect:
+  - net.cert-check
+- id: m004
+  report: so i went to pay my credit card bill and the browser gave me a big scary warning about the certificate
+    or whatever, said something about it expiring? i just want to make sure its actually my bank and not some fake
+    site
+  expect:
+  - net.cert-check
+- id: m005
+  report: how many things are actually connected to my wifi right now? i see like 15 devices in the router app but
+    i only count maybe 8 of ours, the rest have weird names like 'android-7f2a' and 'ESP_123456' and it's freaking
+    me out a bit
+  expect:
+  - net.devices
+- id: m006
+  report: my neighbor asked for the wifi password yesterday and now i'm paranoid, is there a way to see every single
+    device on the network? i want to make sure its just our phones and laptops and the smart tv not some random
+    person
+  expect:
+  - net.devices
+- id: m007
+  report: heard changing dns can make websites load faster, something about google dns or cloudflare? my friend
+    said to use 1.1.1.1 but i have no idea where to even put those numbers in the settings
+  expect:
+  - net.dns-change
+- id: m008
+  report: so my son says we should switch to opendns for parental controls or something, but when i go into the
+    router settings there's like three different places for dns numbers and i dont want to break anything
+  expect:
+  - net.dns-change
+- id: m009
+  report: websites were working fine this morning but now half of them say 'server not found' or take forever to
+    load, my coworker said something about flushing dns cache? does that mean clearing browser history or is it
+    different
+  expect:
+  - net.dns-flush
+- id: m010
+  report: ok this is weird, i can go to google.com fine but when i type in my work's vpn portal it says it can't
+    find the server, but my coworker says it works for them. someone mentioned dns cache being stale? how do i clear
+    that thing
+  expect:
+  - net.dns-flush
+- id: m011
+  report: which dns am i even using right now? my isp's or something else? i tried looking in network settings but
+    it just says 'automatic' and that doesnt tell me anything useful
+  expect:
+  - net.dns-which
+- id: m012
+  report: my desktop is plugged in with a cable but the little light on the port isnt blinking like it usually does,
+    and the internet is super slow. is the cable bad? the port broken? how do i even check if its actually connected
+    properly
+  expect:
+  - net.ethernet
+- id: m013
+  report: so i ran a new ethernet cable through the wall to my office and now the connection keeps dropping, the
+    lights on the router port go on and off. did i crimp the ends wrong? is there a way to test if the link is actually
+    good
+  expect:
+  - net.ethernet
+- id: m014
+  report: is the firewall thing on? i never turned it on but my friend said linux has one built in called ufw? i
+    dont want people getting into my computer from the wifi at the coffee shop when i work there
+  expect:
+  - net.firewall-status
+- id: m015
+  report: my antivirus popped up saying the firewall is disabled, but i'm pretty sure i never messed with it. how
+    do i check if its actually running or if something turned it off?
+  expect:
+  - net.firewall-status
+- id: m016
+  report: need to set up a guest wifi for when my parents visit so they dont have access to my main network with
+    all my files and the printer. the router app has a guest network toggle but it asks for a separate password
+    and i'm not sure if that's actually secure enough
+  expect:
+  - net.guest-wifi
+- id: m017
+  report: running a small bakery from home and customers ask for wifi, but i dont want them on the same network
+    as my square reader and inventory laptop. how do i make a separate guest thing that actually keeps them separated?
+  expect:
+  - net.guest-wifi
+- id: m018
+  report: where do i find the mac address? the it guy at work needs it to let my laptop on the corporate wifi, but
+    everything i google shows different names for it like 'hardware address' or 'physical address' and i see like
+    5 different ones in settings
+  expect:
+  - net.mac
+- id: m019
+  report: my company's vpn requires registering the mac address but i have no clue which one is the right one -
+    there's wifi, ethernet, bluetooth, and some virtual ones. which one do they actually need?
+  expect:
+  - net.mac
+- id: m020
+  report: what's my ip address? not the public one the one that starts with 192.168 i think? i'm trying to set up
+    a pi-hole and it's asking for the server ip
+  expect:
+  - net.my-ip
+- id: m021
+  report: trying to access my router settings page and it says to go to 192.168.1.1 but that doesn't work. how do
+    i find the actual address? my friend said it might be 192.168.0.1 or 10.0.0.1 but i dont want to guess
+  expect:
+  - net.router-address
+- id: m022
+  report: nothing loads at all, not even google. the wifi icon says connected but browser just spins forever. phone
+    works fine on same wifi so its not the router. already restarted the computer twice. what else could it be
+  expect:
+  - net.no-internet
+- id: m023
+  report: ok so internet works on my phone but laptop says 'no internet' with the little yellow triangle. i've restarted
+    the router, restarted the laptop, forgot the network and reconnected. still nothing. this started after a windows
+    update i think
+  expect:
+  - net.no-internet
+- id: m024
+  report: zoom keeps freezing and people say i'm robot-voice, and my games have crazy lag spikes. ran a speed test
+    and it says 200 down but something feels off. how do i check if packets are getting lost or something?
+  expect:
+  - net.packet-loss
+- id: m025
+  report: my discord calls keep cutting out every few minutes and valorant shows like 200ms ping then spikes to
+    900. speed test looks normal though. is this packet loss? how do i even measure that
+  expect:
+  - net.packet-loss
+- id: m026
+  report: trying to host a minecraft server for my friends and they cant connect. looked up port forwarding and
+    it sounds complicated - something about tcp/udp and internal/external ports. my router is an asus rt-ax3000
+    if that helps
+  expect:
+  - net.port-forward
+- id: m027
+  report: need to forward a port for my security cameras so i can check them from work. the app says port 8080 but
+    the router page has like 5 different port forwarding sections and i'm scared i'll open something i shouldn't
+  expect:
+  - net.port-forward
+- id: m028
+  report: how do i check if a port is open on my computer? i'm trying to run a local server for development and
+    the tutorial says 'make sure port 3000 is listening' but i have no idea how to verify that
+  expect:
+  - net.port-listening
+- id: m029
+  report: my python script says 'address already in use' on port 8000 but i closed the terminal. is something still
+    running on that port? how do i find what program is using it and kill it
+  expect:
+  - net.port-listening
+- id: m030
+  report: where did my printer go? it was working yesterday, now my laptop says 'printer not found' but its turned
+    on and connected to wifi. the hp app sees it but nothing else does. so frustrating
+  expect:
+  - net.printer
+- id: m031
+  report: trying to print from my phone and it says no airprint printers found, but my wife's iphone prints to it
+    fine. the printer is an epson et-2750 connected to wifi. why does it work for her but not me
+  expect:
+  - net.printer
+- id: m032
+  report: what's my public ip? i need to tell my friend so they can connect to my game server. google says 'your
+    ip is...' but is that the right one? someone mentioned it changes sometimes
+  expect:
+  - net.public-ip
+- id: m033
+  report: my vpn provider needs my public ip for the allowlist but when i check different websites they show different
+    addresses. which one is actually my real public ip?
+  expect:
+  - net.public-ip
+- id: m034
+  report: ip address keeps changing and it breaks my port forwarding. someone said to 'renew the lease' or 'release
+    and renew' but i have no idea how to do that on linux. is it a command? a button somewhere?
+  expect:
+  - net.renew-ip
+- id: m035
+  report: my computer lost internet after i put it to sleep and woke it up. the wifi is connected but no websites
+    work. read somewhere about renewing dhcp lease? is that the same as restarting networking?
+  expect:
+  - net.renew-ip
+- id: m036
+  report: cant remember the router login address. is it 192.168.1.1? 192.168.0.1? 10.0.0.1? i know it's on a sticker
+    somewhere but the router is in a crawl space and i really dont want to go down there
+  expect:
+  - net.router-address
+- id: m037
+  report: trying to change wifi settings but need the router page. the default gateway in ipconfig shows 192.168.1.254
+    but that doesn't load in browser. am i looking at the wrong number?
+  expect:
+  - net.router-address
+- id: m038
+  report: how do i properly restart the router? just unplug it? wait 30 seconds? my isp said to unplug both the
+    modem and router but in what order? and how long to wait before plugging back in
+  expect:
+  - net.router-restart
+- id: m039
+  report: internet been acting weird all day, called spectrum and they said 'power cycle the equipment.' does that
+    mean just the router or the modem too? and the little battery backup thing in the modem - does that matter?
+  expect:
+  - net.router-restart
+- id: m040
+  report: want to make my home network more secure but dont know where to start. heard about changing default passwords,
+    disabling wps, updating firmware. is there a checklist or something? i have an asus router and like 20 devices
+  expect:
+  - net.secure-network
+- id: m041
+  report: my neighbor's kid somehow got on my wifi last month (long story). changed the password but want to make
+    sure everything else is locked down. what are the actual important things to check vs security theater?
+  expect:
+  - net.secure-network
+- id: m043
+  report: my bank website won't load but google works fine. tried on phone data and it loads there. so it's not
+    the site. is there a way to check if the dns is resolving correctly or if something's blocking it
+  expect:
+  - net.site-check
+- id: m044
+  report: paying for 500mbps but speedtest shows like 80. called the isp and they said 'looks good from our end.'
+    how do i actually test the speed properly? wired? wireless? which server to pick?
+  expect:
+  - net.speed
+- id: m045
+  report: speed test on fast.com says 200, speedtest.net says 450, google's test says 380. which one is right? and
+    why does my steam download only go at 50 mbps when the tests say way more
+  expect:
+  - net.speed
+- id: m046
+  report: video calls lag really bad in the evening. want to see where the connection slows down - is it my wifi,
+    the router, the isp, or further out? heard about traceroute but the output looks like gibberish to me
+  expect:
+  - net.traceroute
+- id: m047
+  report: my game ping is fine during day but terrible after 7pm. ran tracert and it shows a huge jump at hop 4
+    or 5. what does that even mean? is that my isp's problem or something i can fix
+  expect:
+  - net.traceroute
+- id: m048
+  report: how do i know if my vpn is actually working? the app says connected but i'm paranoid. is there a way to
+    check if my traffic is really going through the tunnel and not leaking
+  expect:
+  - net.vpn-status
+- id: m049
+  report: wireguard shows connected but when i check my ip on a website it still shows my home ip not the vpn ip.
+    does that mean its leaking? the app says 'connected' with a green dot
+  expect:
+  - net.vpn-status
+- id: m050
+  report: wifi analyzer app shows like 20 networks on channel 6 and mine is on 6 too. my neighbor's network has
+    way stronger signal than mine in my own bedroom. how do i check what channels are around me and pick a better
+    one
+  expect:
+  - net.wifi-networks
+- id: m051
+  report: living in an apartment and there are so many wifi networks. my 2.4ghz is unusable. how do i see all the
+    networks and their channels to find a clear one? also what's the difference between 2.4 and 5ghz anyway
+  expect:
+  - net.wifi-networks
+- id: m052
+  report: need to change the wifi password because my ex still has it (awkward). the router settings are confusing
+    - there's wpa2, wpa3, wpa2/wpa3 mixed. which one do i pick? and will it kick everyone off immediately?
+  expect:
+  - net.wifi-password-change
+- id: m053
+  report: trying to update wifi password on the router but there's two passwords - one for 2.4ghz and one for 5ghz?
+    or is it the same for both? the app just says 'wifi password' singular but the web interface has separate fields
+  expect:
+  - net.wifi-password-change
+- id: m056
+  report: wifi signal shows full bars but internet is super slow. moved laptop next to router and it's fast. so
+    it's signal strength? but the bars say excellent. how do i see the actual signal strength number and what band
+    im on
+  expect:
+  - net.wifi-signal
+- id: m057
+  report: how do i know if im on 2.4 or 5 ghz? the network name is the same for both. my old laptop only does 2.4
+    but new one does both. is there a way to see which band im actually connected to right now
+  expect:
+  - net.wifi-signal
+- id: m061
+  report: forgot my netflix password and the reset email never comes. checked spam, tried different email addresses,
+    nothing. can you help me recover it? i know this isnt really a network thing but...
+  expect:
+  - none
+- id: m062
+  report: trying to set up my new iphone and it won't activate. says 'could not connect to activation server' but
+    wifi works for everything else. apple support said wait 24 hours but i need my phone now
+  expect:
+  - none
+- id: m063
+  report: my fitbit won't sync with the app anymore. bluetooth is on, phone restarted, app reinstalled. worked fine
+    for months then just stopped last week. is this a network issue or the fitbit itself?
+  expect:
+  - none
+- id: m064
+  report: need to connect to the wifi at this coffee shop but the login page won't pop up. just sits on 'connecting...'
+    forever. works fine on my laptop but not phone. why does captive portal hate me
+  expect:
+  - none
+- id: m065
+  report: how do i set up a new router? just got a tp-link ax5400 to replace the isp garbage. do i just plug it
+    in? clone mac address? the instructions are 50 pages long and i have no patience
+  expect:
+  - none
+- id: m066
+  report: my smart bulbs keep disconnecting from alexa. they're on 2.4ghz, router is dual band. sometimes they work,
+    sometimes 'device unresponsive.' is this a router setting? channel width? dhcp lease time?
+  expect:
+  - none
+- id: m067
+  report: the ethernet port in my wall jack doesn't work. the light on the laptop doesn't blink when i plug in.
+    but the other jack in the living room works fine. did the wire come loose in the wall?
+  expect:
+  - net.ethernet
+- id: m068
+  report: ship arrived at the port today, waiting for customs clearance. the tracking says 'at port of los angeles'
+    but no updates for 3 days. how long does this usually take?
+  expect:
+  - none
+- id: m069
+  report: using a router to round the edges on this walnut table top. the bit keeps burning the wood even at lower
+    speeds. am i feeding too fast? too slow? the grain is tricky on this piece
+  expect:
+  - none
+- id: m070
+  report: my network of mom friends is falling apart since the group chat drama last week. karen said something
+    about jessica's kid and now nobody is talking. how do i fix this connection?
+  expect:
+  - none
+- id: m071
+  report: setting up a home network for my new apartment. comcast comes tomorrow to install. what do i need to buy?
+    modem? router? both? the guy at best buy tried to sell me a $400 mesh system
+  expect:
+  - none
+- id: m073
+  report: trying to cast from phone to tv but it says 'no devices found.' both on same wifi. worked yesterday. chromecast
+    light is white. restarted everything. what else could it be
+  expect:
+  - none
+- id: m075
+  report: the mesh system i bought has three nodes but the back two keep dropping offline. main one is fine. they're
+    only like 30 feet apart with one wall between. do i need to wire them together?
+  expect:
+  - none
+- id: m076
+  report: how do i block tiktok on my kids' devices? not the app, the website too. they use chrome and safari. router
+    has parental controls but it's super basic. is there a better way without buying circle or bark?
+  expect:
+  - none
+- id: m078
+  report: steam deck won't connect to my 5ghz wifi. sees it, tries to connect, then 'authentication failed' but
+    password is correct. 2.4ghz works fine. other devices connect to 5ghz no problem
+  expect:
+  - none
+- id: m079
+  report: nintendo switch downloads are insanely slow. like 2 mbps on a 300 mbps connection. tested on phone same
+    spot and get full speed. is nintendo's servers just trash or is it my router settings?
+  expect:
+  - net.speed
+- id: m085
+  report: how do i share wifi password from iphone to android? the share password thing only works apple to apple.
+    my mom has a samsung and i don't want to read off the 20 character password
+  expect:
+  - none
+- id: m086
+  report: the wifi at my parents' house is terrible. they have the router in the basement behind the furnace. i
+    want to move it but the coax outlet is only in the basement. can i use a mesh system with the existing router?
+  expect:
+  - none
+- id: m087
+  report: my brother keeps kicking me off xbox live by 'lag switching' or whatever. he has some app on his phone.
+    is that even real? can i stop it? our internet is fine when he's not home
+  expect:
+  - none
+- id: m089
+  report: my chromecast with google tv keeps forgetting the wifi password. have to set it up every few weeks. factory
+    reset didn't help. is it the device or my router? other devices don't do this
+  expect:
+  - none
+- id: m090
+  report: how do i prioritize my work laptop over everything else on wifi? kids streaming 4k, wife on zoom, my teams
+    calls lag. router has qos but the settings are confusing - 'high priority' 'mac address' 'ip address' what do
+    i put where
+  expect:
+  - none

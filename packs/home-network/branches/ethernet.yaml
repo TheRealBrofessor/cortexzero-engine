@@ -1,0 +1,61 @@
+id: net.ethernet
+title: Wired (Ethernet) link check
+kind: check
+description: Check cable link state and negotiated speed.
+patterns:
+- is my ethernet cable working
+- why is my ethernet stuck at 100 mbps
+- wired connection is slow
+- is the cable broken
+- is my network cable bad
+- wired internet is slow
+- plugged in cable but no internet
+- should i use a cable instead of wifi
+- ethernet not working
+keywords:
+- ethernet
+- cable
+- wired
+steps:
+- id: dev
+  argv:
+  - nmcli
+  - -t
+  - -f
+  - DEVICE,TYPE,STATE
+  - dev
+  extract: ^([^:]+):ethernet:(.+)$
+  fmt: '{1}'
+  first_only: true
+- id: state
+  argv:
+  - nmcli
+  - -t
+  - -f
+  - DEVICE,TYPE,STATE
+  - dev
+  extract: ^[^:]+:ethernet:(.+)$
+  first_only: true
+- id: speed
+  argv:
+  - cat
+  - /sys/class/net/{dev}/speed
+rules:
+- step: dev
+  empty: true
+  say: This computer has no wired network port.
+- step: speed
+  say: 'Wired link ({dev}, {state}) is only at 100 Mbps: usually a damaged or old cable. Try another Cat5e/Cat6
+    cable.'
+  matches: ^100$
+default: 'Wired port {dev}: {state}, {speed} Mbps (−1 or blank means no cable).'
+core:
+- - ethernet
+  - cable
+  - wired
+  - jack
+  - lan
+  - cat5
+  - cat6
+  - wire
+scope: computer

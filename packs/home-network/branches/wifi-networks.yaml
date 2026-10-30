@@ -1,0 +1,47 @@
+id: net.wifi-networks
+title: Nearby Wi-Fi networks and channels
+kind: check
+description: List nearby Wi-Fi networks with signal and channel.
+patterns:
+- which wifi channel is least crowded
+- show nearby wifi networks
+- what networks are around me
+- wifi channel interference
+- what wifi networks are nearby
+- are the neighbors wifi interfering
+- is my wifi channel crowded
+- best channel for my wifi
+- check what channels are around me
+- too many networks on the same channel
+- which channel should i pick
+- wifi scan shows no networks
+- my laptop sees no wifi networks but my phone does
+steps:
+- id: list
+  argv:
+  - nmcli
+  - -t
+  - -f
+  - SSID,SIGNAL,CHAN
+  - dev
+  - wifi
+  - list
+  extract: ^(.*):(\d+):(\d+)$
+  fmt: '{1} — {2}% ch {3}'
+  max_lines: 15
+  timeout: 15
+default: 'Nearby networks (name — signal, channel):
+
+  {list:all}
+
+  On 2.4 GHz use channel 1, 6, or 11, whichever has the fewest strong neighbours.'
+core:
+- - networks
+  - channel
+  - channels
+  - nearby
+  - interference
+  - crowded
+  - ssid
+  - around
+  - interfering

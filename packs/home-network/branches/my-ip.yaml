@@ -1,0 +1,39 @@
+id: net.my-ip
+title: What is my IP address
+kind: check
+description: Show this computer's local IP address.
+patterns:
+- what is my ip address
+- whats my ip
+- find my ip
+- local ip address
+- where do i find my ip address
+- my computers ip
+- what address is this computer using
+- what is the ip of my laptop
+- where can i see my computers address
+- show me my network address
+- ip of this pc
+- local ip that starts with 192 168
+- not the public ip the local one
+- what ip does my computer have on the lan
+steps:
+- id: ip
+  argv:
+  - ip
+  - '-4'
+  - -br
+  - addr
+  extract: ^(?!lo\b)(\S+)\s+\S+\s+(\d+\.\d+\.\d+\.\d+/\d+)
+  fmt: '{1}: {2}'
+rules:
+- step: ip
+  empty: true
+  say: This computer has no IPv4 address right now (not connected).
+default: 'Your local IP address: {ip:all}
+
+  (This is your address inside your home network. For the internet-facing one ask "what is my public IP".)'
+core:
+- - ip
+  - address
+scope: computer

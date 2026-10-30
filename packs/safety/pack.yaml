@@ -1,0 +1,22 @@
+name: safety
+version: 0.1.0
+domain: safety
+status: draft
+safety_critical: false
+description: Always checked first. Fixed responses; never routed, never model-dependent.
+safety:
+  - id: crisis
+    pattern: '\b(kill myself|suicid\w*|end my life|want to die|self[- ]harm|hurt myself)\b'
+    response: |
+      I'm really sorry you're going through this. You don't have to handle it alone.
+      In the US, call or text 988 (Suicide & Crisis Lifeline) any time. If you're in immediate danger, call 911.
+      If you're outside the US, contact your local emergency number.
+  - id: emergency
+    pattern: '\b(call 911|(?<!no )(?<!not an )(?<!no real )emergency|heart attack|can.?t breathe|cannot breathe|can not breathe|(trouble|difficulty|struggling|hard time) breathing|not breathing|stroke|unconscious|bleeding badly|overdose|(fell|falling|fallen) (in|into) (a |the )?(river|lake|pool|water|ocean|creek))\b'
+    response: |
+      If someone is in danger, call 911 (or your local emergency number) now. I can't help with emergencies.
+  - id: scam
+    pattern: '\b(tech support|microsoft|apple|amazon|bank)\b.{0,40}\b(called|calling|remote access|gift cards?|anydesk|teamviewer)\b|\b(called|calling)\b.{0,40}\b(tech support|microsoft|apple)\b'
+    response: |
+      This sounds like a common scam. Real companies don't call you to fix your computer or ask for gift cards or remote access.
+      Hang up, don't install anything they ask for, and don't share codes or passwords. If you already gave access, disconnect from the internet and change your passwords from another device.

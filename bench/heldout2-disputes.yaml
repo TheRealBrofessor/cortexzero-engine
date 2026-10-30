@@ -1,0 +1,106 @@
+# Labeller disagreements: owner review, not used for scoring.
+- id: m042
+  report: is github down or just me? i can't push my code but everything else loads fine. downdetector shows some
+    reports but not a huge outage. how do i check if its actually the site or my connection
+  labeller_a:
+  - net.site-check
+  labeller_b:
+  - none
+- id: m054
+  report: wifi keeps disconnecting every like 20 minutes. have to turn wifi off and on again on laptop to fix it.
+    phone doesn't have this problem. is it my laptop's wifi card? driver? windows power saving?
+  labeller_a:
+  - net.wifi-reconnect
+  labeller_b:
+  - net.wifi-signal
+- id: m055
+  report: my laptop drops wifi constantly but only when i move it to the couch. works fine at the desk. turning
+    wifi off and on fixes it for a bit. is the antenna loose? do i need to 'reconnect' properly somehow?
+  labeller_a:
+  - net.wifi-signal
+  labeller_b:
+  - net.wifi-reconnect
+- id: m058
+  report: my phone keeps switching between wifi and data randomly. the wifi icon flickers. sometimes it says 'connected
+    without internet.' this started after the last phone update i think
+  labeller_a:
+  - none
+  labeller_b:
+  - net.no-internet
+- id: m059
+  report: gmail not loading on my laptop but works on phone. cleared cache, tried different browser, still nothing.
+    other google sites work fine. is this a dns thing or something else?
+  labeller_a:
+  - net.site-check
+  labeller_b:
+  - net.dns-which
+- id: m060
+  report: printer says 'out of ink' but i just replaced the black cartridge last week. the color ones are low but
+    i only print in black. why won't it let me print just black? this hp printer is such a scam
+  labeller_a:
+  - none
+  labeller_b:
+  - net.printer
+- id: m072
+  report: why does my alexa say 'having trouble connecting to the internet' but my phone on the same wifi works
+    perfectly? restarted alexa, restarted router. still does it randomly
+  labeller_a:
+  - none
+  labeller_b:
+  - net.no-internet
+- id: m074
+  report: my ring doorbell keeps going offline. rssi says -65 which the app says is 'good' but it still disconnects.
+    charger is hardwired so battery isn't the issue. is this a wifi congestion thing?
+  labeller_a:
+  - net.wifi-networks
+  labeller_b:
+  - net.wifi-signal
+- id: m077
+  report: my work laptop won't connect to the office vpn from home. says 'authentication failed' but password is
+    right. IT says 'check your home network.' what does that even mean? internet works fine
+  labeller_a:
+  - none
+  labeller_b:
+  - net.vpn-status
+- id: m080
+  report: my smart tv (lg, 2021) loses wifi every time it goes to sleep. have to go into settings and reconnect
+    manually. firmware is updated. lg support was useless. any ideas?
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
+- id: m081
+  report: trying to access my nas from outside home. set up quickconnect on synology but it's super slow. friend
+    said set up wireguard vpn instead but that sounds complicated. is quickconnect supposed to be this slow?
+  labeller_a:
+  - none
+  labeller_b:
+  - net.vpn-status
+- id: m082
+  report: why does my internet cut out every night at like 2am for 5 minutes? checked router logs and it says 'dhcp
+    lease renewed' right when it happens. is my isp doing maintenance? can i stop it?
+  labeller_a:
+  - net.renew-ip
+  labeller_b:
+  - net.no-internet
+- id: m083
+  report: got a new mesh wifi system (eero pro 6e). setup was easy but now my hp printer won't connect. it sees
+    the network, enters password, says 'connected' but then ip address shows 169.254.x.x. what does that mean?
+  labeller_a:
+  - net.renew-ip
+  labeller_b:
+  - net.no-internet
+- id: m084
+  report: my laptop fan spins loud when i'm on wifi but quiet on ethernet. is wifi actually using that much cpu?
+    or is it something else? task manager shows 'system interrupts' high on wifi
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal
+- id: m088
+  report: trying to use airplay to stream from mac to apple tv but it stutters constantly. both on same wifi, both
+    updated. airplay to homepod works fine. is apple tv wifi just bad?
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal

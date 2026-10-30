@@ -1,0 +1,36 @@
+id: net.firewall-status
+title: Is the firewall on
+kind: check
+description: Check whether the ufw firewall service is active.
+patterns:
+- is my firewall on
+- check the firewall
+- is ufw enabled
+- what is my firewall status
+- is my firewall turned on
+- is the firewall running on this computer
+- check firewall status
+- do i have a firewall
+keywords:
+- firewall
+steps:
+- id: fw
+  argv:
+  - systemctl
+  - is-active
+  - ufw
+rules:
+- step: fw
+  contains: inactive
+  say: The firewall (ufw) is off.
+- step: fw
+  missing: active
+  say: No ufw firewall service found on this computer.
+default: 'The firewall (ufw) is on. To see the rules: `sudo ufw status verbose`.'
+core:
+- - firewall
+  - ufw
+  - iptables
+  - nftables
+  - firewalld
+scope: computer

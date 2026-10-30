@@ -1,0 +1,31 @@
+id: net.traceroute
+title: Where the connection slows down
+kind: check
+description: Trace the path to the internet to see where delay or failure starts.
+patterns:
+- run a traceroute
+- where does my connection slow down
+- trace the route to the internet
+- tech support told me to run a traceroute
+- show the route my connection takes
+- where is the slowdown happening
+- trace my connection hops
+- ran tracert and there is a jump at one hop
+- which hop is slow
+- is the slowdown at my isp
+steps:
+- id: trace
+  argv:
+  - tracepath
+  - -n
+  - -m
+  - '12'
+  - 1.1.1.1
+  max_lines: 14
+  timeout: 40
+default: 'Path to the internet (each line is one hop):
+
+  {trace:all}'
+# core: the branch can only win if each group has a word in the message (synonyms count)
+core:
+- ["traceroute", "tracert", "trace", "hop", "hops", "route", "isp", "slows", "where"]

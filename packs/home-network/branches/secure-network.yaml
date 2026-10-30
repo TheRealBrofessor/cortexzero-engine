@@ -1,0 +1,35 @@
+id: net.secure-network
+title: Secure my home network
+kind: answer
+description: Checklist to make a home network safer.
+patterns:
+- how do i make my home network safe
+- secure my wifi
+- is my network secure
+- protect my home network from hackers
+- make our wifi more secure
+- keep hackers off our network
+- is our home network safe
+- protect our wifi from strangers
+- make sure everything is locked down
+- what are the important security settings to check
+- someone got on my wifi how do i lock it down
+keywords:
+- secure
+- safe
+- hackers
+- protect
+text: '1. Router admin password: change it from the default.
+
+  2. Wi-Fi security: WPA3 (or WPA2-AES), strong password.
+
+  3. Turn off WPS and remote management.
+
+  4. Update the router firmware.
+
+  5. Put smart-home gadgets on the guest network.
+
+  6. Check devices: ask "devices on my network".'
+# core: the branch can only win if each group has a word in the message (synonyms count)
+core:
+- ["secure", "safe", "hackers", "hacked", "protect", "security", "locked", "lock", "stealing"]

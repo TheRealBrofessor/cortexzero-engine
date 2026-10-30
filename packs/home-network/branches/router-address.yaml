@@ -1,0 +1,43 @@
+id: net.router-address
+title: Router address
+kind: check
+description: Find the router (default gateway) address to open its settings page.
+patterns:
+- what is my router address
+- router ip
+- how do i log into my router
+- router settings page
+- default gateway address
+- find my router
+- how do i get into my router settings
+- what do i type to open the router page
+- router login page address
+- where is the router admin page
+- address of the wifi box
+steps:
+- id: gw
+  argv:
+  - ip
+  - route
+  - show
+  - default
+  extract: via (\S+)
+  first_only: true
+rules:
+- step: gw
+  empty: true
+  say: 'No router found: this computer isn''t connected to a network.'
+default: Your router is at {gw}. Open http://{gw} in a browser to reach its settings (the login is often on a sticker
+  on the router).
+core:
+- - router
+  - admin
+- - address
+  - ip
+  - login
+  - log
+  - admin
+  - settings
+  - page
+  - find
+scope: router

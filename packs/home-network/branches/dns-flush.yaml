@@ -1,0 +1,43 @@
+id: net.dns-flush
+title: Flush the DNS cache
+kind: action
+risk: 1
+description: Clear the DNS cache so stale website addresses are forgotten.
+patterns:
+- flush dns
+- clear dns cache
+- flush my dns cache
+- reset dns cache
+- support told me to flush dns
+- dns server not responding
+- clear the dns
+- reset dns on this computer
+- websites show old pages after moving
+- site moved but i still get the old one
+steps:
+- id: flush
+  argv:
+  - resolvectl
+  - flush-caches
+rules:
+- step: flush
+  rc_nonzero: true
+  say: 'Couldn''t flush the cache ({flush}). It may need admin rights: run `sudo resolvectl flush-caches`.'
+  failed: true
+default: DNS cache cleared.
+verify:
+  id: lookup
+  argv:
+  - getent
+  - hosts
+  - example.com
+  timeout: 8
+core:
+- - dns
+  - cache
+  - flush
+  - flushing
+  - old
+  - moved
+  - moving
+scope: computer

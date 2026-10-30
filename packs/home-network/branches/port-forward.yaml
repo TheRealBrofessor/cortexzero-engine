@@ -1,0 +1,36 @@
+id: net.port-forward
+title: Set up port forwarding
+kind: answer
+description: How to forward a port on the router.
+patterns:
+- how do i set up port forwarding
+- my game says open a port
+- forward a port for my camera
+- strict nat on my console
+- open a port on the router
+- forward a port for my game
+- port forwarding for my security camera
+- nat type is strict
+- open nat for xbox
+- forward a port for my game server
+- friends cant connect to my game server
+keywords:
+- forward
+- nat
+text: '1. Give the device a fixed address (address reservation) in the router settings.
+
+  2. Find Port Forwarding / Virtual Server.
+
+  3. Add the port(s) the app asks for, pointing to that device''s address.
+
+  4. Save, then test from outside your network.
+
+  Only forward what you need. Each open port is exposed to the internet.'
+core:
+- - port
+  - forward
+  - forwarding
+  - nat
+  - upnp
+  - server
+scope: any

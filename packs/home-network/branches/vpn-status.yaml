@@ -1,0 +1,32 @@
+id: net.vpn-status
+title: Is my VPN connected
+kind: check
+description: Check whether a VPN tunnel is up.
+patterns:
+- is my vpn connected
+- is the vpn on
+- vpn keeps disconnecting
+- check my vpn
+- am i connected to the vpn
+- check if vpn is working
+- is my vpn running
+- vpn connected but no internet
+- vpn says connected but nothing loads
+keywords:
+- vpn
+steps:
+- id: vpn
+  argv:
+  - ip
+  - -br
+  - link
+  extract: ^((?:wg|tun|tap|tailscale|proton|nordlynx|ppp)\S*)\s+(\S+)
+  fmt: '{1} {2}'
+rules:
+- step: vpn
+  empty: true
+  say: No VPN tunnel is up on this computer.
+default: 'VPN tunnel(s): {vpn:all}'
+core:
+- - vpn
+scope: computer

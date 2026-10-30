@@ -1,0 +1,707 @@
+# TRAINING messages (Hermes eng-r3-train): czcasewriter-written, blind-labelled by czlabela + czlabelb; only agreed labels. For router fine-tuning only, never scoring.
+# 167/200 agreed (33 none). Training data: never used for scoring.
+- id: t001
+  report: router needs a restart but unplugging it always breaks something is there a proper way to reboot without
+    messing up the settings or losing my port forwards and dhcp leases
+  expect:
+  - net.router-restart
+- id: t002
+  report: getting that not secure warning on my bank website again chrome says connection isnt private but it worked
+    fine last week no idea whats changed tried different browser same warning appears
+  expect:
+  - net.cert-check
+- id: t003
+  report: forgot my netflix password reset email never arrives checked spam tried different browsers same issue
+    account recovery just spins forever cant get into my account at all now
+  expect:
+  - none
+- id: t004
+  report: trying to log into router settings but dont know the address its not 192.168.1.1
+  expect:
+  - net.router-address
+- id: t005
+  report: router restart proper way unplug wait plug back in
+  expect:
+  - net.router-restart
+- id: t006
+  report: seeing wierd names on network list
+  expect:
+  - net.devices
+- id: t007
+  report: make home wifi more secure
+  expect:
+  - net.secure-network
+- id: t008
+  report: ufw thing says inactive does that mean my firewall is off should i turn it on
+  expect:
+  - net.firewall-status
+- id: t009
+  report: need to flush dns cache i think a site changed servers and my computer still goes to old address keeps
+    loading the wrong page how do i clear the dns cache on linux mint
+  expect:
+  - net.dns-flush
+- id: t010
+  report: whats my local ip address on this network right now
+  expect:
+  - net.my-ip
+- id: t011
+  report: is github down or just me um
+  expect:
+  - net.site-check
+- id: t012
+  report: certificate valid check for shop site before buying anything
+  expect:
+  - net.cert-check
+- id: t014
+  report: port forwarding for game server not workin at all
+  expect:
+  - net.port-forward
+- id: t015
+  report: vpn shows connected but work sites still blocked somehow
+  expect:
+  - net.vpn-status
+- id: t016
+  report: trying to print from my laptop and it cant find the printer anymore worked yesterday printer is on and
+    connected to wifi but computer says offline and cant discover it at all anymore
+  expect:
+  - net.printer
+- id: t017
+  report: router bit set for drilling holes in wood projects
+  expect:
+  - none
+- id: t018
+  report: which dns am i using now
+  expect:
+  - net.dns-which
+- id: t019
+  report: want to make my home network more secure what basics should i check passwords encryption guest network
+    firewall anything else i might be missing simple checklist would help me out
+  expect:
+  - net.secure-network
+- id: t020
+  report: grandma's tablet keeps forgetting the wifi password every week have to reenter it
+  expect:
+  - none
+- id: t021
+  report: check if port 8080 is open
+  expect:
+  - net.port-listening
+- id: t022
+  report: traceroute shows huge jump at hop 3 then times out is that my isp or something further out trying to figure
+    out where the lag starts before i call support team
+  expect:
+  - net.traceroute
+- id: t023
+  report: wifi signal weak in bedroom
+  expect:
+  - net.wifi-signal
+- id: t024
+  report: my desktop says connected but nothing loads not even google tried restarting the browser same thing phone
+    works fine on same wifi so its not the router but something with this computer only happening since this morning
+  expect:
+  - net.no-internet
+- id: t025
+  report: wifi reconnects automatically but then slow for minutes like its negotiating something before full speed
+    comes back happens every time it drops really frustrating during calls
+  expect:
+  - net.wifi-reconnect
+- id: t026
+  report: which dns server am i actually using right now
+  expect:
+  - net.dns-which
+- id: t027
+  report: cant access router settings page default gateway ip doesnt respond ping works but browser hangs tried
+    different browsers same result maybe the web interface is disabled somehow now
+  expect:
+  - net.router-address
+- id: t028
+  report: cant find printer on network anymore
+  expect:
+  - net.printer
+- id: t030
+  report: need a separate wifi for guests so they dont see my smart tv and stuff
+  expect:
+  - net.guest-wifi
+- id: t031
+  report: how open port for game sever
+  expect:
+  - net.port-forward
+- id: t033
+  report: connected to wifi but no internet
+  expect:
+  - net.no-internet
+- id: t034
+  report: laptop says limited connectivity but phone works fine on same wifi whats the deal
+  expect:
+  - net.no-internet
+- id: t035
+  report: forgot my netflix password and the reset email never arrives checked spam folder too
+  expect:
+  - none
+- id: t036
+  report: open port for minecraft servr
+  expect:
+  - net.port-forward
+- id: t038
+  report: need a longer ethernet cable the one from the wall to pc is too short
+  expect:
+  - net.ethernet
+- id: t039
+  report: reconnecting wifi by toggling off on fixes it temporarily
+  expect:
+  - net.wifi-reconnect
+- id: t041
+  report: trying to figure out which program is listening on port 8080 netstat output confusing too many entries
+    dont know what any of them mean need simple way to identify it
+  expect:
+  - net.port-listening
+- id: t042
+  report: signal shows full bars but speeds terrible think im on 2.4 not 5ghz how to check
+  expect:
+  - net.wifi-signal
+- id: t043
+  report: hey so my laptop keeps dropping off the wifi every few minutes and i have to reconnect manually it started
+    yesterday after the big storm knocked out power for a bit and now it just won't stay connected for more than
+    five minutes at a time
+  expect:
+  - net.wifi-reconnect
+- id: t044
+  report: forgot netflix passwrod again ugh
+  expect:
+  - none
+- id: t045
+  report: thinking of buying a mesh system house is 2500 sq ft two stories current router struggles upstairs which
+    brand works best with linux and doesnt need app for setup
+  expect:
+  - none
+- id: t046
+  report: public ip changed need to update remote access settings
+  expect:
+  - net.public-ip
+- id: t047
+  report: packet loss makeing discord robotic and laggy during calls
+  expect:
+  - net.packet-loss
+- id: t048
+  report: getting that not secure warning on my bank site again is it safe to login
+  expect:
+  - net.cert-check
+- id: t049
+  report: zoom keeps freezing during calls
+  expect:
+  - net.packet-loss
+- id: t050
+  report: what is my local ip address
+  expect:
+  - net.my-ip
+- id: t051
+  report: where does connection slow down
+  expect:
+  - net.traceroute
+- id: t052
+  report: router acting weird again should i just unplug it wait and plug back in
+  expect:
+  - net.router-restart
+- id: t053
+  report: want to use google dns instead
+  expect:
+  - net.dns-change
+- id: t054
+  report: router logs show blocked connection attempts from weird ips should i be worried
+  expect:
+  - none
+- id: t055
+  report: wondering whos on our wifi right now seems like more devices than usual
+  expect:
+  - net.devices
+- id: t056
+  report: securing home network checklist for non tech person like me
+  expect:
+  - net.secure-network
+- id: t057
+  report: work laptop can't reach the vpn gateway keeps timing out but personal laptop connects
+  expect:
+  - net.vpn-status
+- id: t058
+  report: checking if port 8080 is open on this machine
+  expect:
+  - net.port-listening
+- id: t059
+  report: printer stoped showing up on network after update today
+  expect:
+  - net.printer
+- id: t060
+  report: signal boost supplement for gym performance and energy boost
+  expect:
+  - none
+- id: t061
+  report: need to open a port on the router for my minecraft server how do i do that
+  expect:
+  - net.port-forward
+- id: t063
+  report: cant find my wireless printer on the network it was working yesterday now gone
+  expect:
+  - net.printer
+- id: t064
+  report: something eating all my bandwidth netflix buffers but speed test normal how do i see whats using it task
+    manager shows nothing unusual maybe background updates or something
+  expect:
+  - net.bandwidth-hog
+- id: t065
+  report: the wifi keeps dropping every few minutes since yesterday um
+  expect:
+  - net.wifi-reconnect
+- id: t066
+  report: forgot apple id password cant reset on iphone um
+  expect:
+  - none
+- id: t067
+  report: which dns am i even using right now my coworker said check but idk how
+  expect:
+  - net.dns-which
+- id: t070
+  report: renewing ip address after router reboot didnt help much
+  expect:
+  - net.renew-ip
+- id: t071
+  report: my laptop shows connected but nothing loads at all
+  expect:
+  - net.no-internet
+- id: t072
+  report: seeing lots of neighbor wifi networks on my phone which channel should i pick
+  expect:
+  - net.wifi-networks
+- id: t073
+  report: bad conection on flight today
+  expect:
+  - none
+- id: t074
+  report: ethernet negotiated speed only 100mbps not gigabit like before
+  expect:
+  - net.ethernet
+- id: t075
+  report: wifi keeps switching between 2.4 and 5 ghz bands causing drops how do i force it to stay on one band instead
+    of jumping around constantly losing connection randomly all day
+  expect:
+  - net.wifi-signal
+- id: t076
+  report: lock down home network better
+  expect:
+  - net.secure-network
+- id: t078
+  report: got a bill for data overage but we barely stream anything how do i dispute this
+  expect:
+  - none
+- id: t079
+  report: whats router login address again
+  expect:
+  - net.router-address
+- id: t080
+  report: network signal shows full bars but nothing loads says connected no internet tried forgetting network and
+    reconnecting same problem on all devices router lights all look normal
+  expect:
+  - net.no-internet
+- id: t081
+  report: want to switch dns to google or cloudflare maybe
+  expect:
+  - net.dns-change
+- id: t083
+  report: ethernet cable light not blinking
+  expect:
+  - net.ethernet
+- id: t085
+  report: vpn connected but no internet access
+  expect:
+  - net.vpn-status
+- id: t086
+  report: see all wifi networks around here
+  expect:
+  - net.wifi-networks
+- id: t087
+  report: running a speed test cause i pay for 500 but feels like 50 whats going on
+  expect:
+  - net.speed
+- id: t088
+  report: setting up port trigger for gaming but the router menu calls it virtual server confused
+  expect:
+  - net.port-forward
+- id: t090
+  report: wondering if my vpn is actually working the little icon shows connected but ip location sites still show
+    my home city instead of the vpn location how do i verify its really tunneling
+  expect:
+  - net.vpn-status
+- id: t091
+  report: get new ip from router please
+  expect:
+  - net.renew-ip
+- id: t092
+  report: setting up a mesh system but the app cant find the main node any ideas
+  expect:
+  - none
+- id: t094
+  report: ethernet cable lite not blinking on back of pc
+  expect:
+  - net.ethernet
+- id: t096
+  report: checking if port 8080 is open on this machine my app says connection refused
+  expect:
+  - net.port-listening
+- id: t098
+  report: getting certificate warning on my bank site today um
+  expect:
+  - net.cert-check
+- id: t099
+  report: connection dies halfway through downloads want to see where it breaks along the way
+  expect:
+  - net.traceroute
+- id: t100
+  report: 5ghz signal barely reaches living room
+  expect:
+  - net.wifi-signal
+- id: t101
+  report: thinking of switching from comcast to fiber anyone know if the install fee is worth it
+  expect:
+  - none
+- id: t105
+  report: smart fridge keeps losing connection to app notifications stop working then randomly come back samsung
+    support says check router settings but they look fine only fridge has issues
+  expect:
+  - none
+- id: t107
+  report: think i need to renew my ip address network feels stuck on an old one
+  expect:
+  - net.renew-ip
+- id: t108
+  report: changing wifi password because neighbor guessed it last week
+  expect:
+  - net.wifi-password-change
+- id: t109
+  report: wifi signal weak in bedroom any quick fixes for that
+  expect:
+  - net.wifi-signal
+- id: t110
+  report: connection issues with boyfriend not talking for days
+  expect:
+  - none
+- id: t111
+  report: internet feels slow test speeed now
+  expect:
+  - net.speed
+- id: t112
+  report: flush dns cache command not working in terminal at all
+  expect:
+  - net.dns-flush
+- id: t113
+  report: my kids xbox keeps lagging in games says high packet loss but everything else seems fine router lights
+    all green not sure what to check next tried wired connection still laggy
+  expect:
+  - net.packet-loss
+- id: t115
+  report: switch to cloudflare dns how
+  expect:
+  - net.dns-change
+- id: t116
+  report: want to switch to google dns or cloudflare heard its faster and more private how do i do that on linux
+    mint without breaking anything need step by step guide please
+  expect:
+  - net.dns-change
+- id: t117
+  report: isp bill went up twenty dollars no notice called support they said promotional rate ended want to negotiate
+    or switch but dont know options available in my area
+  expect:
+  - none
+- id: t118
+  report: network marketing scheme my cousin joined last month
+  expect:
+  - none
+- id: t119
+  report: setting up guest wifi for airbnb guests need them isolated from my main network and printer so they cant
+    see my files or devices how do i configure separate network properly
+  expect:
+  - net.guest-wifi
+- id: t120
+  report: video calls freeze up and pixelate real bad lately
+  expect:
+  - net.packet-loss
+- id: t121
+  report: dns cache might be stale sites showing old pages still
+  expect:
+  - net.dns-flush
+- id: t122
+  report: websites loading old versions cleared browser cache but still showing yesterday's prices
+  expect:
+  - net.dns-flush
+- id: t124
+  report: speed test for download upload before callin isp again
+  expect:
+  - net.speed
+- id: t125
+  report: trying to find this laptops mac address for work vpn allowlist where do i look
+  expect:
+  - net.mac
+- id: t126
+  report: vpn says connected but work sites still blocked am i actually tunneled or not
+  expect:
+  - net.vpn-status
+- id: t127
+  report: my phone says weak security on home wifi wpa2 is that bad should i upgrade
+  expect:
+  - net.secure-network
+- id: t128
+  report: devices list shows unknown thing named generic device help
+  expect:
+  - net.devices
+- id: t129
+  report: change wifi password on router
+  expect:
+  - net.wifi-password-change
+- id: t130
+  report: ufw status says inactive help
+  expect:
+  - net.firewall-status
+- id: t131
+  report: firewall status shows inactive but i thought ufw was enabled by default should i turn it on or is something
+    else protecting me dont want to break existing connections accidentally
+  expect:
+  - net.firewall-status
+- id: t132
+  report: guest network setup for visitors without main password please
+  expect:
+  - net.guest-wifi
+- id: t133
+  report: heard google dns is faster should i switch mine over or leave it alone
+  expect:
+  - net.dns-change
+- id: t134
+  report: need my mac address for work vpn registration asap
+  expect:
+  - net.mac
+- id: t135
+  report: traceroute to see where lag starts for gaming sessions
+  expect:
+  - net.traceroute
+- id: t136
+  report: which mesh system best for two story house wifi
+  expect:
+  - none
+- id: t137
+  report: need my public ip for remote
+  expect:
+  - net.public-ip
+- id: t138
+  report: router acting up how restrt properly
+  expect:
+  - net.router-restart
+- id: t139
+  report: bandwidth hog something eating all data this month help
+  expect:
+  - net.bandwidth-hog
+- id: t140
+  report: where find mac adress on linux
+  expect:
+  - net.mac
+- id: t142
+  report: wifi keeps droping need reconnect
+  expect:
+  - net.wifi-reconnect
+- id: t143
+  report: cant get online after moving router to other room
+  expect:
+  - net.no-internet
+- id: t144
+  report: want to make my home network more secure what basics should i check off
+  expect:
+  - net.secure-network
+- id: t145
+  report: need to change the wifi password roommate moved out and i want it updated
+  expect:
+  - net.wifi-password-change
+- id: t146
+  report: video calls freeze every few minutes audio cuts out then catches up speed test says 200 down so confused
+    why zoom keeps stuttering only happens on this computer not phone
+  expect:
+  - net.packet-loss
+- id: t147
+  report: which router should i buy
+  expect:
+  - none
+- id: t148
+  report: trying to connect my nintendo switch to hotel wifi needs a browser login page
+  expect:
+  - none
+- id: t149
+  report: port wine goes well with cheese board at parties
+  expect:
+  - none
+- id: t151
+  report: ethernet cable plugged in but no blinking lights on the port is the cord bad
+  expect:
+  - net.ethernet
+- id: t152
+  report: firewall in building code inspection
+  expect:
+  - none
+- id: t154
+  report: firewall on my antivirus keeps blocking steam downloads says suspicious network activity but its just
+    steam adding exception doesnt help keeps blocking every time i try to download
+  expect:
+  - none
+- id: t155
+  report: port wine stain on shirt um
+  expect:
+  - none
+- id: t156
+  report: website down or just me need to check quickly
+  expect:
+  - net.site-check
+- id: t157
+  report: signal boosters for car work
+  expect:
+  - none
+- id: t158
+  report: nearby networks list shows tons on channel 6 mine too should i change channel for better speed or does
+    it not matter anymore with modern routers auto selecting channels now
+  expect:
+  - net.wifi-networks
+- id: t160
+  report: need to see all printers known to this system one disappeared after update but still prints from phone
+    cant find it in settings anywhere how do i list configured printers
+  expect:
+  - net.printer
+- id: t161
+  report: bluetooth speaker keeps cutting out when microwave runs is that a wifi interference thing
+  expect:
+  - none
+- id: t162
+  report: nearby networks list showing channels and signal strength please
+  expect:
+  - net.wifi-networks
+- id: t163
+  report: checking certificate on a site that shows expired but date looks current browser still complains not secure
+    warning wont go away even after refresh cleared cache still broken
+  expect:
+  - net.cert-check
+- id: t164
+  report: router bit stuck in drill
+  expect:
+  - none
+- id: t165
+  report: trying to check what dns servers im using because some sites load weird on this computer but fine on phone
+    thinking its a dns problem how do i see current dns on linux
+  expect:
+  - net.dns-which
+- id: t166
+  report: how do i see what devices are on wifi
+  expect:
+  - net.devices
+- id: t167
+  report: um so the wifi just stopped working after the power flickered router lights all green
+  expect:
+  - net.no-internet
+- id: t168
+  report: new smart bulb wont connect to 5g network says only 2.4 supported is that normal
+  expect:
+  - none
+- id: t169
+  report: is netflix down for everyone or just me been stuck on loading screen for ten mins
+  expect:
+  - net.site-check
+- id: t170
+  report: tv channel guide not working
+  expect:
+  - none
+- id: t173
+  report: what's my local ip address the printer setup is asking for it and i'm stuck
+  expect:
+  - net.my-ip
+- id: t174
+  report: nothing loads at all wifi shows connected but browser says no internet help
+  expect:
+  - net.no-internet
+- id: t177
+  report: network marketing scheme again ugh
+  expect:
+  - none
+- id: t178
+  report: seeing lots of unknown devices on my network list some with weird names worried someone is stealing wifi
+    how do i kick them off and block them from coming back again
+  expect:
+  - net.devices
+- id: t179
+  report: need separate wifi for visitors
+  expect:
+  - net.guest-wifi
+- id: t180
+  report: isp bill went up agian
+  expect:
+  - none
+- id: t181
+  report: need to find my mac address for work vpn whitelist they asked for hardware address not sure which one
+    to give them there are several listed for different interfaces here
+  expect:
+  - net.mac
+- id: t182
+  report: firewall thingy says its off should i worry about it
+  expect:
+  - net.firewall-status
+- id: t184
+  report: is firewall turnned on or off
+  expect:
+  - net.firewall-status
+- id: t185
+  report: wifi connected but nothing loads um
+  expect:
+  - net.no-internet
+- id: t186
+  report: my public ip keeps changing breaks my remote access setup is there a way to make it stick or do i need
+    a dynamic dns service to keep it working reliably
+  expect:
+  - net.public-ip
+- id: t188
+  report: need to find the router login page address thing
+  expect:
+  - net.router-address
+- id: t189
+  report: something eating all my bandwidth
+  expect:
+  - net.bandwidth-hog
+- id: t190
+  report: router admin page wont load at 192.168.1.1 browser spins then times out but internet works fine on all
+    devices cant access settings at all tried http and https both fail
+  expect:
+  - net.router-address
+- id: t191
+  report: um why is bluetooth not pairing
+  expect:
+  - none
+- id: t192
+  report: isp bill went up thirty dollars no explanation given
+  expect:
+  - none
+- id: t193
+  report: internet completely dead on this machine other devices fine tried different cable same port works on laptop
+    so its not the cable or port something wrong with this computer only
+  expect:
+  - net.no-internet
+- id: t195
+  report: ethernet connection keeps dropping to 10mbps instead of 1000 cat6 cable new router same issue cable tester
+    shows all green lights but speed negotiates down constantly every time i check
+  expect:
+  - net.ethernet
+- id: t196
+  report: the wifi signal in my bedroom is terrible one bar if that moved the router closer but didnt help much
+    still drops when i walk in there walls must be blocking it
+  expect:
+  - net.wifi-signal
+- id: t197
+  report: whats my public ip address the remote access tool needs it to connect
+  expect:
+  - net.public-ip
+- id: t198
+  report: chrome says connection not private um
+  expect:
+  - net.cert-check
+- id: t200
+  report: wifi band 2.4 or 5 ghz which am i on
+  expect:
+  - net.wifi-signal

@@ -1,0 +1,142 @@
+# Labeller disagreements: owner review, not used for scoring.
+- id: m003
+  report: So the wifi on my phone shows full bars but nothing loads videos buffer forever and web pages just spin
+    i tried restarting the phone and even forgot the network and rejoined but its still slow is it the router or
+    my phone or something else
+  labeller_a:
+  - none
+  labeller_b:
+  - net.router-restart
+- id: m014
+  report: wifi password changed now smart bulbs wont reconnect ever
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-password-change
+- id: m015
+  report: tailscale vs wireguard home
+  labeller_a:
+  - none
+  labeller_b:
+  - net.vpn-status
+- id: m020
+  report: my phone shows full bars but instagram wont refresh
+  labeller_a:
+  - none
+  labeller_b:
+  - net.router-restart
+- id: m026
+  report: wired says unidentified network
+  labeller_a:
+  - net.no-internet
+  labeller_b:
+  - net.ethernet
+- id: m027
+  report: neighbors wifi showing up stronger than mine right now
+  labeller_a:
+  - net.wifi-networks
+  labeller_b:
+  - net.wifi-signal
+- id: m030
+  report: mac address filtering on but new phone wont connect
+  labeller_a:
+  - none
+  labeller_b:
+  - net.mac
+- id: m033
+  report: shop wifi slow when customers all on their phones
+  labeller_a:
+  - none
+  labeller_b:
+  - net.bandwidth-hog
+- id: m038
+  report: um like so the wifi keeps dropping out when i microwave my lunch its so weird like the connection just
+    dies for a minute then comes back is that normal or is my router broken should i move it away from the kitchen
+    or get a new one
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal
+- id: m039
+  report: wifi drops every hour
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal
+- id: m046
+  report: router restart didnt help still no internet at all
+  labeller_a:
+  - net.no-internet
+  labeller_b:
+  - net.router-restart
+- id: m049
+  report: why is netflix buffering every night around eight pm
+  labeller_a:
+  - net.bandwidth-hog
+  labeller_b:
+  - net.speed
+- id: m055
+  report: um yeah my smart tv forgot wifi password again today
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-password-change
+- id: m060
+  report: um hey zoom works fine but teams says poor connection always
+  labeller_a:
+  - none
+  labeller_b:
+  - net.packet-loss
+- id: m065
+  report: hey my wifi keeps dropping when i microwave leftovers
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal
+- id: m070
+  report: My boss asked for my ip address so they can whitelist me for the work vpn but when i google what is my
+    ip i get one number and when i check in settings i get a different one which one do they actually need the public
+    one or the local one
+  labeller_a:
+  - net.my-ip
+  - net.public-ip
+  labeller_b:
+  - net.public-ip
+- id: m072
+  report: gaming lag spikes every time mom starts video call
+  labeller_a:
+  - net.bandwidth-hog
+  labeller_b:
+  - net.packet-loss
+- id: m090
+  report: trying to watch netflix on the smart tv but it keeps buffering even though speed test on my phone shows
+    fast speeds the tv is wired to the router with ethernet so it should be faster right why is it still slow on
+    the tv only
+  labeller_a:
+  - none
+  labeller_b:
+  - net.speed
+- id: m112
+  report: pay 500mbps get 50
+  labeller_a:
+  - net.speed
+  labeller_b:
+  - none
+- id: m113
+  report: dns error on banking site but google works fine
+  labeller_a:
+  - net.site-check
+  labeller_b:
+  - net.dns-flush
+- id: m115
+  report: flush dns cache didnt fix the website problem at all
+  labeller_a:
+  - net.site-check
+  labeller_b:
+  - net.dns-flush
+- id: m118
+  report: um grandma's tablet shows in device list but nothing loads
+  labeller_a:
+  - none
+  labeller_b:
+  - net.no-internet

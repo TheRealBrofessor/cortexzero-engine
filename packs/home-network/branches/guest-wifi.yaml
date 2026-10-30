@@ -1,0 +1,29 @@
+id: net.guest-wifi
+title: Set up guest Wi-Fi
+kind: answer
+description: How to create a separate guest network.
+patterns:
+- how do i make a guest wifi
+- guest network for visitors
+- give the babysitter wifi without our password
+- separate wifi for customers
+- wifi for visitors
+- separate wifi for guests
+- let customers use wifi safely
+- wifi for the babysitter only
+- guest network for friends
+keywords:
+- guest
+- visitors
+- babysitter
+text: '1. Open your router settings (ask "router address").
+
+  2. Look for Guest Network / Guest Wi-Fi and turn it on.
+
+  3. Give it its own name and password, and enable "isolate guests" (or "AP isolation") so guests can''t see your
+  devices.
+
+  4. Share only the guest password.'
+core:
+- - guest
+scope: any

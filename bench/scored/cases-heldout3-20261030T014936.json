@@ -1,0 +1,8358 @@
+{
+ "cases_file": "bench/cases-heldout3.yaml",
+ "branches": 29,
+ "results": {
+  "index-only": {
+   "summary": {
+    "cases": 98,
+    "accuracy": 0.816,
+    "in_scope": "63/75",
+    "none_correct": "17/23",
+    "false_routes": 12,
+    "asked": 0,
+    "model_failed": 0,
+    "model_calls": 0,
+    "latency_mean_s": 0.016,
+    "latency_max_s": 0.446
+   },
+   "rows": [
+    {
+     "id": "m001",
+     "report": "which dns am i using right now anyway today",
+     "expect": [
+      "net.dns-which"
+     ],
+     "got": "net.dns-which",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-which",
+       0.5665
+      ],
+      [
+       "net.dns-change",
+       0.3959
+      ],
+      [
+       "net.dns-flush",
+       0.3538
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m002",
+     "report": "my neural network model training keeps crashing with out of memory errors on the gpu i have 16gb vram should be enough for this batch size is there a way to monitor gpu memory usage in real time like task manager but for the graphics card",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.022
+    },
+    {
+     "id": "m004",
+     "report": "Video calls keep freezing and people say im robotic audio cuts out too ran a ping test and saw packet loss like fifteen percent is that normal or is something wrong with my line how do i figure out where the loss is happening",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9202
+      ],
+      [
+       "net.traceroute",
+       0.4926
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m005",
+     "report": "isp says modem fine but i got no internet still",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8745
+      ],
+      [
+       "net.traceroute",
+       0.3644
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m006",
+     "report": "Websites were loading wrong yesterday showing old versions or not loading at all someone said to flush the dns cache whatever that means i tried ipconfig flushdns in command prompt but im not sure it worked how do i know if it actually cleared the cache",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.9199
+      ],
+      [
+       "net.dns-which",
+       0.5559
+      ],
+      [
+       "net.dns-change",
+       0.4726
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.446
+    },
+    {
+     "id": "m007",
+     "report": "starlink bypass own router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.235
+    },
+    {
+     "id": "m008",
+     "report": "Had to unplug the router yesterday because it was acting weird lights blinking wrong and now the wifi name doesnt even show up on my laptop or tablet i plugged it back in waited five minutes but still nothing should i call the cable company or try something first",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.router-restart",
+       0.8679
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.guest-wifi",
+       0.8186
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m009",
+     "report": "Favorite website wont load says server not found but my friend can access it just fine from their house tried different browsers cleared cache nothing works is the site down for everyone or just me how can i check without asking around",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8686
+      ],
+      [
+       "net.dns-flush",
+       0.6164
+      ],
+      [
+       "net.no-internet",
+       0.4715
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m010",
+     "report": "restart router properly how",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m011",
+     "report": "bluetooth speaker pairs but audio stutters on zoom calls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m012",
+     "report": "Trying to run a server on my computer and need to know if port 8080 is actually open and listening i ran some command and it showed something but i dont understand the output how do i check if the port is open and what program is using it",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.921
+      ],
+      [
+       "net.port-forward",
+       0.6165
+      ],
+      [
+       "net.site-check",
+       0.3368
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m013",
+     "report": "site down for me but coworker says its fine",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8722
+      ],
+      [
+       "net.no-internet",
+       0.4755
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m016",
+     "report": "port 22 ssh open",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8821
+      ],
+      [
+       "net.port-forward",
+       0.6805
+      ],
+      [
+       "net.site-check",
+       0.3362
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m017",
+     "report": "gmail says not private connection",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.835
+      ],
+      [
+       "net.no-internet",
+       0.4391
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m018",
+     "report": "looking at routers on amazon and totally confused by all the specs ax3000 ax5400 wifi 6 wifi 6e tri-band dual-band mesh extender what do i actually need for a two story house with four people streaming and gaming dont want to overspend",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.4213
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2711
+      ]
+     ],
+     "model_raw": "none.tv-and-radio-channels",
+     "seconds": 0.006
+    },
+    {
+     "id": "m019",
+     "report": "router lights blinking weird after big storm last night",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m021",
+     "report": "router address thing 192.168.1.1 gives me nothing ever",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8714
+      ],
+      [
+       "net.renew-ip",
+       0.584
+      ],
+      [
+       "net.my-ip",
+       0.4714
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m022",
+     "report": "ethernet cable cat five but should be cat six maybe",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8727
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m023",
+     "report": "wifi connected nothing loads",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       1.0
+      ],
+      [
+       "net.wifi-signal",
+       0.6497
+      ],
+      [
+       "net.devices",
+       0.4678
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m024",
+     "report": "internet dies completely when i plug in ethernet cable",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.3691
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m025",
+     "report": "My friends come over and ask for the wifi password but i dont want them on my main network with my work computer and smart tv and all that heard you can make a separate one for guests how do i set that up without breaking my own connection",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8268
+      ],
+      [
+       "net.wifi-password-change",
+       0.8186
+      ],
+      [
+       "net.wifi-signal",
+       0.3493
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m028",
+     "report": "port listening check for minecraft server not showing up",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.6707
+      ],
+      [
+       "net.port-forward",
+       0.4466
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.21
+    },
+    {
+     "id": "m029",
+     "report": "phone works laptop no net",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m031",
+     "report": "getting emails saying my cloud storage is almost full but i barely have anything in there checked the drive and its mostly empty maybe its counting shared files from my team how do i see what's actually taking up space and clear it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m032",
+     "report": "want to see what wifi networks are around me and what channels theyre on so i can pick a better one for my router heard channels overlap and cause interference but the list in settings just shows names and signal strength not channel numbers",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.8731
+      ],
+      [
+       "net.router-address",
+       0.6081
+      ],
+      [
+       "net.wifi-signal",
+       0.5033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m034",
+     "report": "Need to log into my router settings to change some things but i dont know the address to type in the browser tried 192.168.1.1 and 192.168.0.1 neither worked how do i find the actual address for my specific router model",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8738
+      ],
+      [
+       "net.renew-ip",
+       0.5734
+      ],
+      [
+       "net.my-ip",
+       0.4685
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m035",
+     "report": "my internet been acting up since i installed that new smart thermostat it connects to wifi but then other devices get kicked off or slow down could it be using too much bandwidth how do i check what each device is using on the network",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.devices",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.devices",
+       0.8693
+      ],
+      [
+       "net.bandwidth-hog",
+       0.8214
+      ],
+      [
+       "net.no-internet",
+       0.8196
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m036",
+     "report": "isp dns slow can change",
+     "expect": [
+      "net.dns-change"
+     ],
+     "got": "net.dns-change",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-change",
+       0.8317
+      ],
+      [
+       "net.dns-which",
+       0.5711
+      ],
+      [
+       "net.speed",
+       0.4961
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m037",
+     "report": "dns flush didnt fix site",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8311
+      ],
+      [
+       "net.dns-which",
+       0.5648
+      ],
+      [
+       "net.site-check",
+       0.4981
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.038
+    },
+    {
+     "id": "m040",
+     "report": "my computer takes forever to find websites after i wake it from sleep like ten seconds before anything loads someone said its the dns cache being stale how do i clear it properly on windows i tried the command prompt thing but not sure it worked",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8708
+      ],
+      [
+       "net.dns-which",
+       0.5573
+      ],
+      [
+       "net.speed",
+       0.4844
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m041",
+     "report": "order pizza me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m042",
+     "report": "wifi7 clients exist",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2566
+      ]
+     ],
+     "model_raw": "none.buying-and-installing-hardware",
+     "seconds": 0.001
+    },
+    {
+     "id": "m043",
+     "report": "trying to use my phone as a hotspot for my laptop but the laptop says no internet even though phone shows connected and i can browse on the phone fine hotspot worked last month now it doesnt what setting could have changed to break it",
+     "expect": [
+      "none"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8706
+      ],
+      [
+       "net.devices",
+       0.3111
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m044",
+     "report": "vpn connected but work server still says offline now",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.vpn-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.3388
+      ],
+      [
+       "net.devices",
+       0.3178
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m045",
+     "report": "Neighbor asked for our wifi password last week and now i think theyre still using it my internet seems slower in the evenings how do i change the password so they cant get on anymore but my own devices stay connected without me re-entering it on everything",
+     "expect": [
+      "net.wifi-password-change"
+     ],
+     "got": "net.wifi-password-change",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.wifi-password-change",
+       0.9179
+      ],
+      [
+       "net.devices",
+       0.822
+      ],
+      [
+       "net.wifi-signal",
+       0.5879
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m047",
+     "report": "kids 4k streaming hogs bandwidth",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.7431
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m048",
+     "report": "bluetooth headphones keep cutting out during zoom meetings now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.packet-loss",
+       0.3272
+      ]
+     ],
+     "model_raw": "none.bluetooth-and-wearables",
+     "seconds": 0.001
+    },
+    {
+     "id": "m050",
+     "report": "why fi signal shows full bars in the living room but in my bedroom its like two bars and everything loads slow there i heard about two point four and five gigahertz bands but dont know which one im on or how to switch to the better one for my room",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.7419
+      ],
+      [
+       "net.speed",
+       0.6246
+      ],
+      [
+       "net.no-internet",
+       0.5245
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m051",
+     "report": "port forward set up but friends still cant join",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.6287
+      ],
+      [
+       "net.port-listening",
+       0.3438
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m052",
+     "report": "Internet feels slower than usual today download takes ages and upload is barely there i pay for fast service but speed tests show way less than what im supposed to get been like this for three days now any idea why its so bad suddenly",
+     "expect": [
+      "net.speed"
+     ],
+     "got": "net.speed",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.speed",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.8189
+      ],
+      [
+       "net.packet-loss",
+       0.4369
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m053",
+     "report": "secure network checklist thing where do i even start",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": "net.secure-network",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.secure-network",
+       0.8256
+      ],
+      [
+       "net.cert-check",
+       0.2763
+      ],
+      [
+       "net.traceroute",
+       0.2047
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m054",
+     "report": "um yeah mobile data works fine but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.5653
+      ],
+      [
+       "net.wifi-signal",
+       0.2487
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m056",
+     "report": "xbox live nat type strict how do i fix this",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.9248
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m057",
+     "report": "program port 3000",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8667
+      ],
+      [
+       "net.port-forward",
+       0.4389
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m058",
+     "report": "slow after hop 3",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       1.0
+      ],
+      [
+       "net.speed",
+       0.5078
+      ],
+      [
+       "net.packet-loss",
+       0.2432
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m059",
+     "report": "certificate warning on every site since tuesday update happened",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.9214
+      ],
+      [
+       "net.site-check",
+       0.4945
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m061",
+     "report": "joined this network marketing company and they want me to build my downline but i dont know anyone who wants to buy these supplements is there a way to find leads online without spamming my friends on facebook feels scammy but they said its legit",
+     "expect": [
+      "none"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8208
+      ],
+      [
+       "net.no-internet",
+       0.3651
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.068
+    },
+    {
+     "id": "m062",
+     "report": "Got a new router and now my computer says no internet even though wifi connects fine phone works on the same network but laptop doesnt i think it might need a fresh ip address how do i force it to get a new one from the router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.8696
+      ],
+      [
+       "net.my-ip",
+       0.8215
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m063",
+     "report": "firewall popped up warning about suspicious connection attempt just",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8211
+      ],
+      [
+       "net.cert-check",
+       0.3447
+      ],
+      [
+       "net.no-internet",
+       0.2103
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m064",
+     "report": "ring doorbell offline but wifi works for everything else",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2496
+      ],
+      [
+       "net.no-internet",
+       0.2194
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.001
+    },
+    {
+     "id": "m066",
+     "report": "getting that not secure warning in chrome when i go to my bank website the lock icon has a line through it says certificate not valid or something is it safe to proceed or is someone intercepting my connection how do i check if the certificate is actually good",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.cert-check",
+       0.8714
+      ],
+      [
+       "net.site-check",
+       0.8186
+      ],
+      [
+       "net.secure-network",
+       0.6122
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m067",
+     "report": "trying to set up alexa on the new echo dot but it wont connect to wifi keeps saying unable to connect try again the light spins orange then red my phone connects fine to the same network is the echo defective or am i doing something wrong",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.343
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.004
+    },
+    {
+     "id": "m068",
+     "report": "how do i make guest network for airbnb guests",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8793
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.064
+    },
+    {
+     "id": "m069",
+     "report": "i keep seeing pop ups about vpn not connected on my work laptop but i dont even use a vpn personally the company set it up and now it says disconnected how do i check if the vpn tunnel is actually up or if its just a false alarm",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.vpn-status",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8702
+      ],
+      [
+       "net.guest-wifi",
+       0.8203
+      ],
+      [
+       "net.devices",
+       0.3525
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m071",
+     "report": "netflix account hacked someone watching from another country now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1988
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.002
+    },
+    {
+     "id": "m073",
+     "report": "cant find printer network",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8521
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m074",
+     "report": "um why does my hotspot work but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2517
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.001
+    },
+    {
+     "id": "m075",
+     "report": "alexa stops responding random",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m076",
+     "report": "packet loss 15 game",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9351
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m077",
+     "report": "which channel least crowded",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m078",
+     "report": "Saw a bunch of devices on the network list that i dont recognize some weird names like linux-box and pixel-7 could be my roommates stuff or maybe someone else is using my wifi how do i figure out which ones are mine and kick off the ones that arent",
+     "expect": [
+      "net.devices"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8716
+      ],
+      [
+       "net.secure-network",
+       0.4397
+      ],
+      [
+       "net.wifi-reconnect",
+       0.405
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m079",
+     "report": "renew ip address didnt get new one from router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8792
+      ],
+      [
+       "net.my-ip",
+       0.8238
+      ],
+      [
+       "net.router-address",
+       0.823
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.041
+    },
+    {
+     "id": "m080",
+     "report": "best mesh thick walls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m081",
+     "report": "firewall even on",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m082",
+     "report": "why 2.4ghz not 5ghz",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.3838
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m083",
+     "report": "dhcp renewal failed",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "net.renew-ip",
+       0.4079
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m084",
+     "report": "my instagram account got hacked yesterday someone changed the email and password i cant get back in facebook support is useless been three days no reply is there a phone number i can call or someone who can actually help recover it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1905
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.004
+    },
+    {
+     "id": "m085",
+     "report": "mac filter laptop address",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.mac",
+       0.84
+      ],
+      [
+       "net.my-ip",
+       0.4892
+      ],
+      [
+       "net.renew-ip",
+       0.3216
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m086",
+     "report": "Need to find the mac address of my laptop for work they want it to register my device on their network i looked in settings but there are like five different addresses listed which one is the actual mac address they need",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.mac",
+       0.92
+      ],
+      [
+       "net.my-ip",
+       0.8222
+      ],
+      [
+       "net.devices",
+       0.8206
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m087",
+     "report": "Plugged in the ethernet cable but the little lights on the port arent blinking like they used to wifi works fine but wired doesnt i swapped cables tried different ports on the router nothing changed is the port on my computer broken or is it a setting",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8715
+      ],
+      [
+       "net.port-forward",
+       0.5837
+      ],
+      [
+       "net.port-listening",
+       0.5297
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m088",
+     "report": "ethernet port light dead but cable works on other pc",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8273
+      ],
+      [
+       "net.no-internet",
+       0.4595
+      ],
+      [
+       "net.port-listening",
+       0.4165
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m089",
+     "report": "Setting up remote access to my home computer and the software needs my public ip address but it keeps changing every few days is there a way to make it stay the same or do i need to pay extra for a static ip from my provider",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": "net.public-ip",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.public-ip",
+       0.8689
+      ],
+      [
+       "net.my-ip",
+       0.8193
+      ],
+      [
+       "net.renew-ip",
+       0.4298
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m091",
+     "report": "bandwith hog what even is that my roommate downloads constantly",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.8285
+      ],
+      [
+       "net.wifi-signal",
+       0.24
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m092",
+     "report": "bank site cert warning safe",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.8777
+      ],
+      [
+       "net.site-check",
+       0.4974
+      ],
+      [
+       "net.secure-network",
+       0.4096
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.022
+    },
+    {
+     "id": "m093",
+     "report": "my linkedin network keeps suggesting people i dont know from random companies never worked with them is there a way to stop these suggestions or make my profile private so strangers cant find me through my connections anymore",
+     "expect": [
+      "none"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8183
+      ],
+      [
+       "net.cert-check",
+       0.3005
+      ],
+      [
+       "net.secure-network",
+       0.2969
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.223
+    },
+    {
+     "id": "m094",
+     "report": "vpn connected no internet",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.vpn-status",
+       0.8791
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m095",
+     "report": "ethernet cold air return",
+     "expect": [
+      "none"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.5794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m096",
+     "report": "Want to host a game server for my friends and they cant connect i think i need to forward a port on the router but the settings page is confusing with all these numbers and protocols tcp udp both which one do i pick and what numbers go where",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.router-address",
+       0.9182
+      ],
+      [
+       "net.port-forward",
+       0.8696
+      ],
+      [
+       "net.site-check",
+       0.5312
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m097",
+     "report": "traced route to game server shows huge jump at hop three",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       0.7602
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m098",
+     "report": "My laptop keeps losing the internet every hour or so it started last week after that storm we had the lights flickered and ever since the connection drops and comes back on its own i have to keep reconnecting to get my work done what could be wrong with it",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.no-internet",
+       0.5003
+      ],
+      [
+       "net.packet-loss",
+       0.2899
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m099",
+     "report": "ethernet connected no internet",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.ethernet",
+       0.6137
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m100",
+     "report": "should i buy mesh system or just better router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m101",
+     "report": "Want to make my home network more secure heard about changing default passwords and disabling wps and something about guest networks but there are so many settings and i dont want to lock myself out what are the most important things to do first",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": "net.secure-network",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.secure-network",
+       0.873
+      ],
+      [
+       "net.guest-wifi",
+       0.8201
+      ],
+      [
+       "net.wifi-password-change",
+       0.819
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m102",
+     "report": "amazon echo wont connect to new wifi after move",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2498
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.001
+    },
+    {
+     "id": "m103",
+     "report": "wifi networks scan shows nothing but phone sees five",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.5192
+      ],
+      [
+       "net.no-internet",
+       0.3822
+      ],
+      [
+       "net.wifi-signal",
+       0.2477
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m104",
+     "report": "um my internet works but discord voice keeps cutting out",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.packet-loss",
+       0.6017
+      ],
+      [
+       "net.wifi-reconnect",
+       0.5117
+      ],
+      [
+       "net.no-internet",
+       0.3726
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m105",
+     "report": "cant reach router login page from my computer today",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.7435
+      ],
+      [
+       "net.site-check",
+       0.4984
+      ],
+      [
+       "net.no-internet",
+       0.1365
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m106",
+     "report": "google nest thermostat lost connection after power outage yesterday",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.site-check",
+       0.212
+      ],
+      [
+       "net.no-internet",
+       0.2085
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.002
+    },
+    {
+     "id": "m107",
+     "report": "smart fridge keeps losing wifi connection every few days have to go into settings and reconnect manually the fridge is right next to the router literally five feet away signal should be perfect why does it keep dropping only the fridge not other stuff",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8205
+      ],
+      [
+       "net.router-address",
+       0.6071
+      ],
+      [
+       "net.no-internet",
+       0.5215
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m108",
+     "report": "bought a mesh wifi system three pack but the app says weak connection between nodes even though theyre only twenty feet apart walls are plaster not concrete should i return it and get a different brand or try moving them around first",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.8175
+      ],
+      [
+       "net.no-internet",
+       0.4043
+      ],
+      [
+       "net.wifi-networks",
+       0.3554
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m109",
+     "report": "packet loss test shows twenty percent to google dns",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.packet-loss",
+       0.8718
+      ],
+      [
+       "net.dns-change",
+       0.8705
+      ],
+      [
+       "net.dns-which",
+       0.5601
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m110",
+     "report": "there router keeps needing restarts like every other day i unplug it wait thirty seconds plug it back in and it works for a while but then starts acting up again is there a proper way to restart it so it stays stable longer or is it just dying",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       0.8183
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m111",
+     "report": "public ip changed and now remote access broken completely",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": "net.public-ip",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.public-ip",
+       0.8712
+      ],
+      [
+       "net.my-ip",
+       0.823
+      ],
+      [
+       "net.no-internet",
+       0.4735
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m114",
+     "report": "printer worked yesterday now laptop cant find it anymore",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8244
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m116",
+     "report": "Trying to print from my laptop and it says printer offline but the printer is on and connected to wifi i can print from my phone just fine restarted both nothing works why does my computer not see it when my phone does just fine",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.printer",
+       0.8701
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8204
+      ],
+      [
+       "net.wifi-signal",
+       0.5882
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m117",
+     "report": "Keep getting warnings about firewall being off in the security center but i thought it was on by default how do i check if its actually running and turn it on if its not i dont want to mess up my connection by enabling the wrong thing",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8216
+      ],
+      [
+       "net.wifi-reconnect",
+       0.7113
+      ],
+      [
+       "net.secure-network",
+       0.3229
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m119",
+     "report": "speed test says fast but downloads crawl anyway today",
+     "expect": [
+      "net.speed"
+     ],
+     "got": "net.speed",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.speed",
+       0.7498
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2476
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m120",
+     "report": "signal shows strong but video calls keep freezing up",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9231
+      ],
+      [
+       "net.wifi-signal",
+       0.6102
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    }
+   ]
+  },
+  "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M": {
+   "summary": {
+    "cases": 98,
+    "accuracy": 0.816,
+    "in_scope": "63/75",
+    "none_correct": "17/23",
+    "false_routes": 12,
+    "asked": 3,
+    "model_failed": 0,
+    "model_calls": 6,
+    "latency_mean_s": 0.118,
+    "latency_max_s": 0.776
+   },
+   "rows": [
+    {
+     "id": "m001",
+     "report": "which dns am i using right now anyway today",
+     "expect": [
+      "net.dns-which"
+     ],
+     "got": "net.dns-which",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-which",
+       0.5665
+      ],
+      [
+       "net.dns-change",
+       0.3959
+      ],
+      [
+       "net.dns-flush",
+       0.3538
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m002",
+     "report": "my neural network model training keeps crashing with out of memory errors on the gpu i have 16gb vram should be enough for this batch size is there a way to monitor gpu memory usage in real time like task manager but for the graphics card",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.027
+    },
+    {
+     "id": "m004",
+     "report": "Video calls keep freezing and people say im robotic audio cuts out too ran a ping test and saw packet loss like fifteen percent is that normal or is something wrong with my line how do i figure out where the loss is happening",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9202
+      ],
+      [
+       "net.traceroute",
+       0.4926
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m005",
+     "report": "isp says modem fine but i got no internet still",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8745
+      ],
+      [
+       "net.traceroute",
+       0.3644
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m006",
+     "report": "Websites were loading wrong yesterday showing old versions or not loading at all someone said to flush the dns cache whatever that means i tried ipconfig flushdns in command prompt but im not sure it worked how do i know if it actually cleared the cache",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.9199
+      ],
+      [
+       "net.dns-which",
+       0.5559
+      ],
+      [
+       "net.dns-change",
+       0.4726
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.433
+    },
+    {
+     "id": "m007",
+     "report": "starlink bypass own router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.23
+    },
+    {
+     "id": "m008",
+     "report": "Had to unplug the router yesterday because it was acting weird lights blinking wrong and now the wifi name doesnt even show up on my laptop or tablet i plugged it back in waited five minutes but still nothing should i call the cable company or try something first",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.router-restart",
+       0.8679
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.guest-wifi",
+       0.8186
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.408
+    },
+    {
+     "id": "m009",
+     "report": "Favorite website wont load says server not found but my friend can access it just fine from their house tried different browsers cleared cache nothing works is the site down for everyone or just me how can i check without asking around",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8686
+      ],
+      [
+       "net.dns-flush",
+       0.6164
+      ],
+      [
+       "net.no-internet",
+       0.4715
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.008
+    },
+    {
+     "id": "m010",
+     "report": "restart router properly how",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m011",
+     "report": "bluetooth speaker pairs but audio stutters on zoom calls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m012",
+     "report": "Trying to run a server on my computer and need to know if port 8080 is actually open and listening i ran some command and it showed something but i dont understand the output how do i check if the port is open and what program is using it",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.921
+      ],
+      [
+       "net.port-forward",
+       0.6165
+      ],
+      [
+       "net.site-check",
+       0.3368
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m013",
+     "report": "site down for me but coworker says its fine",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8722
+      ],
+      [
+       "net.no-internet",
+       0.4755
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m016",
+     "report": "port 22 ssh open",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8821
+      ],
+      [
+       "net.port-forward",
+       0.6805
+      ],
+      [
+       "net.site-check",
+       0.3362
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m017",
+     "report": "gmail says not private connection",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.835
+      ],
+      [
+       "net.no-internet",
+       0.4391
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m018",
+     "report": "looking at routers on amazon and totally confused by all the specs ax3000 ax5400 wifi 6 wifi 6e tri-band dual-band mesh extender what do i actually need for a two story house with four people streaming and gaming dont want to overspend",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.4213
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2711
+      ]
+     ],
+     "model_raw": "none.tv-and-radio-channels",
+     "seconds": 0.005
+    },
+    {
+     "id": "m019",
+     "report": "router lights blinking weird after big storm last night",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m021",
+     "report": "router address thing 192.168.1.1 gives me nothing ever",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8714
+      ],
+      [
+       "net.renew-ip",
+       0.584
+      ],
+      [
+       "net.my-ip",
+       0.4714
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m022",
+     "report": "ethernet cable cat five but should be cat six maybe",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8727
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m023",
+     "report": "wifi connected nothing loads",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       1.0
+      ],
+      [
+       "net.wifi-signal",
+       0.6497
+      ],
+      [
+       "net.devices",
+       0.4678
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m024",
+     "report": "internet dies completely when i plug in ethernet cable",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.3691
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m025",
+     "report": "My friends come over and ask for the wifi password but i dont want them on my main network with my work computer and smart tv and all that heard you can make a separate one for guests how do i set that up without breaking my own connection",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8268
+      ],
+      [
+       "net.wifi-password-change",
+       0.8186
+      ],
+      [
+       "net.wifi-signal",
+       0.3493
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.411
+    },
+    {
+     "id": "m028",
+     "report": "port listening check for minecraft server not showing up",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.6707
+      ],
+      [
+       "net.port-forward",
+       0.4466
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.244
+    },
+    {
+     "id": "m029",
+     "report": "phone works laptop no net",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m031",
+     "report": "getting emails saying my cloud storage is almost full but i barely have anything in there checked the drive and its mostly empty maybe its counting shared files from my team how do i see what's actually taking up space and clear it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m032",
+     "report": "want to see what wifi networks are around me and what channels theyre on so i can pick a better one for my router heard channels overlap and cause interference but the list in settings just shows names and signal strength not channel numbers",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.8731
+      ],
+      [
+       "net.router-address",
+       0.6081
+      ],
+      [
+       "net.wifi-signal",
+       0.5033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m034",
+     "report": "Need to log into my router settings to change some things but i dont know the address to type in the browser tried 192.168.1.1 and 192.168.0.1 neither worked how do i find the actual address for my specific router model",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8738
+      ],
+      [
+       "net.renew-ip",
+       0.5734
+      ],
+      [
+       "net.my-ip",
+       0.4685
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m035",
+     "report": "my internet been acting up since i installed that new smart thermostat it connects to wifi but then other devices get kicked off or slow down could it be using too much bandwidth how do i check what each device is using on the network",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.devices",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.devices",
+       0.8693
+      ],
+      [
+       "net.bandwidth-hog",
+       0.8214
+      ],
+      [
+       "net.no-internet",
+       0.8196
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.425
+    },
+    {
+     "id": "m036",
+     "report": "isp dns slow can change",
+     "expect": [
+      "net.dns-change"
+     ],
+     "got": "net.dns-change",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-change",
+       0.8317
+      ],
+      [
+       "net.dns-which",
+       0.5711
+      ],
+      [
+       "net.speed",
+       0.4961
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m037",
+     "report": "dns flush didnt fix site",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8311
+      ],
+      [
+       "net.dns-which",
+       0.5648
+      ],
+      [
+       "net.site-check",
+       0.4981
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.047
+    },
+    {
+     "id": "m040",
+     "report": "my computer takes forever to find websites after i wake it from sleep like ten seconds before anything loads someone said its the dns cache being stale how do i clear it properly on windows i tried the command prompt thing but not sure it worked",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8708
+      ],
+      [
+       "net.dns-which",
+       0.5573
+      ],
+      [
+       "net.speed",
+       0.4844
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m041",
+     "report": "order pizza me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m042",
+     "report": "wifi7 clients exist",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2566
+      ]
+     ],
+     "model_raw": "none.buying-and-installing-hardware",
+     "seconds": 0.001
+    },
+    {
+     "id": "m043",
+     "report": "trying to use my phone as a hotspot for my laptop but the laptop says no internet even though phone shows connected and i can browse on the phone fine hotspot worked last month now it doesnt what setting could have changed to break it",
+     "expect": [
+      "none"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8706
+      ],
+      [
+       "net.devices",
+       0.3111
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m044",
+     "report": "vpn connected but work server still says offline now",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.vpn-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.3388
+      ],
+      [
+       "net.devices",
+       0.3178
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m045",
+     "report": "Neighbor asked for our wifi password last week and now i think theyre still using it my internet seems slower in the evenings how do i change the password so they cant get on anymore but my own devices stay connected without me re-entering it on everything",
+     "expect": [
+      "net.wifi-password-change"
+     ],
+     "got": "net.wifi-password-change",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.wifi-password-change",
+       0.9179
+      ],
+      [
+       "net.devices",
+       0.822
+      ],
+      [
+       "net.wifi-signal",
+       0.5879
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.456
+    },
+    {
+     "id": "m047",
+     "report": "kids 4k streaming hogs bandwidth",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.7431
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m048",
+     "report": "bluetooth headphones keep cutting out during zoom meetings now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.packet-loss",
+       0.3272
+      ]
+     ],
+     "model_raw": "none.bluetooth-and-wearables",
+     "seconds": 0.003
+    },
+    {
+     "id": "m050",
+     "report": "why fi signal shows full bars in the living room but in my bedroom its like two bars and everything loads slow there i heard about two point four and five gigahertz bands but dont know which one im on or how to switch to the better one for my room",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.7419
+      ],
+      [
+       "net.speed",
+       0.6246
+      ],
+      [
+       "net.no-internet",
+       0.5245
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.446
+    },
+    {
+     "id": "m051",
+     "report": "port forward set up but friends still cant join",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.6287
+      ],
+      [
+       "net.port-listening",
+       0.3438
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m052",
+     "report": "Internet feels slower than usual today download takes ages and upload is barely there i pay for fast service but speed tests show way less than what im supposed to get been like this for three days now any idea why its so bad suddenly",
+     "expect": [
+      "net.speed"
+     ],
+     "got": "net.speed",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.speed",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.8189
+      ],
+      [
+       "net.packet-loss",
+       0.4369
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.475
+    },
+    {
+     "id": "m053",
+     "report": "secure network checklist thing where do i even start",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": "net.secure-network",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.secure-network",
+       0.8256
+      ],
+      [
+       "net.cert-check",
+       0.2763
+      ],
+      [
+       "net.traceroute",
+       0.2047
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m054",
+     "report": "um yeah mobile data works fine but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.5653
+      ],
+      [
+       "net.wifi-signal",
+       0.2487
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m056",
+     "report": "xbox live nat type strict how do i fix this",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.9248
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m057",
+     "report": "program port 3000",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8667
+      ],
+      [
+       "net.port-forward",
+       0.4389
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m058",
+     "report": "slow after hop 3",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       1.0
+      ],
+      [
+       "net.speed",
+       0.5078
+      ],
+      [
+       "net.packet-loss",
+       0.2432
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m059",
+     "report": "certificate warning on every site since tuesday update happened",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.9214
+      ],
+      [
+       "net.site-check",
+       0.4945
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m061",
+     "report": "joined this network marketing company and they want me to build my downline but i dont know anyone who wants to buy these supplements is there a way to find leads online without spamming my friends on facebook feels scammy but they said its legit",
+     "expect": [
+      "none"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8208
+      ],
+      [
+       "net.no-internet",
+       0.3651
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.073
+    },
+    {
+     "id": "m062",
+     "report": "Got a new router and now my computer says no internet even though wifi connects fine phone works on the same network but laptop doesnt i think it might need a fresh ip address how do i force it to get a new one from the router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.8696
+      ],
+      [
+       "net.my-ip",
+       0.8215
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.421
+    },
+    {
+     "id": "m063",
+     "report": "firewall popped up warning about suspicious connection attempt just",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8211
+      ],
+      [
+       "net.cert-check",
+       0.3447
+      ],
+      [
+       "net.no-internet",
+       0.2103
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m064",
+     "report": "ring doorbell offline but wifi works for everything else",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2496
+      ],
+      [
+       "net.no-internet",
+       0.2194
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.003
+    },
+    {
+     "id": "m066",
+     "report": "getting that not secure warning in chrome when i go to my bank website the lock icon has a line through it says certificate not valid or something is it safe to proceed or is someone intercepting my connection how do i check if the certificate is actually good",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.cert-check",
+       0.8714
+      ],
+      [
+       "net.site-check",
+       0.8186
+      ],
+      [
+       "net.secure-network",
+       0.6122
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.425
+    },
+    {
+     "id": "m067",
+     "report": "trying to set up alexa on the new echo dot but it wont connect to wifi keeps saying unable to connect try again the light spins orange then red my phone connects fine to the same network is the echo defective or am i doing something wrong",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.343
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.008
+    },
+    {
+     "id": "m068",
+     "report": "how do i make guest network for airbnb guests",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8793
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.072
+    },
+    {
+     "id": "m069",
+     "report": "i keep seeing pop ups about vpn not connected on my work laptop but i dont even use a vpn personally the company set it up and now it says disconnected how do i check if the vpn tunnel is actually up or if its just a false alarm",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.vpn-status",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8702
+      ],
+      [
+       "net.guest-wifi",
+       0.8203
+      ],
+      [
+       "net.devices",
+       0.3525
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.vpn-status\"}",
+     "seconds": 0.456
+    },
+    {
+     "id": "m071",
+     "report": "netflix account hacked someone watching from another country now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1988
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.004
+    },
+    {
+     "id": "m073",
+     "report": "cant find printer network",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8521
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m074",
+     "report": "um why does my hotspot work but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2517
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.003
+    },
+    {
+     "id": "m075",
+     "report": "alexa stops responding random",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m076",
+     "report": "packet loss 15 game",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9351
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m077",
+     "report": "which channel least crowded",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m078",
+     "report": "Saw a bunch of devices on the network list that i dont recognize some weird names like linux-box and pixel-7 could be my roommates stuff or maybe someone else is using my wifi how do i figure out which ones are mine and kick off the ones that arent",
+     "expect": [
+      "net.devices"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8716
+      ],
+      [
+       "net.secure-network",
+       0.4397
+      ],
+      [
+       "net.wifi-reconnect",
+       0.405
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.006
+    },
+    {
+     "id": "m079",
+     "report": "renew ip address didnt get new one from router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8792
+      ],
+      [
+       "net.my-ip",
+       0.8238
+      ],
+      [
+       "net.router-address",
+       0.823
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.renew-ip\"}",
+     "seconds": 0.776
+    },
+    {
+     "id": "m080",
+     "report": "best mesh thick walls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m081",
+     "report": "firewall even on",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m082",
+     "report": "why 2.4ghz not 5ghz",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.3838
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.325
+    },
+    {
+     "id": "m083",
+     "report": "dhcp renewal failed",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "net.renew-ip",
+       0.4079
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.344
+    },
+    {
+     "id": "m084",
+     "report": "my instagram account got hacked yesterday someone changed the email and password i cant get back in facebook support is useless been three days no reply is there a phone number i can call or someone who can actually help recover it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1905
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.011
+    },
+    {
+     "id": "m085",
+     "report": "mac filter laptop address",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.mac",
+       0.84
+      ],
+      [
+       "net.my-ip",
+       0.4892
+      ],
+      [
+       "net.renew-ip",
+       0.3216
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m086",
+     "report": "Need to find the mac address of my laptop for work they want it to register my device on their network i looked in settings but there are like five different addresses listed which one is the actual mac address they need",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.mac",
+       0.92
+      ],
+      [
+       "net.my-ip",
+       0.8222
+      ],
+      [
+       "net.devices",
+       0.8206
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.409
+    },
+    {
+     "id": "m087",
+     "report": "Plugged in the ethernet cable but the little lights on the port arent blinking like they used to wifi works fine but wired doesnt i swapped cables tried different ports on the router nothing changed is the port on my computer broken or is it a setting",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8715
+      ],
+      [
+       "net.port-forward",
+       0.5837
+      ],
+      [
+       "net.port-listening",
+       0.5297
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.01
+    },
+    {
+     "id": "m088",
+     "report": "ethernet port light dead but cable works on other pc",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8273
+      ],
+      [
+       "net.no-internet",
+       0.4595
+      ],
+      [
+       "net.port-listening",
+       0.4165
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m089",
+     "report": "Setting up remote access to my home computer and the software needs my public ip address but it keeps changing every few days is there a way to make it stay the same or do i need to pay extra for a static ip from my provider",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": "net.public-ip",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.public-ip",
+       0.8689
+      ],
+      [
+       "net.my-ip",
+       0.8193
+      ],
+      [
+       "net.renew-ip",
+       0.4298
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.42
+    },
+    {
+     "id": "m091",
+     "report": "bandwith hog what even is that my roommate downloads constantly",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.8285
+      ],
+      [
+       "net.wifi-signal",
+       0.24
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m092",
+     "report": "bank site cert warning safe",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.8777
+      ],
+      [
+       "net.site-check",
+       0.4974
+      ],
+      [
+       "net.secure-network",
+       0.4096
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.023
+    },
+    {
+     "id": "m093",
+     "report": "my linkedin network keeps suggesting people i dont know from random companies never worked with them is there a way to stop these suggestions or make my profile private so strangers cant find me through my connections anymore",
+     "expect": [
+      "none"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8183
+      ],
+      [
+       "net.cert-check",
+       0.3005
+      ],
+      [
+       "net.secure-network",
+       0.2969
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.255
+    },
+    {
+     "id": "m094",
+     "report": "vpn connected no internet",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.vpn-status",
+       0.8791
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.399
+    },
+    {
+     "id": "m095",
+     "report": "ethernet cold air return",
+     "expect": [
+      "none"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.5794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m096",
+     "report": "Want to host a game server for my friends and they cant connect i think i need to forward a port on the router but the settings page is confusing with all these numbers and protocols tcp udp both which one do i pick and what numbers go where",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.router-address",
+       0.9182
+      ],
+      [
+       "net.port-forward",
+       0.8696
+      ],
+      [
+       "net.site-check",
+       0.5312
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.429
+    },
+    {
+     "id": "m097",
+     "report": "traced route to game server shows huge jump at hop three",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       0.7602
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m098",
+     "report": "My laptop keeps losing the internet every hour or so it started last week after that storm we had the lights flickered and ever since the connection drops and comes back on its own i have to keep reconnecting to get my work done what could be wrong with it",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.no-internet",
+       0.5003
+      ],
+      [
+       "net.packet-loss",
+       0.2899
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.006
+    },
+    {
+     "id": "m099",
+     "report": "ethernet connected no internet",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.ethernet",
+       0.6137
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m100",
+     "report": "should i buy mesh system or just better router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m101",
+     "report": "Want to make my home network more secure heard about changing default passwords and disabling wps and something about guest networks but there are so many settings and i dont want to lock myself out what are the most important things to do first",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": "net.secure-network",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.secure-network",
+       0.873
+      ],
+      [
+       "net.guest-wifi",
+       0.8201
+      ],
+      [
+       "net.wifi-password-change",
+       0.819
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.426
+    },
+    {
+     "id": "m102",
+     "report": "amazon echo wont connect to new wifi after move",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2498
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.003
+    },
+    {
+     "id": "m103",
+     "report": "wifi networks scan shows nothing but phone sees five",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.5192
+      ],
+      [
+       "net.no-internet",
+       0.3822
+      ],
+      [
+       "net.wifi-signal",
+       0.2477
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.412
+    },
+    {
+     "id": "m104",
+     "report": "um my internet works but discord voice keeps cutting out",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.packet-loss",
+       0.6017
+      ],
+      [
+       "net.wifi-reconnect",
+       0.5117
+      ],
+      [
+       "net.no-internet",
+       0.3726
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.404
+    },
+    {
+     "id": "m105",
+     "report": "cant reach router login page from my computer today",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.7435
+      ],
+      [
+       "net.site-check",
+       0.4984
+      ],
+      [
+       "net.no-internet",
+       0.1365
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.006
+    },
+    {
+     "id": "m106",
+     "report": "google nest thermostat lost connection after power outage yesterday",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.site-check",
+       0.212
+      ],
+      [
+       "net.no-internet",
+       0.2085
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.005
+    },
+    {
+     "id": "m107",
+     "report": "smart fridge keeps losing wifi connection every few days have to go into settings and reconnect manually the fridge is right next to the router literally five feet away signal should be perfect why does it keep dropping only the fridge not other stuff",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8205
+      ],
+      [
+       "net.router-address",
+       0.6071
+      ],
+      [
+       "net.no-internet",
+       0.5215
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.007
+    },
+    {
+     "id": "m108",
+     "report": "bought a mesh wifi system three pack but the app says weak connection between nodes even though theyre only twenty feet apart walls are plaster not concrete should i return it and get a different brand or try moving them around first",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.8175
+      ],
+      [
+       "net.no-internet",
+       0.4043
+      ],
+      [
+       "net.wifi-networks",
+       0.3554
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.008
+    },
+    {
+     "id": "m109",
+     "report": "packet loss test shows twenty percent to google dns",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.packet-loss",
+       0.8718
+      ],
+      [
+       "net.dns-change",
+       0.8705
+      ],
+      [
+       "net.dns-which",
+       0.5601
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.417
+    },
+    {
+     "id": "m110",
+     "report": "there router keeps needing restarts like every other day i unplug it wait thirty seconds plug it back in and it works for a while but then starts acting up again is there a proper way to restart it so it stays stable longer or is it just dying",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       0.8183
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.008
+    },
+    {
+     "id": "m111",
+     "report": "public ip changed and now remote access broken completely",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": "net.public-ip",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.public-ip",
+       0.8712
+      ],
+      [
+       "net.my-ip",
+       0.823
+      ],
+      [
+       "net.no-internet",
+       0.4735
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.414
+    },
+    {
+     "id": "m114",
+     "report": "printer worked yesterday now laptop cant find it anymore",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8244
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m116",
+     "report": "Trying to print from my laptop and it says printer offline but the printer is on and connected to wifi i can print from my phone just fine restarted both nothing works why does my computer not see it when my phone does just fine",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.printer",
+       0.8701
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8204
+      ],
+      [
+       "net.wifi-signal",
+       0.5882
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.401
+    },
+    {
+     "id": "m117",
+     "report": "Keep getting warnings about firewall being off in the security center but i thought it was on by default how do i check if its actually running and turn it on if its not i dont want to mess up my connection by enabling the wrong thing",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8216
+      ],
+      [
+       "net.wifi-reconnect",
+       0.7113
+      ],
+      [
+       "net.secure-network",
+       0.3229
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.firewall-status\"}",
+     "seconds": 0.478
+    },
+    {
+     "id": "m119",
+     "report": "speed test says fast but downloads crawl anyway today",
+     "expect": [
+      "net.speed"
+     ],
+     "got": "net.speed",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.speed",
+       0.7498
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2476
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m120",
+     "report": "signal shows strong but video calls keep freezing up",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9231
+      ],
+      [
+       "net.wifi-signal",
+       0.6102
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    }
+   ]
+  },
+  "llama3.2:1b": {
+   "summary": {
+    "cases": 98,
+    "accuracy": 0.684,
+    "in_scope": "50/75",
+    "none_correct": "17/23",
+    "false_routes": 11,
+    "asked": 1,
+    "model_failed": 0,
+    "model_calls": 22,
+    "latency_mean_s": 0.143,
+    "latency_max_s": 0.931
+   },
+   "rows": [
+    {
+     "id": "m001",
+     "report": "which dns am i using right now anyway today",
+     "expect": [
+      "net.dns-which"
+     ],
+     "got": "net.dns-which",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-which",
+       0.5665
+      ],
+      [
+       "net.dns-change",
+       0.3959
+      ],
+      [
+       "net.dns-flush",
+       0.3538
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m002",
+     "report": "my neural network model training keeps crashing with out of memory errors on the gpu i have 16gb vram should be enough for this batch size is there a way to monitor gpu memory usage in real time like task manager but for the graphics card",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.023
+    },
+    {
+     "id": "m004",
+     "report": "Video calls keep freezing and people say im robotic audio cuts out too ran a ping test and saw packet loss like fifteen percent is that normal or is something wrong with my line how do i figure out where the loss is happening",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9202
+      ],
+      [
+       "net.traceroute",
+       0.4926
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m005",
+     "report": "isp says modem fine but i got no internet still",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8745
+      ],
+      [
+       "net.traceroute",
+       0.3644
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m006",
+     "report": "Websites were loading wrong yesterday showing old versions or not loading at all someone said to flush the dns cache whatever that means i tried ipconfig flushdns in command prompt but im not sure it worked how do i know if it actually cleared the cache",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.9199
+      ],
+      [
+       "net.dns-which",
+       0.5559
+      ],
+      [
+       "net.dns-change",
+       0.4726
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.442
+    },
+    {
+     "id": "m007",
+     "report": "starlink bypass own router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.242
+    },
+    {
+     "id": "m008",
+     "report": "Had to unplug the router yesterday because it was acting weird lights blinking wrong and now the wifi name doesnt even show up on my laptop or tablet i plugged it back in waited five minutes but still nothing should i call the cable company or try something first",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.router-restart",
+       0.8679
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.guest-wifi",
+       0.8186
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.615
+    },
+    {
+     "id": "m009",
+     "report": "Favorite website wont load says server not found but my friend can access it just fine from their house tried different browsers cleared cache nothing works is the site down for everyone or just me how can i check without asking around",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8686
+      ],
+      [
+       "net.dns-flush",
+       0.6164
+      ],
+      [
+       "net.no-internet",
+       0.4715
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.01
+    },
+    {
+     "id": "m010",
+     "report": "restart router properly how",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m011",
+     "report": "bluetooth speaker pairs but audio stutters on zoom calls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m012",
+     "report": "Trying to run a server on my computer and need to know if port 8080 is actually open and listening i ran some command and it showed something but i dont understand the output how do i check if the port is open and what program is using it",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.921
+      ],
+      [
+       "net.port-forward",
+       0.6165
+      ],
+      [
+       "net.site-check",
+       0.3368
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.006
+    },
+    {
+     "id": "m013",
+     "report": "site down for me but coworker says its fine",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8722
+      ],
+      [
+       "net.no-internet",
+       0.4755
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m016",
+     "report": "port 22 ssh open",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8821
+      ],
+      [
+       "net.port-forward",
+       0.6805
+      ],
+      [
+       "net.site-check",
+       0.3362
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m017",
+     "report": "gmail says not private connection",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.835
+      ],
+      [
+       "net.no-internet",
+       0.4391
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m018",
+     "report": "looking at routers on amazon and totally confused by all the specs ax3000 ax5400 wifi 6 wifi 6e tri-band dual-band mesh extender what do i actually need for a two story house with four people streaming and gaming dont want to overspend",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.4213
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2711
+      ]
+     ],
+     "model_raw": "none.tv-and-radio-channels",
+     "seconds": 0.006
+    },
+    {
+     "id": "m019",
+     "report": "router lights blinking weird after big storm last night",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m021",
+     "report": "router address thing 192.168.1.1 gives me nothing ever",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8714
+      ],
+      [
+       "net.renew-ip",
+       0.584
+      ],
+      [
+       "net.my-ip",
+       0.4714
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m022",
+     "report": "ethernet cable cat five but should be cat six maybe",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8727
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m023",
+     "report": "wifi connected nothing loads",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       1.0
+      ],
+      [
+       "net.wifi-signal",
+       0.6497
+      ],
+      [
+       "net.devices",
+       0.4678
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m024",
+     "report": "internet dies completely when i plug in ethernet cable",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.3691
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m025",
+     "report": "My friends come over and ask for the wifi password but i dont want them on my main network with my work computer and smart tv and all that heard you can make a separate one for guests how do i set that up without breaking my own connection",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8268
+      ],
+      [
+       "net.wifi-password-change",
+       0.8186
+      ],
+      [
+       "net.wifi-signal",
+       0.3493
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.guest-wifi\"}",
+     "seconds": 0.716
+    },
+    {
+     "id": "m028",
+     "report": "port listening check for minecraft server not showing up",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.6707
+      ],
+      [
+       "net.port-forward",
+       0.4466
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.225
+    },
+    {
+     "id": "m029",
+     "report": "phone works laptop no net",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m031",
+     "report": "getting emails saying my cloud storage is almost full but i barely have anything in there checked the drive and its mostly empty maybe its counting shared files from my team how do i see what's actually taking up space and clear it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m032",
+     "report": "want to see what wifi networks are around me and what channels theyre on so i can pick a better one for my router heard channels overlap and cause interference but the list in settings just shows names and signal strength not channel numbers",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.8731
+      ],
+      [
+       "net.router-address",
+       0.6081
+      ],
+      [
+       "net.wifi-signal",
+       0.5033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m034",
+     "report": "Need to log into my router settings to change some things but i dont know the address to type in the browser tried 192.168.1.1 and 192.168.0.1 neither worked how do i find the actual address for my specific router model",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8738
+      ],
+      [
+       "net.renew-ip",
+       0.5734
+      ],
+      [
+       "net.my-ip",
+       0.4685
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m035",
+     "report": "my internet been acting up since i installed that new smart thermostat it connects to wifi but then other devices get kicked off or slow down could it be using too much bandwidth how do i check what each device is using on the network",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.devices",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "net.devices",
+       0.8693
+      ],
+      [
+       "net.bandwidth-hog",
+       0.8214
+      ],
+      [
+       "net.no-internet",
+       0.8196
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.579
+    },
+    {
+     "id": "m036",
+     "report": "isp dns slow can change",
+     "expect": [
+      "net.dns-change"
+     ],
+     "got": "net.dns-change",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-change",
+       0.8317
+      ],
+      [
+       "net.dns-which",
+       0.5711
+      ],
+      [
+       "net.speed",
+       0.4961
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m037",
+     "report": "dns flush didnt fix site",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8311
+      ],
+      [
+       "net.dns-which",
+       0.5648
+      ],
+      [
+       "net.site-check",
+       0.4981
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.048
+    },
+    {
+     "id": "m040",
+     "report": "my computer takes forever to find websites after i wake it from sleep like ten seconds before anything loads someone said its the dns cache being stale how do i clear it properly on windows i tried the command prompt thing but not sure it worked",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8708
+      ],
+      [
+       "net.dns-which",
+       0.5573
+      ],
+      [
+       "net.speed",
+       0.4844
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m041",
+     "report": "order pizza me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m042",
+     "report": "wifi7 clients exist",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2566
+      ]
+     ],
+     "model_raw": "none.buying-and-installing-hardware",
+     "seconds": 0.001
+    },
+    {
+     "id": "m043",
+     "report": "trying to use my phone as a hotspot for my laptop but the laptop says no internet even though phone shows connected and i can browse on the phone fine hotspot worked last month now it doesnt what setting could have changed to break it",
+     "expect": [
+      "none"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8706
+      ],
+      [
+       "net.devices",
+       0.3111
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m044",
+     "report": "vpn connected but work server still says offline now",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.vpn-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.3388
+      ],
+      [
+       "net.devices",
+       0.3178
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m045",
+     "report": "Neighbor asked for our wifi password last week and now i think theyre still using it my internet seems slower in the evenings how do i change the password so they cant get on anymore but my own devices stay connected without me re-entering it on everything",
+     "expect": [
+      "net.wifi-password-change"
+     ],
+     "got": "net.wifi-password-change",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.wifi-password-change",
+       0.9179
+      ],
+      [
+       "net.devices",
+       0.822
+      ],
+      [
+       "net.wifi-signal",
+       0.5879
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.wifi-password-change\"}",
+     "seconds": 0.931
+    },
+    {
+     "id": "m047",
+     "report": "kids 4k streaming hogs bandwidth",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.7431
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m048",
+     "report": "bluetooth headphones keep cutting out during zoom meetings now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.packet-loss",
+       0.3272
+      ]
+     ],
+     "model_raw": "none.bluetooth-and-wearables",
+     "seconds": 0.001
+    },
+    {
+     "id": "m050",
+     "report": "why fi signal shows full bars in the living room but in my bedroom its like two bars and everything loads slow there i heard about two point four and five gigahertz bands but dont know which one im on or how to switch to the better one for my room",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.7419
+      ],
+      [
+       "net.speed",
+       0.6246
+      ],
+      [
+       "net.no-internet",
+       0.5245
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.586
+    },
+    {
+     "id": "m051",
+     "report": "port forward set up but friends still cant join",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.6287
+      ],
+      [
+       "net.port-listening",
+       0.3438
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m052",
+     "report": "Internet feels slower than usual today download takes ages and upload is barely there i pay for fast service but speed tests show way less than what im supposed to get been like this for three days now any idea why its so bad suddenly",
+     "expect": [
+      "net.speed"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.speed",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.8189
+      ],
+      [
+       "net.packet-loss",
+       0.4369
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.541
+    },
+    {
+     "id": "m053",
+     "report": "secure network checklist thing where do i even start",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": "net.secure-network",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.secure-network",
+       0.8256
+      ],
+      [
+       "net.cert-check",
+       0.2763
+      ],
+      [
+       "net.traceroute",
+       0.2047
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m054",
+     "report": "um yeah mobile data works fine but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.5653
+      ],
+      [
+       "net.wifi-signal",
+       0.2487
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m056",
+     "report": "xbox live nat type strict how do i fix this",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.9248
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m057",
+     "report": "program port 3000",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8667
+      ],
+      [
+       "net.port-forward",
+       0.4389
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m058",
+     "report": "slow after hop 3",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       1.0
+      ],
+      [
+       "net.speed",
+       0.5078
+      ],
+      [
+       "net.packet-loss",
+       0.2432
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m059",
+     "report": "certificate warning on every site since tuesday update happened",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.9214
+      ],
+      [
+       "net.site-check",
+       0.4945
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m061",
+     "report": "joined this network marketing company and they want me to build my downline but i dont know anyone who wants to buy these supplements is there a way to find leads online without spamming my friends on facebook feels scammy but they said its legit",
+     "expect": [
+      "none"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8208
+      ],
+      [
+       "net.no-internet",
+       0.3651
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.071
+    },
+    {
+     "id": "m062",
+     "report": "Got a new router and now my computer says no internet even though wifi connects fine phone works on the same network but laptop doesnt i think it might need a fresh ip address how do i force it to get a new one from the router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.8696
+      ],
+      [
+       "net.my-ip",
+       0.8215
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.renew-ip\"}",
+     "seconds": 0.793
+    },
+    {
+     "id": "m063",
+     "report": "firewall popped up warning about suspicious connection attempt just",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8211
+      ],
+      [
+       "net.cert-check",
+       0.3447
+      ],
+      [
+       "net.no-internet",
+       0.2103
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m064",
+     "report": "ring doorbell offline but wifi works for everything else",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2496
+      ],
+      [
+       "net.no-internet",
+       0.2194
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.003
+    },
+    {
+     "id": "m066",
+     "report": "getting that not secure warning in chrome when i go to my bank website the lock icon has a line through it says certificate not valid or something is it safe to proceed or is someone intercepting my connection how do i check if the certificate is actually good",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.cert-check",
+       0.8714
+      ],
+      [
+       "net.site-check",
+       0.8186
+      ],
+      [
+       "net.secure-network",
+       0.6122
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.533
+    },
+    {
+     "id": "m067",
+     "report": "trying to set up alexa on the new echo dot but it wont connect to wifi keeps saying unable to connect try again the light spins orange then red my phone connects fine to the same network is the echo defective or am i doing something wrong",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.343
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.008
+    },
+    {
+     "id": "m068",
+     "report": "how do i make guest network for airbnb guests",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8793
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.078
+    },
+    {
+     "id": "m069",
+     "report": "i keep seeing pop ups about vpn not connected on my work laptop but i dont even use a vpn personally the company set it up and now it says disconnected how do i check if the vpn tunnel is actually up or if its just a false alarm",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8702
+      ],
+      [
+       "net.guest-wifi",
+       0.8203
+      ],
+      [
+       "net.devices",
+       0.3525
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.501
+    },
+    {
+     "id": "m071",
+     "report": "netflix account hacked someone watching from another country now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1988
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.004
+    },
+    {
+     "id": "m073",
+     "report": "cant find printer network",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8521
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m074",
+     "report": "um why does my hotspot work but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2517
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.003
+    },
+    {
+     "id": "m075",
+     "report": "alexa stops responding random",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m076",
+     "report": "packet loss 15 game",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9351
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m077",
+     "report": "which channel least crowded",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m078",
+     "report": "Saw a bunch of devices on the network list that i dont recognize some weird names like linux-box and pixel-7 could be my roommates stuff or maybe someone else is using my wifi how do i figure out which ones are mine and kick off the ones that arent",
+     "expect": [
+      "net.devices"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8716
+      ],
+      [
+       "net.secure-network",
+       0.4397
+      ],
+      [
+       "net.wifi-reconnect",
+       0.405
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.009
+    },
+    {
+     "id": "m079",
+     "report": "renew ip address didnt get new one from router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8792
+      ],
+      [
+       "net.my-ip",
+       0.8238
+      ],
+      [
+       "net.router-address",
+       0.823
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.443
+    },
+    {
+     "id": "m080",
+     "report": "best mesh thick walls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m081",
+     "report": "firewall even on",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m082",
+     "report": "why 2.4ghz not 5ghz",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.3838
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.437
+    },
+    {
+     "id": "m083",
+     "report": "dhcp renewal failed",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.renew-ip",
+       0.4079
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.334
+    },
+    {
+     "id": "m084",
+     "report": "my instagram account got hacked yesterday someone changed the email and password i cant get back in facebook support is useless been three days no reply is there a phone number i can call or someone who can actually help recover it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1905
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.006
+    },
+    {
+     "id": "m085",
+     "report": "mac filter laptop address",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.mac",
+       0.84
+      ],
+      [
+       "net.my-ip",
+       0.4892
+      ],
+      [
+       "net.renew-ip",
+       0.3216
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m086",
+     "report": "Need to find the mac address of my laptop for work they want it to register my device on their network i looked in settings but there are like five different addresses listed which one is the actual mac address they need",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.mac",
+       0.92
+      ],
+      [
+       "net.my-ip",
+       0.8222
+      ],
+      [
+       "net.devices",
+       0.8206
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.mac\"}",
+     "seconds": 0.502
+    },
+    {
+     "id": "m087",
+     "report": "Plugged in the ethernet cable but the little lights on the port arent blinking like they used to wifi works fine but wired doesnt i swapped cables tried different ports on the router nothing changed is the port on my computer broken or is it a setting",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8715
+      ],
+      [
+       "net.port-forward",
+       0.5837
+      ],
+      [
+       "net.port-listening",
+       0.5297
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m088",
+     "report": "ethernet port light dead but cable works on other pc",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8273
+      ],
+      [
+       "net.no-internet",
+       0.4595
+      ],
+      [
+       "net.port-listening",
+       0.4165
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m089",
+     "report": "Setting up remote access to my home computer and the software needs my public ip address but it keeps changing every few days is there a way to make it stay the same or do i need to pay extra for a static ip from my provider",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.public-ip",
+       0.8689
+      ],
+      [
+       "net.my-ip",
+       0.8193
+      ],
+      [
+       "net.renew-ip",
+       0.4298
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.493
+    },
+    {
+     "id": "m091",
+     "report": "bandwith hog what even is that my roommate downloads constantly",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.8285
+      ],
+      [
+       "net.wifi-signal",
+       0.24
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m092",
+     "report": "bank site cert warning safe",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.8777
+      ],
+      [
+       "net.site-check",
+       0.4974
+      ],
+      [
+       "net.secure-network",
+       0.4096
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.036
+    },
+    {
+     "id": "m093",
+     "report": "my linkedin network keeps suggesting people i dont know from random companies never worked with them is there a way to stop these suggestions or make my profile private so strangers cant find me through my connections anymore",
+     "expect": [
+      "none"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8183
+      ],
+      [
+       "net.cert-check",
+       0.3005
+      ],
+      [
+       "net.secure-network",
+       0.2969
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.231
+    },
+    {
+     "id": "m094",
+     "report": "vpn connected no internet",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.vpn-status",
+       0.8791
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.no-internet\"}",
+     "seconds": 0.516
+    },
+    {
+     "id": "m095",
+     "report": "ethernet cold air return",
+     "expect": [
+      "none"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.5794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m096",
+     "report": "Want to host a game server for my friends and they cant connect i think i need to forward a port on the router but the settings page is confusing with all these numbers and protocols tcp udp both which one do i pick and what numbers go where",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.router-address",
+       0.9182
+      ],
+      [
+       "net.port-forward",
+       0.8696
+      ],
+      [
+       "net.site-check",
+       0.5312
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.487
+    },
+    {
+     "id": "m097",
+     "report": "traced route to game server shows huge jump at hop three",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       0.7602
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m098",
+     "report": "My laptop keeps losing the internet every hour or so it started last week after that storm we had the lights flickered and ever since the connection drops and comes back on its own i have to keep reconnecting to get my work done what could be wrong with it",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.no-internet",
+       0.5003
+      ],
+      [
+       "net.packet-loss",
+       0.2899
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.007
+    },
+    {
+     "id": "m099",
+     "report": "ethernet connected no internet",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.ethernet",
+       0.6137
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m100",
+     "report": "should i buy mesh system or just better router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m101",
+     "report": "Want to make my home network more secure heard about changing default passwords and disabling wps and something about guest networks but there are so many settings and i dont want to lock myself out what are the most important things to do first",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.secure-network",
+       0.873
+      ],
+      [
+       "net.guest-wifi",
+       0.8201
+      ],
+      [
+       "net.wifi-password-change",
+       0.819
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.76
+    },
+    {
+     "id": "m102",
+     "report": "amazon echo wont connect to new wifi after move",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2498
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.003
+    },
+    {
+     "id": "m103",
+     "report": "wifi networks scan shows nothing but phone sees five",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.5192
+      ],
+      [
+       "net.no-internet",
+       0.3822
+      ],
+      [
+       "net.wifi-signal",
+       0.2477
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.429
+    },
+    {
+     "id": "m104",
+     "report": "um my internet works but discord voice keeps cutting out",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.packet-loss",
+       0.6017
+      ],
+      [
+       "net.wifi-reconnect",
+       0.5117
+      ],
+      [
+       "net.no-internet",
+       0.3726
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.426
+    },
+    {
+     "id": "m105",
+     "report": "cant reach router login page from my computer today",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.7435
+      ],
+      [
+       "net.site-check",
+       0.4984
+      ],
+      [
+       "net.no-internet",
+       0.1365
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m106",
+     "report": "google nest thermostat lost connection after power outage yesterday",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.site-check",
+       0.212
+      ],
+      [
+       "net.no-internet",
+       0.2085
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.003
+    },
+    {
+     "id": "m107",
+     "report": "smart fridge keeps losing wifi connection every few days have to go into settings and reconnect manually the fridge is right next to the router literally five feet away signal should be perfect why does it keep dropping only the fridge not other stuff",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8205
+      ],
+      [
+       "net.router-address",
+       0.6071
+      ],
+      [
+       "net.no-internet",
+       0.5215
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m108",
+     "report": "bought a mesh wifi system three pack but the app says weak connection between nodes even though theyre only twenty feet apart walls are plaster not concrete should i return it and get a different brand or try moving them around first",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.8175
+      ],
+      [
+       "net.no-internet",
+       0.4043
+      ],
+      [
+       "net.wifi-networks",
+       0.3554
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m109",
+     "report": "packet loss test shows twenty percent to google dns",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.packet-loss",
+       0.8718
+      ],
+      [
+       "net.dns-change",
+       0.8705
+      ],
+      [
+       "net.dns-which",
+       0.5601
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.412
+    },
+    {
+     "id": "m110",
+     "report": "there router keeps needing restarts like every other day i unplug it wait thirty seconds plug it back in and it works for a while but then starts acting up again is there a proper way to restart it so it stays stable longer or is it just dying",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       0.8183
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.008
+    },
+    {
+     "id": "m111",
+     "report": "public ip changed and now remote access broken completely",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.public-ip",
+       0.8712
+      ],
+      [
+       "net.my-ip",
+       0.823
+      ],
+      [
+       "net.no-internet",
+       0.4735
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.427
+    },
+    {
+     "id": "m114",
+     "report": "printer worked yesterday now laptop cant find it anymore",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8244
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m116",
+     "report": "Trying to print from my laptop and it says printer offline but the printer is on and connected to wifi i can print from my phone just fine restarted both nothing works why does my computer not see it when my phone does just fine",
+     "expect": [
+      "net.printer"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.printer",
+       0.8701
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8204
+      ],
+      [
+       "net.wifi-signal",
+       0.5882
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.502
+    },
+    {
+     "id": "m117",
+     "report": "Keep getting warnings about firewall being off in the security center but i thought it was on by default how do i check if its actually running and turn it on if its not i dont want to mess up my connection by enabling the wrong thing",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8216
+      ],
+      [
+       "net.wifi-reconnect",
+       0.7113
+      ],
+      [
+       "net.secure-network",
+       0.3229
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.497
+    },
+    {
+     "id": "m119",
+     "report": "speed test says fast but downloads crawl anyway today",
+     "expect": [
+      "net.speed"
+     ],
+     "got": "net.speed",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.speed",
+       0.7498
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2476
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m120",
+     "report": "signal shows strong but video calls keep freezing up",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9231
+      ],
+      [
+       "net.wifi-signal",
+       0.6102
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    }
+   ]
+  },
+  "gemma3:1b": {
+   "summary": {
+    "cases": 98,
+    "accuracy": 0.847,
+    "in_scope": "66/75",
+    "none_correct": "17/23",
+    "false_routes": 12,
+    "asked": 0,
+    "model_failed": 0,
+    "model_calls": 23,
+    "latency_mean_s": 0.161,
+    "latency_max_s": 0.728
+   },
+   "rows": [
+    {
+     "id": "m001",
+     "report": "which dns am i using right now anyway today",
+     "expect": [
+      "net.dns-which"
+     ],
+     "got": "net.dns-which",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-which",
+       0.5665
+      ],
+      [
+       "net.dns-change",
+       0.3959
+      ],
+      [
+       "net.dns-flush",
+       0.3538
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m002",
+     "report": "my neural network model training keeps crashing with out of memory errors on the gpu i have 16gb vram should be enough for this batch size is there a way to monitor gpu memory usage in real time like task manager but for the graphics card",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.028
+    },
+    {
+     "id": "m004",
+     "report": "Video calls keep freezing and people say im robotic audio cuts out too ran a ping test and saw packet loss like fifteen percent is that normal or is something wrong with my line how do i figure out where the loss is happening",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9202
+      ],
+      [
+       "net.traceroute",
+       0.4926
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m005",
+     "report": "isp says modem fine but i got no internet still",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8745
+      ],
+      [
+       "net.traceroute",
+       0.3644
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m006",
+     "report": "Websites were loading wrong yesterday showing old versions or not loading at all someone said to flush the dns cache whatever that means i tried ipconfig flushdns in command prompt but im not sure it worked how do i know if it actually cleared the cache",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.9199
+      ],
+      [
+       "net.dns-which",
+       0.5559
+      ],
+      [
+       "net.dns-change",
+       0.4726
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.44
+    },
+    {
+     "id": "m007",
+     "report": "starlink bypass own router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.241
+    },
+    {
+     "id": "m008",
+     "report": "Had to unplug the router yesterday because it was acting weird lights blinking wrong and now the wifi name doesnt even show up on my laptop or tablet i plugged it back in waited five minutes but still nothing should i call the cable company or try something first",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.router-restart",
+       0.8679
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.guest-wifi",
+       0.8186
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.router-restart\"}",
+     "seconds": 0.634
+    },
+    {
+     "id": "m009",
+     "report": "Favorite website wont load says server not found but my friend can access it just fine from their house tried different browsers cleared cache nothing works is the site down for everyone or just me how can i check without asking around",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8686
+      ],
+      [
+       "net.dns-flush",
+       0.6164
+      ],
+      [
+       "net.no-internet",
+       0.4715
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m010",
+     "report": "restart router properly how",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m011",
+     "report": "bluetooth speaker pairs but audio stutters on zoom calls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m012",
+     "report": "Trying to run a server on my computer and need to know if port 8080 is actually open and listening i ran some command and it showed something but i dont understand the output how do i check if the port is open and what program is using it",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.921
+      ],
+      [
+       "net.port-forward",
+       0.6165
+      ],
+      [
+       "net.site-check",
+       0.3368
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m013",
+     "report": "site down for me but coworker says its fine",
+     "expect": [
+      "net.site-check"
+     ],
+     "got": "net.site-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.site-check",
+       0.8722
+      ],
+      [
+       "net.no-internet",
+       0.4755
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m016",
+     "report": "port 22 ssh open",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8821
+      ],
+      [
+       "net.port-forward",
+       0.6805
+      ],
+      [
+       "net.site-check",
+       0.3362
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m017",
+     "report": "gmail says not private connection",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.835
+      ],
+      [
+       "net.no-internet",
+       0.4391
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m018",
+     "report": "looking at routers on amazon and totally confused by all the specs ax3000 ax5400 wifi 6 wifi 6e tri-band dual-band mesh extender what do i actually need for a two story house with four people streaming and gaming dont want to overspend",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.4213
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2711
+      ]
+     ],
+     "model_raw": "none.tv-and-radio-channels",
+     "seconds": 0.005
+    },
+    {
+     "id": "m019",
+     "report": "router lights blinking weird after big storm last night",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m021",
+     "report": "router address thing 192.168.1.1 gives me nothing ever",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8714
+      ],
+      [
+       "net.renew-ip",
+       0.584
+      ],
+      [
+       "net.my-ip",
+       0.4714
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m022",
+     "report": "ethernet cable cat five but should be cat six maybe",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8727
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m023",
+     "report": "wifi connected nothing loads",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       1.0
+      ],
+      [
+       "net.wifi-signal",
+       0.6497
+      ],
+      [
+       "net.devices",
+       0.4678
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m024",
+     "report": "internet dies completely when i plug in ethernet cable",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.3691
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m025",
+     "report": "My friends come over and ask for the wifi password but i dont want them on my main network with my work computer and smart tv and all that heard you can make a separate one for guests how do i set that up without breaking my own connection",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8268
+      ],
+      [
+       "net.wifi-password-change",
+       0.8186
+      ],
+      [
+       "net.wifi-signal",
+       0.3493
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.guest-wifi\"}",
+     "seconds": 0.59
+    },
+    {
+     "id": "m028",
+     "report": "port listening check for minecraft server not showing up",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.6707
+      ],
+      [
+       "net.port-forward",
+       0.4466
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.226
+    },
+    {
+     "id": "m029",
+     "report": "phone works laptop no net",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m031",
+     "report": "getting emails saying my cloud storage is almost full but i barely have anything in there checked the drive and its mostly empty maybe its counting shared files from my team how do i see what's actually taking up space and clear it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m032",
+     "report": "want to see what wifi networks are around me and what channels theyre on so i can pick a better one for my router heard channels overlap and cause interference but the list in settings just shows names and signal strength not channel numbers",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.8731
+      ],
+      [
+       "net.router-address",
+       0.6081
+      ],
+      [
+       "net.wifi-signal",
+       0.5033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m034",
+     "report": "Need to log into my router settings to change some things but i dont know the address to type in the browser tried 192.168.1.1 and 192.168.0.1 neither worked how do i find the actual address for my specific router model",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.8738
+      ],
+      [
+       "net.renew-ip",
+       0.5734
+      ],
+      [
+       "net.my-ip",
+       0.4685
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m035",
+     "report": "my internet been acting up since i installed that new smart thermostat it connects to wifi but then other devices get kicked off or slow down could it be using too much bandwidth how do i check what each device is using on the network",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.devices",
+       0.8693
+      ],
+      [
+       "net.bandwidth-hog",
+       0.8214
+      ],
+      [
+       "net.no-internet",
+       0.8196
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.bandwidth-hog\"}",
+     "seconds": 0.645
+    },
+    {
+     "id": "m036",
+     "report": "isp dns slow can change",
+     "expect": [
+      "net.dns-change"
+     ],
+     "got": "net.dns-change",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-change",
+       0.8317
+      ],
+      [
+       "net.dns-which",
+       0.5711
+      ],
+      [
+       "net.speed",
+       0.4961
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m037",
+     "report": "dns flush didnt fix site",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8311
+      ],
+      [
+       "net.dns-which",
+       0.5648
+      ],
+      [
+       "net.site-check",
+       0.4981
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.041
+    },
+    {
+     "id": "m040",
+     "report": "my computer takes forever to find websites after i wake it from sleep like ten seconds before anything loads someone said its the dns cache being stale how do i clear it properly on windows i tried the command prompt thing but not sure it worked",
+     "expect": [
+      "net.dns-flush"
+     ],
+     "got": "net.dns-flush",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.dns-flush",
+       0.8708
+      ],
+      [
+       "net.dns-which",
+       0.5573
+      ],
+      [
+       "net.speed",
+       0.4844
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m041",
+     "report": "order pizza me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m042",
+     "report": "wifi7 clients exist",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2566
+      ]
+     ],
+     "model_raw": "none.buying-and-installing-hardware",
+     "seconds": 0.001
+    },
+    {
+     "id": "m043",
+     "report": "trying to use my phone as a hotspot for my laptop but the laptop says no internet even though phone shows connected and i can browse on the phone fine hotspot worked last month now it doesnt what setting could have changed to break it",
+     "expect": [
+      "none"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.8706
+      ],
+      [
+       "net.devices",
+       0.3111
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m044",
+     "report": "vpn connected but work server still says offline now",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.vpn-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.3388
+      ],
+      [
+       "net.devices",
+       0.3178
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m045",
+     "report": "Neighbor asked for our wifi password last week and now i think theyre still using it my internet seems slower in the evenings how do i change the password so they cant get on anymore but my own devices stay connected without me re-entering it on everything",
+     "expect": [
+      "net.wifi-password-change"
+     ],
+     "got": "net.wifi-password-change",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.wifi-password-change",
+       0.9179
+      ],
+      [
+       "net.devices",
+       0.822
+      ],
+      [
+       "net.wifi-signal",
+       0.5879
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.wifi-password-change\"}",
+     "seconds": 0.728
+    },
+    {
+     "id": "m047",
+     "report": "kids 4k streaming hogs bandwidth",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.7431
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m048",
+     "report": "bluetooth headphones keep cutting out during zoom meetings now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.packet-loss",
+       0.3272
+      ]
+     ],
+     "model_raw": "none.bluetooth-and-wearables",
+     "seconds": 0.001
+    },
+    {
+     "id": "m050",
+     "report": "why fi signal shows full bars in the living room but in my bedroom its like two bars and everything loads slow there i heard about two point four and five gigahertz bands but dont know which one im on or how to switch to the better one for my room",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.7419
+      ],
+      [
+       "net.speed",
+       0.6246
+      ],
+      [
+       "net.no-internet",
+       0.5245
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.wifi-signal\"}",
+     "seconds": 0.622
+    },
+    {
+     "id": "m051",
+     "report": "port forward set up but friends still cant join",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.6287
+      ],
+      [
+       "net.port-listening",
+       0.3438
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m052",
+     "report": "Internet feels slower than usual today download takes ages and upload is barely there i pay for fast service but speed tests show way less than what im supposed to get been like this for three days now any idea why its so bad suddenly",
+     "expect": [
+      "net.speed"
+     ],
+     "got": "net.speed",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.speed",
+       0.8748
+      ],
+      [
+       "net.no-internet",
+       0.8189
+      ],
+      [
+       "net.packet-loss",
+       0.4369
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.speed\"}",
+     "seconds": 0.668
+    },
+    {
+     "id": "m053",
+     "report": "secure network checklist thing where do i even start",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": "net.secure-network",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.secure-network",
+       0.8256
+      ],
+      [
+       "net.cert-check",
+       0.2763
+      ],
+      [
+       "net.traceroute",
+       0.2047
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m054",
+     "report": "um yeah mobile data works fine but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.5653
+      ],
+      [
+       "net.wifi-signal",
+       0.2487
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m056",
+     "report": "xbox live nat type strict how do i fix this",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-forward",
+       0.9248
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m057",
+     "report": "program port 3000",
+     "expect": [
+      "net.port-listening"
+     ],
+     "got": "net.port-listening",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.port-listening",
+       0.8667
+      ],
+      [
+       "net.port-forward",
+       0.4389
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m058",
+     "report": "slow after hop 3",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       1.0
+      ],
+      [
+       "net.speed",
+       0.5078
+      ],
+      [
+       "net.packet-loss",
+       0.2432
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m059",
+     "report": "certificate warning on every site since tuesday update happened",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.9214
+      ],
+      [
+       "net.site-check",
+       0.4945
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m061",
+     "report": "joined this network marketing company and they want me to build my downline but i dont know anyone who wants to buy these supplements is there a way to find leads online without spamming my friends on facebook feels scammy but they said its legit",
+     "expect": [
+      "none"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8208
+      ],
+      [
+       "net.no-internet",
+       0.3651
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.072
+    },
+    {
+     "id": "m062",
+     "report": "Got a new router and now my computer says no internet even though wifi connects fine phone works on the same network but laptop doesnt i think it might need a fresh ip address how do i force it to get a new one from the router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8735
+      ],
+      [
+       "net.no-internet",
+       0.8696
+      ],
+      [
+       "net.my-ip",
+       0.8215
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.renew-ip\"}",
+     "seconds": 0.613
+    },
+    {
+     "id": "m063",
+     "report": "firewall popped up warning about suspicious connection attempt just",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8211
+      ],
+      [
+       "net.cert-check",
+       0.3447
+      ],
+      [
+       "net.no-internet",
+       0.2103
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m064",
+     "report": "ring doorbell offline but wifi works for everything else",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2496
+      ],
+      [
+       "net.no-internet",
+       0.2194
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.003
+    },
+    {
+     "id": "m066",
+     "report": "getting that not secure warning in chrome when i go to my bank website the lock icon has a line through it says certificate not valid or something is it safe to proceed or is someone intercepting my connection how do i check if the certificate is actually good",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.cert-check",
+       0.8714
+      ],
+      [
+       "net.site-check",
+       0.8186
+      ],
+      [
+       "net.secure-network",
+       0.6122
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.cert-check\"}",
+     "seconds": 0.607
+    },
+    {
+     "id": "m067",
+     "report": "trying to set up alexa on the new echo dot but it wont connect to wifi keeps saying unable to connect try again the light spins orange then red my phone connects fine to the same network is the echo defective or am i doing something wrong",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.343
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.035
+    },
+    {
+     "id": "m068",
+     "report": "how do i make guest network for airbnb guests",
+     "expect": [
+      "net.guest-wifi"
+     ],
+     "got": "net.guest-wifi",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.guest-wifi",
+       0.8793
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.109
+    },
+    {
+     "id": "m069",
+     "report": "i keep seeing pop ups about vpn not connected on my work laptop but i dont even use a vpn personally the company set it up and now it says disconnected how do i check if the vpn tunnel is actually up or if its just a false alarm",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.vpn-status",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.vpn-status",
+       0.8702
+      ],
+      [
+       "net.guest-wifi",
+       0.8203
+      ],
+      [
+       "net.devices",
+       0.3525
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.vpn-status\"}",
+     "seconds": 0.589
+    },
+    {
+     "id": "m071",
+     "report": "netflix account hacked someone watching from another country now",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1988
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.003
+    },
+    {
+     "id": "m073",
+     "report": "cant find printer network",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8521
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m074",
+     "report": "um why does my hotspot work but home wifi doesnt",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2517
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.003
+    },
+    {
+     "id": "m075",
+     "report": "alexa stops responding random",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m076",
+     "report": "packet loss 15 game",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9351
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m077",
+     "report": "which channel least crowded",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-networks",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-networks",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m078",
+     "report": "Saw a bunch of devices on the network list that i dont recognize some weird names like linux-box and pixel-7 could be my roommates stuff or maybe someone else is using my wifi how do i figure out which ones are mine and kick off the ones that arent",
+     "expect": [
+      "net.devices"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8716
+      ],
+      [
+       "net.secure-network",
+       0.4397
+      ],
+      [
+       "net.wifi-reconnect",
+       0.405
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.007
+    },
+    {
+     "id": "m079",
+     "report": "renew ip address didnt get new one from router",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.renew-ip",
+       0.8792
+      ],
+      [
+       "net.my-ip",
+       0.8238
+      ],
+      [
+       "net.router-address",
+       0.823
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.renew-ip\"}",
+     "seconds": 0.66
+    },
+    {
+     "id": "m080",
+     "report": "best mesh thick walls",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m081",
+     "report": "firewall even on",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.firewall-status",
+       1.0
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m082",
+     "report": "why 2.4ghz not 5ghz",
+     "expect": [
+      "net.wifi-signal"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.3838
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.wifi-signal\"}",
+     "seconds": 0.567
+    },
+    {
+     "id": "m083",
+     "report": "dhcp renewal failed",
+     "expect": [
+      "net.renew-ip"
+     ],
+     "got": "net.renew-ip",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.renew-ip",
+       0.4079
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.renew-ip\"}",
+     "seconds": 0.574
+    },
+    {
+     "id": "m084",
+     "report": "my instagram account got hacked yesterday someone changed the email and password i cant get back in facebook support is useless been three days no reply is there a phone number i can call or someone who can actually help recover it",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.secure-network",
+       0.1905
+      ]
+     ],
+     "model_raw": "none.online-account-password",
+     "seconds": 0.004
+    },
+    {
+     "id": "m085",
+     "report": "mac filter laptop address",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.mac",
+       0.84
+      ],
+      [
+       "net.my-ip",
+       0.4892
+      ],
+      [
+       "net.renew-ip",
+       0.3216
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m086",
+     "report": "Need to find the mac address of my laptop for work they want it to register my device on their network i looked in settings but there are like five different addresses listed which one is the actual mac address they need",
+     "expect": [
+      "net.mac"
+     ],
+     "got": "net.mac",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.mac",
+       0.92
+      ],
+      [
+       "net.my-ip",
+       0.8222
+      ],
+      [
+       "net.devices",
+       0.8206
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.mac\"}",
+     "seconds": 0.595
+    },
+    {
+     "id": "m087",
+     "report": "Plugged in the ethernet cable but the little lights on the port arent blinking like they used to wifi works fine but wired doesnt i swapped cables tried different ports on the router nothing changed is the port on my computer broken or is it a setting",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8715
+      ],
+      [
+       "net.port-forward",
+       0.5837
+      ],
+      [
+       "net.port-listening",
+       0.5297
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m088",
+     "report": "ethernet port light dead but cable works on other pc",
+     "expect": [
+      "net.ethernet"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.8273
+      ],
+      [
+       "net.no-internet",
+       0.4595
+      ],
+      [
+       "net.port-listening",
+       0.4165
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "m089",
+     "report": "Setting up remote access to my home computer and the software needs my public ip address but it keeps changing every few days is there a way to make it stay the same or do i need to pay extra for a static ip from my provider",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": "net.public-ip",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.public-ip",
+       0.8689
+      ],
+      [
+       "net.my-ip",
+       0.8193
+      ],
+      [
+       "net.renew-ip",
+       0.4298
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.public-ip\"}",
+     "seconds": 0.614
+    },
+    {
+     "id": "m091",
+     "report": "bandwith hog what even is that my roommate downloads constantly",
+     "expect": [
+      "net.bandwidth-hog"
+     ],
+     "got": "net.bandwidth-hog",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.bandwidth-hog",
+       0.8285
+      ],
+      [
+       "net.wifi-signal",
+       0.24
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m092",
+     "report": "bank site cert warning safe",
+     "expect": [
+      "net.cert-check"
+     ],
+     "got": "net.cert-check",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.cert-check",
+       0.8777
+      ],
+      [
+       "net.site-check",
+       0.4974
+      ],
+      [
+       "net.secure-network",
+       0.4096
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.021
+    },
+    {
+     "id": "m093",
+     "report": "my linkedin network keeps suggesting people i dont know from random companies never worked with them is there a way to stop these suggestions or make my profile private so strangers cant find me through my connections anymore",
+     "expect": [
+      "none"
+     ],
+     "got": "net.devices",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.devices",
+       0.8183
+      ],
+      [
+       "net.cert-check",
+       0.3005
+      ],
+      [
+       "net.secure-network",
+       0.2969
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.229
+    },
+    {
+     "id": "m094",
+     "report": "vpn connected no internet",
+     "expect": [
+      "net.vpn-status"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.vpn-status",
+       0.8791
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.no-internet\"}",
+     "seconds": 0.589
+    },
+    {
+     "id": "m095",
+     "report": "ethernet cold air return",
+     "expect": [
+      "none"
+     ],
+     "got": "net.ethernet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.ethernet",
+       0.5794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m096",
+     "report": "Want to host a game server for my friends and they cant connect i think i need to forward a port on the router but the settings page is confusing with all these numbers and protocols tcp udp both which one do i pick and what numbers go where",
+     "expect": [
+      "net.port-forward"
+     ],
+     "got": "net.port-forward",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.router-address",
+       0.9182
+      ],
+      [
+       "net.port-forward",
+       0.8696
+      ],
+      [
+       "net.site-check",
+       0.5312
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.port-forward\"}",
+     "seconds": 0.583
+    },
+    {
+     "id": "m097",
+     "report": "traced route to game server shows huge jump at hop three",
+     "expect": [
+      "net.traceroute"
+     ],
+     "got": "net.traceroute",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.traceroute",
+       0.7602
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.006
+    },
+    {
+     "id": "m098",
+     "report": "My laptop keeps losing the internet every hour or so it started last week after that storm we had the lights flickered and ever since the connection drops and comes back on its own i have to keep reconnecting to get my work done what could be wrong with it",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8199
+      ],
+      [
+       "net.no-internet",
+       0.5003
+      ],
+      [
+       "net.packet-loss",
+       0.2899
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.007
+    },
+    {
+     "id": "m099",
+     "report": "ethernet connected no internet",
+     "expect": [
+      "net.no-internet"
+     ],
+     "got": "net.no-internet",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.no-internet",
+       0.924
+      ],
+      [
+       "net.ethernet",
+       0.6137
+      ],
+      [
+       "net.devices",
+       0.3411
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m100",
+     "report": "should i buy mesh system or just better router",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "m101",
+     "report": "Want to make my home network more secure heard about changing default passwords and disabling wps and something about guest networks but there are so many settings and i dont want to lock myself out what are the most important things to do first",
+     "expect": [
+      "net.secure-network"
+     ],
+     "got": "net.secure-network",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.secure-network",
+       0.873
+      ],
+      [
+       "net.guest-wifi",
+       0.8201
+      ],
+      [
+       "net.wifi-password-change",
+       0.819
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.secure-network\"}",
+     "seconds": 0.588
+    },
+    {
+     "id": "m102",
+     "report": "amazon echo wont connect to new wifi after move",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.2498
+      ]
+     ],
+     "model_raw": "none.phone-and-tablet-wifi",
+     "seconds": 0.005
+    },
+    {
+     "id": "m103",
+     "report": "wifi networks scan shows nothing but phone sees five",
+     "expect": [
+      "net.wifi-networks"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.wifi-networks",
+       0.5192
+      ],
+      [
+       "net.no-internet",
+       0.3822
+      ],
+      [
+       "net.wifi-signal",
+       0.2477
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.wifi-signal\"}",
+     "seconds": 0.632
+    },
+    {
+     "id": "m104",
+     "report": "um my internet works but discord voice keeps cutting out",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.packet-loss",
+       0.6017
+      ],
+      [
+       "net.wifi-reconnect",
+       0.5117
+      ],
+      [
+       "net.no-internet",
+       0.3726
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.wifi-reconnect\"}",
+     "seconds": 0.66
+    },
+    {
+     "id": "m105",
+     "report": "cant reach router login page from my computer today",
+     "expect": [
+      "net.router-address"
+     ],
+     "got": "net.router-address",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-address",
+       0.7435
+      ],
+      [
+       "net.site-check",
+       0.4984
+      ],
+      [
+       "net.no-internet",
+       0.1365
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m106",
+     "report": "google nest thermostat lost connection after power outage yesterday",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "net.site-check",
+       0.212
+      ],
+      [
+       "net.no-internet",
+       0.2085
+      ]
+     ],
+     "model_raw": "none.smart-home",
+     "seconds": 0.003
+    },
+    {
+     "id": "m107",
+     "report": "smart fridge keeps losing wifi connection every few days have to go into settings and reconnect manually the fridge is right next to the router literally five feet away signal should be perfect why does it keep dropping only the fridge not other stuff",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-reconnect",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-reconnect",
+       0.8205
+      ],
+      [
+       "net.router-address",
+       0.6071
+      ],
+      [
+       "net.no-internet",
+       0.5215
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.008
+    },
+    {
+     "id": "m108",
+     "report": "bought a mesh wifi system three pack but the app says weak connection between nodes even though theyre only twenty feet apart walls are plaster not concrete should i return it and get a different brand or try moving them around first",
+     "expect": [
+      "none"
+     ],
+     "got": "net.wifi-signal",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.wifi-signal",
+       0.8175
+      ],
+      [
+       "net.no-internet",
+       0.4043
+      ],
+      [
+       "net.wifi-networks",
+       0.3554
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.011
+    },
+    {
+     "id": "m109",
+     "report": "packet loss test shows twenty percent to google dns",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.packet-loss",
+       0.8718
+      ],
+      [
+       "net.dns-change",
+       0.8705
+      ],
+      [
+       "net.dns-which",
+       0.5601
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.packet-loss\"}",
+     "seconds": 0.606
+    },
+    {
+     "id": "m110",
+     "report": "there router keeps needing restarts like every other day i unplug it wait thirty seconds plug it back in and it works for a while but then starts acting up again is there a proper way to restart it so it stays stable longer or is it just dying",
+     "expect": [
+      "net.router-restart"
+     ],
+     "got": "net.router-restart",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.router-restart",
+       0.8183
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.005
+    },
+    {
+     "id": "m111",
+     "report": "public ip changed and now remote access broken completely",
+     "expect": [
+      "net.public-ip"
+     ],
+     "got": "net.public-ip",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.public-ip",
+       0.8712
+      ],
+      [
+       "net.my-ip",
+       0.823
+      ],
+      [
+       "net.no-internet",
+       0.4735
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.public-ip\"}",
+     "seconds": 0.63
+    },
+    {
+     "id": "m114",
+     "report": "printer worked yesterday now laptop cant find it anymore",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.printer",
+       0.8244
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "m116",
+     "report": "Trying to print from my laptop and it says printer offline but the printer is on and connected to wifi i can print from my phone just fine restarted both nothing works why does my computer not see it when my phone does just fine",
+     "expect": [
+      "net.printer"
+     ],
+     "got": "net.printer",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.printer",
+       0.8701
+      ],
+      [
+       "net.wifi-reconnect",
+       0.8204
+      ],
+      [
+       "net.wifi-signal",
+       0.5882
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.printer\"}",
+     "seconds": 0.563
+    },
+    {
+     "id": "m117",
+     "report": "Keep getting warnings about firewall being off in the security center but i thought it was on by default how do i check if its actually running and turn it on if its not i dont want to mess up my connection by enabling the wrong thing",
+     "expect": [
+      "net.firewall-status"
+     ],
+     "got": "net.firewall-status",
+     "decided_by": "model",
+     "top": [
+      [
+       "net.firewall-status",
+       0.8216
+      ],
+      [
+       "net.wifi-reconnect",
+       0.7113
+      ],
+      [
+       "net.secure-network",
+       0.3229
+      ]
+     ],
+     "model_raw": "{\"choice\": \"net.firewall-status\"}",
+     "seconds": 0.619
+    },
+    {
+     "id": "m119",
+     "report": "speed test says fast but downloads crawl anyway today",
+     "expect": [
+      "net.speed"
+     ],
+     "got": "net.speed",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.speed",
+       0.7498
+      ],
+      [
+       "net.bandwidth-hog",
+       0.2476
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.004
+    },
+    {
+     "id": "m120",
+     "report": "signal shows strong but video calls keep freezing up",
+     "expect": [
+      "net.packet-loss"
+     ],
+     "got": "net.packet-loss",
+     "decided_by": "index",
+     "top": [
+      [
+       "net.packet-loss",
+       0.9231
+      ],
+      [
+       "net.wifi-signal",
+       0.6102
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    }
+   ]
+  }
+ }
+}

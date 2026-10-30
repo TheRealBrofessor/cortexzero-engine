@@ -1,0 +1,34 @@
+id: net.dns-change
+title: Change DNS servers
+kind: answer
+description: How to switch to a public DNS server.
+patterns:
+- how do i change my dns
+- someone told me to change my dns
+- use 1.1.1.1 dns
+- switch dns server
+- switch to a faster dns
+- use google dns
+- change my name server
+- set dns to cloudflare
+- switch to opendns
+- where do i put the dns numbers
+- change the dns in the router settings
+- use cloudflare or google dns
+keywords:
+- dns
+- change
+text: 'On this computer (NetworkManager):
+
+  `nmcli con mod "<connection name>" ipv4.dns "1.1.1.1 9.9.9.9" ipv4.ignore-auto-dns yes` then reconnect.
+
+  For the whole house, set DNS in the router settings instead.
+
+  Find the connection name with `nmcli con show --active`.'
+core:
+- - dns
+  - opendns
+  - cloudflare
+  - quad9
+  - resolver
+scope: router

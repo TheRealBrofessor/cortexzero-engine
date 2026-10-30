@@ -1,0 +1,27 @@
+id: net.mac
+title: My MAC address
+kind: check
+description: Show this computer's hardware (MAC) addresses.
+patterns:
+- what is my mac address
+- find my mac address
+- hardware address of my computer
+- where do i find my devices mac
+- what is this computers hardware address
+- physical address of my network card
+- mac address of my laptop
+steps:
+- id: mac
+  argv:
+  - ip
+  - -br
+  - link
+  extract: ^(?!lo\b)(\S+)\s+\S+\s+([0-9a-f:]{17})
+  fmt: '{1}: {2}'
+default: 'Hardware (MAC) addresses: {mac:all}'
+core:
+- - mac
+  - hardware
+  - physical
+  - card
+scope: computer

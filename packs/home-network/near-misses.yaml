@@ -1,0 +1,203 @@
+# Out-of-scope look-alikes: messages that share words with home-network branches but are about
+# something this pack cannot check or fix. If one of these matches at least as well as the best
+# branch, the engine says "not in my library" instead of guessing. Write phrasings by TOPIC, not by
+# copying test messages. Topic ids become "none.<topic>" in the evidence log.
+woodworking-router:
+- router bit for woodworking
+- plunge router or trim router for wood
+- router table fence for cutting edges
+- cnc router for carving wood
+- which router bit makes a round edge on oak
+- my wood router burns the edge of the board
+- router bit keeps burning the wood
+- round over the edges of a table top with a router
+- feeding the router too fast or too slow through the grain
+- router speed setting for hardwood
+ship-and-travel-port:
+- which port does the cruise ship leave from
+- port of call on the cruise
+- airport terminal and gate
+- ship docked in the port harbor
+- port wine with dinner
+- ferry port parking
+online-account-password:
+- reset my gmail password
+- forgot my email password
+- netflix password reset email never comes
+- recover my facebook account password
+- apple id password locked out
+- bank login password reset
+- instagram account hacked password changed
+- two factor code not arriving for my account
+- password manager recommendation
+phone-and-tablet-wifi:
+- use my phone as a hotspot for my laptop
+- phone hotspot connected but laptop has no internet
+- share wifi password from iphone to android
+- my phone wont connect to wifi but laptop does
+- iphone keeps dropping wifi
+- android says connected without internet on my phone
+- wifi calling on my phone
+- tablet forgets wifi network
+- cell signal bars on my phone are low
+- 5g cellular data on my phone is slow
+- mobile hotspot from my phone
+printer-hardware:
+- printer is out of ink
+- replace the toner cartridge
+- paper jam in the printer
+- printer prints blank pages or streaks
+- printer ink is too expensive
+- which printer should i buy
+bluetooth-and-wearables:
+- bluetooth headphones wont pair
+- fitbit wont sync with the app
+- bluetooth speaker keeps cutting out
+- smartwatch wont connect to my phone
+- airpods connect to the wrong device
+casting-and-streaming-devices:
+- chromecast wont cast from my phone
+- cast to tv says no devices found
+- roku remote not working
+- airplay to apple tv not showing
+- smart tv app keeps crashing
+- chromecast keeps forgetting the wifi password
+- fire stick needs to be set up again
+smart-home:
+- smart fridge keeps losing wifi
+- smart thermostat app offline
+- washing machine wont connect to wifi
+- smart bulbs keep disconnecting from alexa
+- alexa says device unresponsive
+- google home routine not working
+- smart plug wont pair with the app
+- ring doorbell offline
+- thermostat app cant reach the thermostat
+buying-and-installing-hardware:
+- mesh wifi nodes weak connection between them should i return it
+- mesh system satellites wont pair
+- how do i set up a new router out of the box
+- which router should i buy
+- is a mesh system worth it
+- mesh wifi system with my existing router
+- move the router to another room with no coax outlet
+- best wifi extender to buy
+- replace the isp router with my own
+isp-billing-and-plan:
+- cancel my internet plan
+- my internet bill went up
+- cheapest internet provider in my area
+- isp data cap overage charges
+- upgrade my internet plan
+gaming-accounts-and-cheats:
+- lag switch on xbox live
+- my brother kicks me off xbox live
+- xbox live account suspended
+- steam account locked
+- psn is down for maintenance
+- steam deck authentication failed on wifi
+console-and-device-wifi:
+- steam deck wont connect to 5ghz wifi
+- nintendo switch cant find the wifi network
+- ps5 keeps disconnecting from wifi
+- smart tv wont join the wifi
+quality-of-service:
+- prioritize my work laptop over everything on wifi
+- set up qos on the router
+- give zoom calls priority on the router
+public-wifi-captive-portal:
+- coffee shop wifi login page wont pop up
+- hotel wifi captive portal not loading
+- airport wifi sign in page
+tv-and-radio-channels:
+- what channel is the game on
+- cable tv channels missing
+- tv antenna channel scan
+- satellite dish lost signal
+- radio station signal is weak
+general-off-topic:
+- who won the game last night
+- what is the weather tomorrow
+- recipe for dinner tonight
+- write me a poem
+- fishing net for the boat
+- spider web in the garage
+- social networking for my business
+- networking event for my career
+- network marketing company leads
+- my linkedin network suggests strangers
+- grow my professional network
+- cold air return vent in the basement
+- ethernet port on the hvac thermostat wiring
+# settings of OTHER devices (this pack only checks/changes this computer and the home router)
+other-device-settings:
+- wifi password on my phone
+- ip address on my phone
+- guest wifi on my phone
+- port on my phone
+- dns settings on my iphone
+- firewall on my iphone
+- bandwidth on my iphone
+- mac address on my fridge
+- vpn on my fridge
+- restart on my fridge
+- wifi password on my refrigerator
+- ip address on my refrigerator
+- guest wifi on my refrigerator
+- port on my refrigerator
+- dns settings on my microwave
+- firewall on my microwave
+- bandwidth on my microwave
+- mac address on my toaster
+- vpn on my toaster
+- restart on my toaster
+- wifi password on my drone
+- ip address on my drone
+- guest wifi on my drone
+- port on my drone
+- dns settings on my printer
+- firewall on my printer
+- bandwidth on my printer
+- mac address on my camera
+- vpn on my camera
+- restart on my camera
+- wifi password on my audio receiver
+- ip address on my audio receiver
+- guest wifi on my audio receiver
+- port on my audio receiver
+- dns settings on my satellite dish
+- firewall on my satellite dish
+- bandwidth on my satellite dish
+- mac address on my thermostat
+- vpn on my thermostat
+- restart on my thermostat
+- wifi password on my garage door
+- ip address on my garage door
+- guest wifi on my garage door
+- port on my garage door
+- dns settings on my bluetooth dongle
+- firewall on my bluetooth dongle
+- bandwidth on my bluetooth dongle
+- mac address on my game console
+- vpn on my game console
+- restart on my game console
+- wifi password on my xbox
+- ip address on my xbox
+- guest wifi on my xbox
+- port on my xbox
+- dns settings on my playstation
+- firewall on my playstation
+- bandwidth on my playstation
+- mac address on my doorbell
+- vpn on my doorbell
+- restart on my doorbell
+- wifi password on my smart speaker
+- ip address on my smart speaker
+- guest wifi on my smart speaker
+- port on my smart speaker
+- dns settings on my photocopier
+- firewall on my photocopier
+- bandwidth on my photocopier
+- mac address on my car
+- vpn on my car
+- restart on my car

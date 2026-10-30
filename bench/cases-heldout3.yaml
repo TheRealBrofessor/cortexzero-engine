@@ -1,0 +1,465 @@
+# HELD-OUT v3: written by Hermes czcasewriter, blind-labelled by czlabela + czlabelb; only agreed labels.
+# 98/120 agreed (23 none). Never tune on this file.
+- id: m001
+  report: which dns am i using right now anyway today
+  expect:
+  - net.dns-which
+- id: m002
+  report: my neural network model training keeps crashing with out of memory errors on the gpu i have 16gb vram
+    should be enough for this batch size is there a way to monitor gpu memory usage in real time like task manager
+    but for the graphics card
+  expect:
+  - none
+- id: m004
+  report: Video calls keep freezing and people say im robotic audio cuts out too ran a ping test and saw packet
+    loss like fifteen percent is that normal or is something wrong with my line how do i figure out where the loss
+    is happening
+  expect:
+  - net.packet-loss
+- id: m005
+  report: isp says modem fine but i got no internet still
+  expect:
+  - net.no-internet
+- id: m006
+  report: Websites were loading wrong yesterday showing old versions or not loading at all someone said to flush
+    the dns cache whatever that means i tried ipconfig flushdns in command prompt but im not sure it worked how
+    do i know if it actually cleared the cache
+  expect:
+  - net.dns-flush
+- id: m007
+  report: starlink bypass own router
+  expect:
+  - none
+- id: m008
+  report: Had to unplug the router yesterday because it was acting weird lights blinking wrong and now the wifi
+    name doesnt even show up on my laptop or tablet i plugged it back in waited five minutes but still nothing should
+    i call the cable company or try something first
+  expect:
+  - net.router-restart
+- id: m009
+  report: Favorite website wont load says server not found but my friend can access it just fine from their house
+    tried different browsers cleared cache nothing works is the site down for everyone or just me how can i check
+    without asking around
+  expect:
+  - net.site-check
+- id: m010
+  report: restart router properly how
+  expect:
+  - net.router-restart
+- id: m011
+  report: bluetooth speaker pairs but audio stutters on zoom calls
+  expect:
+  - none
+- id: m012
+  report: Trying to run a server on my computer and need to know if port 8080 is actually open and listening i ran
+    some command and it showed something but i dont understand the output how do i check if the port is open and
+    what program is using it
+  expect:
+  - net.port-listening
+- id: m013
+  report: site down for me but coworker says its fine
+  expect:
+  - net.site-check
+- id: m016
+  report: port 22 ssh open
+  expect:
+  - net.port-listening
+- id: m017
+  report: gmail says not private connection
+  expect:
+  - net.cert-check
+- id: m018
+  report: looking at routers on amazon and totally confused by all the specs ax3000 ax5400 wifi 6 wifi 6e tri-band
+    dual-band mesh extender what do i actually need for a two story house with four people streaming and gaming
+    dont want to overspend
+  expect:
+  - none
+- id: m019
+  report: router lights blinking weird after big storm last night
+  expect:
+  - net.router-restart
+- id: m021
+  report: router address thing 192.168.1.1 gives me nothing ever
+  expect:
+  - net.router-address
+- id: m022
+  report: ethernet cable cat five but should be cat six maybe
+  expect:
+  - net.ethernet
+- id: m023
+  report: wifi connected nothing loads
+  expect:
+  - net.no-internet
+- id: m024
+  report: internet dies completely when i plug in ethernet cable
+  expect:
+  - net.no-internet
+- id: m025
+  report: My friends come over and ask for the wifi password but i dont want them on my main network with my work
+    computer and smart tv and all that heard you can make a separate one for guests how do i set that up without
+    breaking my own connection
+  expect:
+  - net.guest-wifi
+- id: m028
+  report: port listening check for minecraft server not showing up
+  expect:
+  - net.port-listening
+- id: m029
+  report: phone works laptop no net
+  expect:
+  - net.no-internet
+- id: m031
+  report: getting emails saying my cloud storage is almost full but i barely have anything in there checked the
+    drive and its mostly empty maybe its counting shared files from my team how do i see what's actually taking
+    up space and clear it
+  expect:
+  - none
+- id: m032
+  report: want to see what wifi networks are around me and what channels theyre on so i can pick a better one for
+    my router heard channels overlap and cause interference but the list in settings just shows names and signal
+    strength not channel numbers
+  expect:
+  - net.wifi-networks
+- id: m034
+  report: Need to log into my router settings to change some things but i dont know the address to type in the browser
+    tried 192.168.1.1 and 192.168.0.1 neither worked how do i find the actual address for my specific router model
+  expect:
+  - net.router-address
+- id: m035
+  report: my internet been acting up since i installed that new smart thermostat it connects to wifi but then other
+    devices get kicked off or slow down could it be using too much bandwidth how do i check what each device is
+    using on the network
+  expect:
+  - net.bandwidth-hog
+- id: m036
+  report: isp dns slow can change
+  expect:
+  - net.dns-change
+- id: m037
+  report: dns flush didnt fix site
+  expect:
+  - net.dns-flush
+- id: m040
+  report: my computer takes forever to find websites after i wake it from sleep like ten seconds before anything
+    loads someone said its the dns cache being stale how do i clear it properly on windows i tried the command prompt
+    thing but not sure it worked
+  expect:
+  - net.dns-flush
+- id: m041
+  report: order pizza me
+  expect:
+  - none
+- id: m042
+  report: wifi7 clients exist
+  expect:
+  - none
+- id: m043
+  report: trying to use my phone as a hotspot for my laptop but the laptop says no internet even though phone shows
+    connected and i can browse on the phone fine hotspot worked last month now it doesnt what setting could have
+    changed to break it
+  expect:
+  - none
+- id: m044
+  report: vpn connected but work server still says offline now
+  expect:
+  - net.vpn-status
+- id: m045
+  report: Neighbor asked for our wifi password last week and now i think theyre still using it my internet seems
+    slower in the evenings how do i change the password so they cant get on anymore but my own devices stay connected
+    without me re-entering it on everything
+  expect:
+  - net.wifi-password-change
+- id: m047
+  report: kids 4k streaming hogs bandwidth
+  expect:
+  - net.bandwidth-hog
+- id: m048
+  report: bluetooth headphones keep cutting out during zoom meetings now
+  expect:
+  - none
+- id: m050
+  report: why fi signal shows full bars in the living room but in my bedroom its like two bars and everything loads
+    slow there i heard about two point four and five gigahertz bands but dont know which one im on or how to switch
+    to the better one for my room
+  expect:
+  - net.wifi-signal
+- id: m051
+  report: port forward set up but friends still cant join
+  expect:
+  - net.port-forward
+- id: m052
+  report: Internet feels slower than usual today download takes ages and upload is barely there i pay for fast service
+    but speed tests show way less than what im supposed to get been like this for three days now any idea why its
+    so bad suddenly
+  expect:
+  - net.speed
+- id: m053
+  report: secure network checklist thing where do i even start
+  expect:
+  - net.secure-network
+- id: m054
+  report: um yeah mobile data works fine but home wifi doesnt
+  expect:
+  - net.no-internet
+- id: m056
+  report: xbox live nat type strict how do i fix this
+  expect:
+  - net.port-forward
+- id: m057
+  report: program port 3000
+  expect:
+  - net.port-listening
+- id: m058
+  report: slow after hop 3
+  expect:
+  - net.traceroute
+- id: m059
+  report: certificate warning on every site since tuesday update happened
+  expect:
+  - net.cert-check
+- id: m061
+  report: joined this network marketing company and they want me to build my downline but i dont know anyone who
+    wants to buy these supplements is there a way to find leads online without spamming my friends on facebook feels
+    scammy but they said its legit
+  expect:
+  - none
+- id: m062
+  report: Got a new router and now my computer says no internet even though wifi connects fine phone works on the
+    same network but laptop doesnt i think it might need a fresh ip address how do i force it to get a new one from
+    the router
+  expect:
+  - net.renew-ip
+- id: m063
+  report: firewall popped up warning about suspicious connection attempt just
+  expect:
+  - net.firewall-status
+- id: m064
+  report: ring doorbell offline but wifi works for everything else
+  expect:
+  - none
+- id: m066
+  report: getting that not secure warning in chrome when i go to my bank website the lock icon has a line through
+    it says certificate not valid or something is it safe to proceed or is someone intercepting my connection how
+    do i check if the certificate is actually good
+  expect:
+  - net.cert-check
+- id: m067
+  report: trying to set up alexa on the new echo dot but it wont connect to wifi keeps saying unable to connect
+    try again the light spins orange then red my phone connects fine to the same network is the echo defective or
+    am i doing something wrong
+  expect:
+  - none
+- id: m068
+  report: how do i make guest network for airbnb guests
+  expect:
+  - net.guest-wifi
+- id: m069
+  report: i keep seeing pop ups about vpn not connected on my work laptop but i dont even use a vpn personally the
+    company set it up and now it says disconnected how do i check if the vpn tunnel is actually up or if its just
+    a false alarm
+  expect:
+  - net.vpn-status
+- id: m071
+  report: netflix account hacked someone watching from another country now
+  expect:
+  - none
+- id: m073
+  report: cant find printer network
+  expect:
+  - net.printer
+- id: m074
+  report: um why does my hotspot work but home wifi doesnt
+  expect:
+  - net.no-internet
+- id: m075
+  report: alexa stops responding random
+  expect:
+  - none
+- id: m076
+  report: packet loss 15 game
+  expect:
+  - net.packet-loss
+- id: m077
+  report: which channel least crowded
+  expect:
+  - net.wifi-networks
+- id: m078
+  report: Saw a bunch of devices on the network list that i dont recognize some weird names like linux-box and pixel-7
+    could be my roommates stuff or maybe someone else is using my wifi how do i figure out which ones are mine and
+    kick off the ones that arent
+  expect:
+  - net.devices
+- id: m079
+  report: renew ip address didnt get new one from router
+  expect:
+  - net.renew-ip
+- id: m080
+  report: best mesh thick walls
+  expect:
+  - none
+- id: m081
+  report: firewall even on
+  expect:
+  - net.firewall-status
+- id: m082
+  report: why 2.4ghz not 5ghz
+  expect:
+  - net.wifi-signal
+- id: m083
+  report: dhcp renewal failed
+  expect:
+  - net.renew-ip
+- id: m084
+  report: my instagram account got hacked yesterday someone changed the email and password i cant get back in facebook
+    support is useless been three days no reply is there a phone number i can call or someone who can actually help
+    recover it
+  expect:
+  - none
+- id: m085
+  report: mac filter laptop address
+  expect:
+  - net.mac
+- id: m086
+  report: Need to find the mac address of my laptop for work they want it to register my device on their network
+    i looked in settings but there are like five different addresses listed which one is the actual mac address
+    they need
+  expect:
+  - net.mac
+- id: m087
+  report: Plugged in the ethernet cable but the little lights on the port arent blinking like they used to wifi
+    works fine but wired doesnt i swapped cables tried different ports on the router nothing changed is the port
+    on my computer broken or is it a setting
+  expect:
+  - net.ethernet
+- id: m088
+  report: ethernet port light dead but cable works on other pc
+  expect:
+  - net.ethernet
+- id: m089
+  report: Setting up remote access to my home computer and the software needs my public ip address but it keeps
+    changing every few days is there a way to make it stay the same or do i need to pay extra for a static ip from
+    my provider
+  expect:
+  - net.public-ip
+- id: m091
+  report: bandwith hog what even is that my roommate downloads constantly
+  expect:
+  - net.bandwidth-hog
+- id: m092
+  report: bank site cert warning safe
+  expect:
+  - net.cert-check
+- id: m093
+  report: my linkedin network keeps suggesting people i dont know from random companies never worked with them is
+    there a way to stop these suggestions or make my profile private so strangers cant find me through my connections
+    anymore
+  expect:
+  - none
+- id: m094
+  report: vpn connected no internet
+  expect:
+  - net.vpn-status
+- id: m095
+  report: ethernet cold air return
+  expect:
+  - none
+- id: m096
+  report: Want to host a game server for my friends and they cant connect i think i need to forward a port on the
+    router but the settings page is confusing with all these numbers and protocols tcp udp both which one do i pick
+    and what numbers go where
+  expect:
+  - net.port-forward
+- id: m097
+  report: traced route to game server shows huge jump at hop three
+  expect:
+  - net.traceroute
+- id: m098
+  report: My laptop keeps losing the internet every hour or so it started last week after that storm we had the
+    lights flickered and ever since the connection drops and comes back on its own i have to keep reconnecting to
+    get my work done what could be wrong with it
+  expect:
+  - net.no-internet
+- id: m099
+  report: ethernet connected no internet
+  expect:
+  - net.no-internet
+- id: m100
+  report: should i buy mesh system or just better router
+  expect:
+  - none
+- id: m101
+  report: Want to make my home network more secure heard about changing default passwords and disabling wps and
+    something about guest networks but there are so many settings and i dont want to lock myself out what are the
+    most important things to do first
+  expect:
+  - net.secure-network
+- id: m102
+  report: amazon echo wont connect to new wifi after move
+  expect:
+  - none
+- id: m103
+  report: wifi networks scan shows nothing but phone sees five
+  expect:
+  - net.wifi-networks
+- id: m104
+  report: um my internet works but discord voice keeps cutting out
+  expect:
+  - net.packet-loss
+- id: m105
+  report: cant reach router login page from my computer today
+  expect:
+  - net.router-address
+- id: m106
+  report: google nest thermostat lost connection after power outage yesterday
+  expect:
+  - none
+- id: m107
+  report: smart fridge keeps losing wifi connection every few days have to go into settings and reconnect manually
+    the fridge is right next to the router literally five feet away signal should be perfect why does it keep dropping
+    only the fridge not other stuff
+  expect:
+  - none
+- id: m108
+  report: bought a mesh wifi system three pack but the app says weak connection between nodes even though theyre
+    only twenty feet apart walls are plaster not concrete should i return it and get a different brand or try moving
+    them around first
+  expect:
+  - none
+- id: m109
+  report: packet loss test shows twenty percent to google dns
+  expect:
+  - net.packet-loss
+- id: m110
+  report: there router keeps needing restarts like every other day i unplug it wait thirty seconds plug it back
+    in and it works for a while but then starts acting up again is there a proper way to restart it so it stays
+    stable longer or is it just dying
+  expect:
+  - net.router-restart
+- id: m111
+  report: public ip changed and now remote access broken completely
+  expect:
+  - net.public-ip
+- id: m114
+  report: printer worked yesterday now laptop cant find it anymore
+  expect:
+  - net.printer
+- id: m116
+  report: Trying to print from my laptop and it says printer offline but the printer is on and connected to wifi
+    i can print from my phone just fine restarted both nothing works why does my computer not see it when my phone
+    does just fine
+  expect:
+  - net.printer
+- id: m117
+  report: Keep getting warnings about firewall being off in the security center but i thought it was on by default
+    how do i check if its actually running and turn it on if its not i dont want to mess up my connection by enabling
+    the wrong thing
+  expect:
+  - net.firewall-status
+- id: m119
+  report: speed test says fast but downloads crawl anyway today
+  expect:
+  - net.speed
+- id: m120
+  report: signal shows strong but video calls keep freezing up
+  expect:
+  - net.packet-loss

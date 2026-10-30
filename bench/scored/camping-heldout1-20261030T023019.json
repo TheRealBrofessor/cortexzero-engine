@@ -1,0 +1,4094 @@
+{
+ "cases_file": "packs/family-camping/cases/heldout1.yaml",
+ "branches": 14,
+ "results": {
+  "index-only": {
+   "summary": {
+    "cases": 54,
+    "accuracy": 0.556,
+    "in_scope": "20/43",
+    "none_correct": "10/11",
+    "false_routes": 1,
+    "asked": 0,
+    "model_failed": 0,
+    "model_calls": 0,
+    "latency_mean_s": 0.021,
+    "latency_max_s": 0.24
+   },
+   "rows": [
+    {
+     "id": "K001",
+     "report": "Bear right outside tent",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5869
+      ],
+      [
+       "camp.food-storage",
+       0.3667
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K002",
+     "report": "Black bear picnic table help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5351
+      ],
+      [
+       "camp.food-storage",
+       0.3082
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K003",
+     "report": "Saw bear cub near creek",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.6537
+      ],
+      [
+       "camp.food-storage",
+       0.3045
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K004",
+     "report": "How start campfire safely please",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8449
+      ],
+      [
+       "camp.campfire-out",
+       0.5254
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K005",
+     "report": "Wet wood wont light help",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K006",
+     "report": "Where can I have fire",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8596
+      ],
+      [
+       "camp.campfire-out",
+       0.5011
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.0
+    },
+    {
+     "id": "K007",
+     "report": "Fire out enough for bed",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": "camp.campfire-out",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.7005
+      ],
+      [
+       "camp.campfire-build",
+       0.2794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.0
+    },
+    {
+     "id": "K008",
+     "report": "Coals still hot after water",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.water-safe",
+       0.4319
+      ],
+      [
+       "camp.minor-burn",
+       0.331
+      ],
+      [
+       "camp.campfire-out",
+       0.2714
+      ]
+     ],
+     "model_raw": "none.house-and-home",
+     "seconds": 0.0
+    },
+    {
+     "id": "K010",
+     "report": "Fishing license catch release lake",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.8772
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K011",
+     "report": "Kids need license or not",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.606
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K013",
+     "report": "Cooler placement bear proof help",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4972
+      ],
+      [
+       "camp.bear-encounter",
+       0.33
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K014",
+     "report": "Trunk smell proof or locker",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.food-storage",
+       0.5428
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K015",
+     "report": "Toothpaste deodorant scented items yes",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K016",
+     "report": "Weekend packing list absolute must haves for family trip",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": "camp.gear-checklist",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.6986
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K017",
+     "report": "Forgot tent stakes last time what else people forget",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.4407
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K018",
+     "report": "Grandkids coming need checklist two adults three kids dog",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.3237
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.222
+    },
+    {
+     "id": "K019",
+     "report": "Teen got dizzy nauseous hiking ninety degree heat help",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.8283
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K020",
+     "report": "Grandpa flushed confused setting up camp sun all afternoon",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K021",
+     "report": "Heat exhaustion versus heat stroke tell difference fast please",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.822
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K022",
+     "report": "Woke up shivering sleeping bag not rated cold enough",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8252
+      ],
+      [
+       "camp.weather-forecast",
+       0.3001
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K023",
+     "report": "Grandma hands numb clumsy after morning fishing wind chill",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.417
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K024",
+     "report": "Hypothermia signs toddler wont stop crying feels cold help",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8773
+      ],
+      [
+       "camp.weather-forecast",
+       0.3033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K025",
+     "report": "Tie tarp down which knot makes loop not slip",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": "camp.knot-bowline",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.7587
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K026",
+     "report": "Bowline bear bag hang step step hands cold please",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.4086
+      ],
+      [
+       "camp.bear-encounter",
+       0.323
+      ],
+      [
+       "camp.weather-forecast",
+       0.3037
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K027",
+     "report": "Tying tent guyline bowline better two half hitches right",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.405
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.181
+    },
+    {
+     "id": "K028",
+     "report": "Thunder rolling in tents ridge where go now help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.lightning",
+       0.484
+      ],
+      [
+       "camp.weather-forecast",
+       0.2136
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K029",
+     "report": "Lightning close hair standing up leader says get low",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.lightning",
+       0.4595
+      ],
+      [
+       "camp.weather-forecast",
+       0.2041
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K030",
+     "report": "Storm hit fast no buildings just cars shelter help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.lightning",
+       0.4818
+      ],
+      [
+       "camp.weather-forecast",
+       0.2058
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K031",
+     "report": "Marshmallow caught fire kid burned thumb blister forming help",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5473
+      ],
+      [
+       "camp.campfire-out",
+       0.4485
+      ],
+      [
+       "camp.campfire-build",
+       0.3526
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K032",
+     "report": "Grabbed hot cast iron handle palm red stinging bad",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.2367
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K033",
+     "report": "Hot coffee spilled forearm small burn water helps now",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5106
+      ],
+      [
+       "camp.water-safe",
+       0.4163
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K034",
+     "report": "Found tick attached kids ear after hike tweezers ready",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.8746
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K035",
+     "report": "Tick belly head stuck body popped off now what",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.6307
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K036",
+     "report": "How long attached before lyme risk tiny nymph help",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K037",
+     "report": "Stream looks clear giardia risk boil how long safe",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.6612
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.205
+    },
+    {
+     "id": "K038",
+     "report": "I forgot the water filter so I am boiling a pot on the camp stove rolling boil one minute should work right for safe drinking water tomorrow morning breakfast time please",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8227
+      ],
+      [
+       "camp.gear-checklist",
+       0.2931
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K039",
+     "report": "Lake water morning coffee should I boil then filter or filter then boil which order works best for safe drinking water without giardia risk tonight camping trip here please help me decide",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8222
+      ],
+      [
+       "camp.gear-checklist",
+       0.5647
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.205
+    },
+    {
+     "id": "K040",
+     "report": "Weather forecast Pine Creek campground this weekend please help",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.9242
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K041",
+     "report": "Phone weather app says sunny all weekend but campground ranger warned afternoon storms who should I believe for planning hiking trip tomorrow morning hike here now please help me",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.5678
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.002
+    },
+    {
+     "id": "K042",
+     "report": "Need reliable forecast high elevation campsite but all weather apps disagree completely today and tomorrow so unsure what to pack for weekend trip coming up soon really",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "index-only",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.6312
+      ],
+      [
+       "camp.gear-checklist",
+       0.6261
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K043",
+     "report": "Extra weather question NOAA fire weather watch red flag warning means what for campers planning trips this weekend",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4115
+      ],
+      [
+       "camp.weather-forecast",
+       0.3753
+      ],
+      [
+       "camp.campfire-build",
+       0.2615
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.021
+    },
+    {
+     "id": "K044",
+     "report": "Campfire smoke asthma inhaler not helping much at all need advice right now please help",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4315
+      ],
+      [
+       "camp.campfire-build",
+       0.2638
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K045",
+     "report": "Poison ivy spreading fast calamine gone any camp remedies work for itching swelling until home doctor tomorrow afternoon please help me out",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K046",
+     "report": "Shoelace knot stuck fingers freezing help me please now",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8223
+      ],
+      [
+       "camp.knot-bowline",
+       0.3196
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K047",
+     "report": "Bear spray expired twenty twenty one still good or trash it and buy new one before weekend trip next saturday morning early please help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.318
+      ],
+      [
+       "camp.food-storage",
+       0.2958
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K048",
+     "report": "Propane tank making weird hissing noise valve stuck open maybe dangerous should we move away from fire right now before something bad happens tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4107
+      ],
+      [
+       "camp.campfire-build",
+       0.2605
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K050",
+     "report": "Mosquitoes eating us alive DEET versus picaridin which works better kids adults all night long without reapplying constantly every hour please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.24
+    },
+    {
+     "id": "K051",
+     "report": "Forgot can opener any hacks opening beans without one using knife rock safely without cutting myself badly need help now please",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K052",
+     "report": "Camp chair broke duct tape fix or sit cooler rest weekend trip because no stores nearby anywhere close to here help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4719
+      ],
+      [
+       "camp.gear-checklist",
+       0.3198
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K053",
+     "report": "Neighbors generator loud all night quiet hours start ten right or eleven because need sleep badly tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K055",
+     "report": "Storm drain backed up campsite flooding who call this hour ranger station closed water rising fast everywhere help me please",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.lightning",
+       0.4674
+      ],
+      [
+       "camp.water-safe",
+       0.4121
+      ],
+      [
+       "camp.weather-forecast",
+       0.1998
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K056",
+     "report": "License plate fell trailer duct tape hold till home or need real fix before highway driving tomorrow morning early please help",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.4126
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.002
+    },
+    {
+     "id": "K057",
+     "report": "Burned tongue hot cocoa blistered swallow ok or see doc tomorrow morning because really hurts bad swollen now help me",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.3419
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K060",
+     "report": "Fire drill school today kids hid closet crying teacher said practice but really scared shaking help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4119
+      ],
+      [
+       "camp.campfire-build",
+       0.297
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    }
+   ]
+  },
+  "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M": {
+   "summary": {
+    "cases": 54,
+    "accuracy": 0.556,
+    "in_scope": "20/43",
+    "none_correct": "10/11",
+    "false_routes": 1,
+    "asked": 22,
+    "model_failed": 0,
+    "model_calls": 22,
+    "latency_mean_s": 0.17,
+    "latency_max_s": 0.542
+   },
+   "rows": [
+    {
+     "id": "K001",
+     "report": "Bear right outside tent",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5869
+      ],
+      [
+       "camp.food-storage",
+       0.3667
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K002",
+     "report": "Black bear picnic table help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5351
+      ],
+      [
+       "camp.food-storage",
+       0.3082
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.336
+    },
+    {
+     "id": "K003",
+     "report": "Saw bear cub near creek",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.6537
+      ],
+      [
+       "camp.food-storage",
+       0.3045
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K004",
+     "report": "How start campfire safely please",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8449
+      ],
+      [
+       "camp.campfire-out",
+       0.5254
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K005",
+     "report": "Wet wood wont light help",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K006",
+     "report": "Where can I have fire",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8596
+      ],
+      [
+       "camp.campfire-out",
+       0.5011
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K007",
+     "report": "Fire out enough for bed",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": "camp.campfire-out",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.7005
+      ],
+      [
+       "camp.campfire-build",
+       0.2794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K008",
+     "report": "Coals still hot after water",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.water-safe",
+       0.4319
+      ],
+      [
+       "camp.minor-burn",
+       0.331
+      ],
+      [
+       "camp.campfire-out",
+       0.2714
+      ]
+     ],
+     "model_raw": "none.house-and-home",
+     "seconds": 0.001
+    },
+    {
+     "id": "K010",
+     "report": "Fishing license catch release lake",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.8772
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K011",
+     "report": "Kids need license or not",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.606
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K013",
+     "report": "Cooler placement bear proof help",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4972
+      ],
+      [
+       "camp.bear-encounter",
+       0.33
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.34
+    },
+    {
+     "id": "K014",
+     "report": "Trunk smell proof or locker",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.food-storage",
+       0.5428
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.277
+    },
+    {
+     "id": "K015",
+     "report": "Toothpaste deodorant scented items yes",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K016",
+     "report": "Weekend packing list absolute must haves for family trip",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": "camp.gear-checklist",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.6986
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K017",
+     "report": "Forgot tent stakes last time what else people forget",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.4407
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.269
+    },
+    {
+     "id": "K018",
+     "report": "Grandkids coming need checklist two adults three kids dog",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.3237
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.509
+    },
+    {
+     "id": "K019",
+     "report": "Teen got dizzy nauseous hiking ninety degree heat help",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.8283
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K020",
+     "report": "Grandpa flushed confused setting up camp sun all afternoon",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K021",
+     "report": "Heat exhaustion versus heat stroke tell difference fast please",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.822
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K022",
+     "report": "Woke up shivering sleeping bag not rated cold enough",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8252
+      ],
+      [
+       "camp.weather-forecast",
+       0.3001
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K023",
+     "report": "Grandma hands numb clumsy after morning fishing wind chill",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.417
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.268
+    },
+    {
+     "id": "K024",
+     "report": "Hypothermia signs toddler wont stop crying feels cold help",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8773
+      ],
+      [
+       "camp.weather-forecast",
+       0.3033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K025",
+     "report": "Tie tarp down which knot makes loop not slip",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": "camp.knot-bowline",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.7587
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K026",
+     "report": "Bowline bear bag hang step step hands cold please",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.4086
+      ],
+      [
+       "camp.bear-encounter",
+       0.323
+      ],
+      [
+       "camp.weather-forecast",
+       0.3037
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.379
+    },
+    {
+     "id": "K027",
+     "report": "Tying tent guyline bowline better two half hitches right",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.405
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.542
+    },
+    {
+     "id": "K028",
+     "report": "Thunder rolling in tents ridge where go now help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.lightning",
+       0.484
+      ],
+      [
+       "camp.weather-forecast",
+       0.2136
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.371
+    },
+    {
+     "id": "K029",
+     "report": "Lightning close hair standing up leader says get low",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.lightning",
+       0.4595
+      ],
+      [
+       "camp.weather-forecast",
+       0.2041
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.352
+    },
+    {
+     "id": "K030",
+     "report": "Storm hit fast no buildings just cars shelter help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.lightning",
+       0.4818
+      ],
+      [
+       "camp.weather-forecast",
+       0.2058
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.358
+    },
+    {
+     "id": "K031",
+     "report": "Marshmallow caught fire kid burned thumb blister forming help",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5473
+      ],
+      [
+       "camp.campfire-out",
+       0.4485
+      ],
+      [
+       "camp.campfire-build",
+       0.3526
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.408
+    },
+    {
+     "id": "K032",
+     "report": "Grabbed hot cast iron handle palm red stinging bad",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.2367
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.268
+    },
+    {
+     "id": "K033",
+     "report": "Hot coffee spilled forearm small burn water helps now",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5106
+      ],
+      [
+       "camp.water-safe",
+       0.4163
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.361
+    },
+    {
+     "id": "K034",
+     "report": "Found tick attached kids ear after hike tweezers ready",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.8746
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K035",
+     "report": "Tick belly head stuck body popped off now what",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.6307
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K036",
+     "report": "How long attached before lyme risk tiny nymph help",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K037",
+     "report": "Stream looks clear giardia risk boil how long safe",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.6612
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.229
+    },
+    {
+     "id": "K038",
+     "report": "I forgot the water filter so I am boiling a pot on the camp stove rolling boil one minute should work right for safe drinking water tomorrow morning breakfast time please",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8227
+      ],
+      [
+       "camp.gear-checklist",
+       0.2931
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K039",
+     "report": "Lake water morning coffee should I boil then filter or filter then boil which order works best for safe drinking water without giardia risk tonight camping trip here please help me decide",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8222
+      ],
+      [
+       "camp.gear-checklist",
+       0.5647
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.209
+    },
+    {
+     "id": "K040",
+     "report": "Weather forecast Pine Creek campground this weekend please help",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.9242
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K041",
+     "report": "Phone weather app says sunny all weekend but campground ranger warned afternoon storms who should I believe for planning hiking trip tomorrow morning hike here now please help me",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.5678
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.002
+    },
+    {
+     "id": "K042",
+     "report": "Need reliable forecast high elevation campsite but all weather apps disagree completely today and tomorrow so unsure what to pack for weekend trip coming up soon really",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "index-after-ask",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.6312
+      ],
+      [
+       "camp.gear-checklist",
+       0.6261
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.33
+    },
+    {
+     "id": "K043",
+     "report": "Extra weather question NOAA fire weather watch red flag warning means what for campers planning trips this weekend",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4115
+      ],
+      [
+       "camp.weather-forecast",
+       0.3753
+      ],
+      [
+       "camp.campfire-build",
+       0.2615
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.409
+    },
+    {
+     "id": "K044",
+     "report": "Campfire smoke asthma inhaler not helping much at all need advice right now please help",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4315
+      ],
+      [
+       "camp.campfire-build",
+       0.2638
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.441
+    },
+    {
+     "id": "K045",
+     "report": "Poison ivy spreading fast calamine gone any camp remedies work for itching swelling until home doctor tomorrow afternoon please help me out",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "K046",
+     "report": "Shoelace knot stuck fingers freezing help me please now",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8223
+      ],
+      [
+       "camp.knot-bowline",
+       0.3196
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K047",
+     "report": "Bear spray expired twenty twenty one still good or trash it and buy new one before weekend trip next saturday morning early please help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.318
+      ],
+      [
+       "camp.food-storage",
+       0.2958
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.365
+    },
+    {
+     "id": "K048",
+     "report": "Propane tank making weird hissing noise valve stuck open maybe dangerous should we move away from fire right now before something bad happens tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4107
+      ],
+      [
+       "camp.campfire-build",
+       0.2605
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.37
+    },
+    {
+     "id": "K050",
+     "report": "Mosquitoes eating us alive DEET versus picaridin which works better kids adults all night long without reapplying constantly every hour please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.269
+    },
+    {
+     "id": "K051",
+     "report": "Forgot can opener any hacks opening beans without one using knife rock safely without cutting myself badly need help now please",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K052",
+     "report": "Camp chair broke duct tape fix or sit cooler rest weekend trip because no stores nearby anywhere close to here help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4719
+      ],
+      [
+       "camp.gear-checklist",
+       0.3198
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.358
+    },
+    {
+     "id": "K053",
+     "report": "Neighbors generator loud all night quiet hours start ten right or eleven because need sleep badly tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "K055",
+     "report": "Storm drain backed up campsite flooding who call this hour ranger station closed water rising fast everywhere help me please",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.lightning",
+       0.4674
+      ],
+      [
+       "camp.water-safe",
+       0.4121
+      ],
+      [
+       "camp.weather-forecast",
+       0.1998
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.364
+    },
+    {
+     "id": "K056",
+     "report": "License plate fell trailer duct tape hold till home or need real fix before highway driving tomorrow morning early please help",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.4126
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.003
+    },
+    {
+     "id": "K057",
+     "report": "Burned tongue hot cocoa blistered swallow ok or see doc tomorrow morning because really hurts bad swollen now help me",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.3419
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.339
+    },
+    {
+     "id": "K060",
+     "report": "Fire drill school today kids hid closet crying teacher said practice but really scared shaking help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "ask",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4119
+      ],
+      [
+       "camp.campfire-build",
+       0.297
+      ]
+     ],
+     "model_raw": "{\"choice\": \"ask\"}",
+     "seconds": 0.386
+    }
+   ]
+  },
+  "llama3.2:1b": {
+   "summary": {
+    "cases": 54,
+    "accuracy": 0.611,
+    "in_scope": "24/43",
+    "none_correct": "9/11",
+    "false_routes": 3,
+    "asked": 0,
+    "model_failed": 0,
+    "model_calls": 23,
+    "latency_mean_s": 0.194,
+    "latency_max_s": 0.601
+   },
+   "rows": [
+    {
+     "id": "K001",
+     "report": "Bear right outside tent",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5869
+      ],
+      [
+       "camp.food-storage",
+       0.3667
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K002",
+     "report": "Black bear picnic table help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5351
+      ],
+      [
+       "camp.food-storage",
+       0.3082
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.bear-encounter\"}",
+     "seconds": 0.601
+    },
+    {
+     "id": "K003",
+     "report": "Saw bear cub near creek",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.6537
+      ],
+      [
+       "camp.food-storage",
+       0.3045
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K004",
+     "report": "How start campfire safely please",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8449
+      ],
+      [
+       "camp.campfire-out",
+       0.5254
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K005",
+     "report": "Wet wood wont light help",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K006",
+     "report": "Where can I have fire",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8596
+      ],
+      [
+       "camp.campfire-out",
+       0.5011
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K007",
+     "report": "Fire out enough for bed",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": "camp.campfire-out",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.7005
+      ],
+      [
+       "camp.campfire-build",
+       0.2794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K008",
+     "report": "Coals still hot after water",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.water-safe",
+       0.4319
+      ],
+      [
+       "camp.minor-burn",
+       0.331
+      ],
+      [
+       "camp.campfire-out",
+       0.2714
+      ]
+     ],
+     "model_raw": "none.house-and-home",
+     "seconds": 0.001
+    },
+    {
+     "id": "K010",
+     "report": "Fishing license catch release lake",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.8772
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K011",
+     "report": "Kids need license or not",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.606
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K013",
+     "report": "Cooler placement bear proof help",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4972
+      ],
+      [
+       "camp.bear-encounter",
+       0.33
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.bear-encounter\"}",
+     "seconds": 0.492
+    },
+    {
+     "id": "K014",
+     "report": "Trunk smell proof or locker",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": "camp.food-storage",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.food-storage",
+       0.5428
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.food-storage\"}",
+     "seconds": 0.439
+    },
+    {
+     "id": "K015",
+     "report": "Toothpaste deodorant scented items yes",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K016",
+     "report": "Weekend packing list absolute must haves for family trip",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": "camp.gear-checklist",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.6986
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K017",
+     "report": "Forgot tent stakes last time what else people forget",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": "camp.gear-checklist",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.4407
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.gear-checklist\"}",
+     "seconds": 0.405
+    },
+    {
+     "id": "K018",
+     "report": "Grandkids coming need checklist two adults three kids dog",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.3237
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.564
+    },
+    {
+     "id": "K019",
+     "report": "Teen got dizzy nauseous hiking ninety degree heat help",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.8283
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K020",
+     "report": "Grandpa flushed confused setting up camp sun all afternoon",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K021",
+     "report": "Heat exhaustion versus heat stroke tell difference fast please",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.822
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K022",
+     "report": "Woke up shivering sleeping bag not rated cold enough",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8252
+      ],
+      [
+       "camp.weather-forecast",
+       0.3001
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K023",
+     "report": "Grandma hands numb clumsy after morning fishing wind chill",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.417
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.303
+    },
+    {
+     "id": "K024",
+     "report": "Hypothermia signs toddler wont stop crying feels cold help",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8773
+      ],
+      [
+       "camp.weather-forecast",
+       0.3033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K025",
+     "report": "Tie tarp down which knot makes loop not slip",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": "camp.knot-bowline",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.7587
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K026",
+     "report": "Bowline bear bag hang step step hands cold please",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.4086
+      ],
+      [
+       "camp.bear-encounter",
+       0.323
+      ],
+      [
+       "camp.weather-forecast",
+       0.3037
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.392
+    },
+    {
+     "id": "K027",
+     "report": "Tying tent guyline bowline better two half hitches right",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.405
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.58
+    },
+    {
+     "id": "K028",
+     "report": "Thunder rolling in tents ridge where go now help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.lightning",
+       0.484
+      ],
+      [
+       "camp.weather-forecast",
+       0.2136
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.374
+    },
+    {
+     "id": "K029",
+     "report": "Lightning close hair standing up leader says get low",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": "camp.lightning",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.lightning",
+       0.4595
+      ],
+      [
+       "camp.weather-forecast",
+       0.2041
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.lightning\"}",
+     "seconds": 0.461
+    },
+    {
+     "id": "K030",
+     "report": "Storm hit fast no buildings just cars shelter help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.lightning",
+       0.4818
+      ],
+      [
+       "camp.weather-forecast",
+       0.2058
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.371
+    },
+    {
+     "id": "K031",
+     "report": "Marshmallow caught fire kid burned thumb blister forming help",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5473
+      ],
+      [
+       "camp.campfire-out",
+       0.4485
+      ],
+      [
+       "camp.campfire-build",
+       0.3526
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.366
+    },
+    {
+     "id": "K032",
+     "report": "Grabbed hot cast iron handle palm red stinging bad",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.2367
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.308
+    },
+    {
+     "id": "K033",
+     "report": "Hot coffee spilled forearm small burn water helps now",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5106
+      ],
+      [
+       "camp.water-safe",
+       0.4163
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.361
+    },
+    {
+     "id": "K034",
+     "report": "Found tick attached kids ear after hike tweezers ready",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.8746
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K035",
+     "report": "Tick belly head stuck body popped off now what",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.6307
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K036",
+     "report": "How long attached before lyme risk tiny nymph help",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K037",
+     "report": "Stream looks clear giardia risk boil how long safe",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.6612
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.235
+    },
+    {
+     "id": "K038",
+     "report": "I forgot the water filter so I am boiling a pot on the camp stove rolling boil one minute should work right for safe drinking water tomorrow morning breakfast time please",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8227
+      ],
+      [
+       "camp.gear-checklist",
+       0.2931
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K039",
+     "report": "Lake water morning coffee should I boil then filter or filter then boil which order works best for safe drinking water without giardia risk tonight camping trip here please help me decide",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8222
+      ],
+      [
+       "camp.gear-checklist",
+       0.5647
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.222
+    },
+    {
+     "id": "K040",
+     "report": "Weather forecast Pine Creek campground this weekend please help",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.9242
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K041",
+     "report": "Phone weather app says sunny all weekend but campground ranger warned afternoon storms who should I believe for planning hiking trip tomorrow morning hike here now please help me",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.5678
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.002
+    },
+    {
+     "id": "K042",
+     "report": "Need reliable forecast high elevation campsite but all weather apps disagree completely today and tomorrow so unsure what to pack for weekend trip coming up soon really",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.6312
+      ],
+      [
+       "camp.gear-checklist",
+       0.6261
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.weather-forecast\"}",
+     "seconds": 0.448
+    },
+    {
+     "id": "K043",
+     "report": "Extra weather question NOAA fire weather watch red flag warning means what for campers planning trips this weekend",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4115
+      ],
+      [
+       "camp.weather-forecast",
+       0.3753
+      ],
+      [
+       "camp.campfire-build",
+       0.2615
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.455
+    },
+    {
+     "id": "K044",
+     "report": "Campfire smoke asthma inhaler not helping much at all need advice right now please help",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4315
+      ],
+      [
+       "camp.campfire-build",
+       0.2638
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.36
+    },
+    {
+     "id": "K045",
+     "report": "Poison ivy spreading fast calamine gone any camp remedies work for itching swelling until home doctor tomorrow afternoon please help me out",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "K046",
+     "report": "Shoelace knot stuck fingers freezing help me please now",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8223
+      ],
+      [
+       "camp.knot-bowline",
+       0.3196
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K047",
+     "report": "Bear spray expired twenty twenty one still good or trash it and buy new one before weekend trip next saturday morning early please help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.318
+      ],
+      [
+       "camp.food-storage",
+       0.2958
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.386
+    },
+    {
+     "id": "K048",
+     "report": "Propane tank making weird hissing noise valve stuck open maybe dangerous should we move away from fire right now before something bad happens tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4107
+      ],
+      [
+       "camp.campfire-build",
+       0.2605
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.429
+    },
+    {
+     "id": "K050",
+     "report": "Mosquitoes eating us alive DEET versus picaridin which works better kids adults all night long without reapplying constantly every hour please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.274
+    },
+    {
+     "id": "K051",
+     "report": "Forgot can opener any hacks opening beans without one using knife rock safely without cutting myself badly need help now please",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K052",
+     "report": "Camp chair broke duct tape fix or sit cooler rest weekend trip because no stores nearby anywhere close to here help me",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.food-storage",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4719
+      ],
+      [
+       "camp.gear-checklist",
+       0.3198
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.food-storage\"}",
+     "seconds": 0.438
+    },
+    {
+     "id": "K053",
+     "report": "Neighbors generator loud all night quiet hours start ten right or eleven because need sleep badly tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "K055",
+     "report": "Storm drain backed up campsite flooding who call this hour ranger station closed water rising fast everywhere help me please",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.lightning",
+       0.4674
+      ],
+      [
+       "camp.water-safe",
+       0.4121
+      ],
+      [
+       "camp.weather-forecast",
+       0.1998
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.362
+    },
+    {
+     "id": "K056",
+     "report": "License plate fell trailer duct tape hold till home or need real fix before highway driving tomorrow morning early please help",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.4126
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.005
+    },
+    {
+     "id": "K057",
+     "report": "Burned tongue hot cocoa blistered swallow ok or see doc tomorrow morning because really hurts bad swollen now help me",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.3419
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.378
+    },
+    {
+     "id": "K060",
+     "report": "Fire drill school today kids hid closet crying teacher said practice but really scared shaking help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4119
+      ],
+      [
+       "camp.campfire-build",
+       0.297
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.417
+    }
+   ]
+  },
+  "gemma3:1b": {
+   "summary": {
+    "cases": 54,
+    "accuracy": 0.685,
+    "in_scope": "32/43",
+    "none_correct": "5/11",
+    "false_routes": 9,
+    "asked": 0,
+    "model_failed": 0,
+    "model_calls": 23,
+    "latency_mean_s": 0.244,
+    "latency_max_s": 0.734
+   },
+   "rows": [
+    {
+     "id": "K001",
+     "report": "Bear right outside tent",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5869
+      ],
+      [
+       "camp.food-storage",
+       0.3667
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K002",
+     "report": "Black bear picnic table help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.food-storage",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.5351
+      ],
+      [
+       "camp.food-storage",
+       0.3082
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.food-storage\"}",
+     "seconds": 0.493
+    },
+    {
+     "id": "K003",
+     "report": "Saw bear cub near creek",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.6537
+      ],
+      [
+       "camp.food-storage",
+       0.3045
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K004",
+     "report": "How start campfire safely please",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8449
+      ],
+      [
+       "camp.campfire-out",
+       0.5254
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K005",
+     "report": "Wet wood wont light help",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K006",
+     "report": "Where can I have fire",
+     "expect": [
+      "camp.campfire-build"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-build",
+       0.8596
+      ],
+      [
+       "camp.campfire-out",
+       0.5011
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K007",
+     "report": "Fire out enough for bed",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": "camp.campfire-out",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.7005
+      ],
+      [
+       "camp.campfire-build",
+       0.2794
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K008",
+     "report": "Coals still hot after water",
+     "expect": [
+      "camp.campfire-out"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.water-safe",
+       0.4319
+      ],
+      [
+       "camp.minor-burn",
+       0.331
+      ],
+      [
+       "camp.campfire-out",
+       0.2714
+      ]
+     ],
+     "model_raw": "none.house-and-home",
+     "seconds": 0.001
+    },
+    {
+     "id": "K010",
+     "report": "Fishing license catch release lake",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.8772
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K011",
+     "report": "Kids need license or not",
+     "expect": [
+      "camp.fishing-license"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.606
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K013",
+     "report": "Cooler placement bear proof help",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4972
+      ],
+      [
+       "camp.bear-encounter",
+       0.33
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.bear-encounter\"}",
+     "seconds": 0.525
+    },
+    {
+     "id": "K014",
+     "report": "Trunk smell proof or locker",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.food-storage",
+       0.5428
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.448
+    },
+    {
+     "id": "K015",
+     "report": "Toothpaste deodorant scented items yes",
+     "expect": [
+      "camp.food-storage"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K016",
+     "report": "Weekend packing list absolute must haves for family trip",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": "camp.gear-checklist",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.6986
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K017",
+     "report": "Forgot tent stakes last time what else people forget",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": "camp.gear-checklist",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.4407
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.gear-checklist\"}",
+     "seconds": 0.481
+    },
+    {
+     "id": "K018",
+     "report": "Grandkids coming need checklist two adults three kids dog",
+     "expect": [
+      "camp.gear-checklist"
+     ],
+     "got": null,
+     "decided_by": "none-model",
+     "top": [
+      [
+       "camp.gear-checklist",
+       0.3237
+      ]
+     ],
+     "model_raw": "{\"choice\": \"none\"}",
+     "seconds": 0.663
+    },
+    {
+     "id": "K019",
+     "report": "Teen got dizzy nauseous hiking ninety degree heat help",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.8283
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K020",
+     "report": "Grandpa flushed confused setting up camp sun all afternoon",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K021",
+     "report": "Heat exhaustion versus heat stroke tell difference fast please",
+     "expect": [
+      "camp.heat-illness"
+     ],
+     "got": "camp.heat-illness",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.heat-illness",
+       0.822
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K022",
+     "report": "Woke up shivering sleeping bag not rated cold enough",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8252
+      ],
+      [
+       "camp.weather-forecast",
+       0.3001
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K023",
+     "report": "Grandma hands numb clumsy after morning fishing wind chill",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.fishing-license",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.417
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.fishing-license\"}",
+     "seconds": 0.45
+    },
+    {
+     "id": "K024",
+     "report": "Hypothermia signs toddler wont stop crying feels cold help",
+     "expect": [
+      "camp.hypothermia"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8773
+      ],
+      [
+       "camp.weather-forecast",
+       0.3033
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "K025",
+     "report": "Tie tarp down which knot makes loop not slip",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": "camp.knot-bowline",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.7587
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "K026",
+     "report": "Bowline bear bag hang step step hands cold please",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": "camp.knot-bowline",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.4086
+      ],
+      [
+       "camp.bear-encounter",
+       0.323
+      ],
+      [
+       "camp.weather-forecast",
+       0.3037
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.knot-bowline\"}",
+     "seconds": 0.535
+    },
+    {
+     "id": "K027",
+     "report": "Tying tent guyline bowline better two half hitches right",
+     "expect": [
+      "camp.knot-bowline"
+     ],
+     "got": "camp.knot-bowline",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.knot-bowline",
+       0.405
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.knot-bowline\"}",
+     "seconds": 0.734
+    },
+    {
+     "id": "K028",
+     "report": "Thunder rolling in tents ridge where go now help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": "camp.lightning",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.lightning",
+       0.484
+      ],
+      [
+       "camp.weather-forecast",
+       0.2136
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.lightning\"}",
+     "seconds": 0.524
+    },
+    {
+     "id": "K029",
+     "report": "Lightning close hair standing up leader says get low",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": "camp.lightning",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.lightning",
+       0.4595
+      ],
+      [
+       "camp.weather-forecast",
+       0.2041
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.lightning\"}",
+     "seconds": 0.52
+    },
+    {
+     "id": "K030",
+     "report": "Storm hit fast no buildings just cars shelter help",
+     "expect": [
+      "camp.lightning"
+     ],
+     "got": "camp.lightning",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.lightning",
+       0.4818
+      ],
+      [
+       "camp.weather-forecast",
+       0.2058
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.lightning\"}",
+     "seconds": 0.481
+    },
+    {
+     "id": "K031",
+     "report": "Marshmallow caught fire kid burned thumb blister forming help",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": "camp.minor-burn",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5473
+      ],
+      [
+       "camp.campfire-out",
+       0.4485
+      ],
+      [
+       "camp.campfire-build",
+       0.3526
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.minor-burn\"}",
+     "seconds": 0.569
+    },
+    {
+     "id": "K032",
+     "report": "Grabbed hot cast iron handle palm red stinging bad",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": "camp.minor-burn",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.2367
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.minor-burn\"}",
+     "seconds": 0.514
+    },
+    {
+     "id": "K033",
+     "report": "Hot coffee spilled forearm small burn water helps now",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": "camp.minor-burn",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.5106
+      ],
+      [
+       "camp.water-safe",
+       0.4163
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.minor-burn\"}",
+     "seconds": 0.549
+    },
+    {
+     "id": "K034",
+     "report": "Found tick attached kids ear after hike tweezers ready",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.8746
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K035",
+     "report": "Tick belly head stuck body popped off now what",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": "camp.tick-removal",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.tick-removal",
+       0.6307
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K036",
+     "report": "How long attached before lyme risk tiny nymph help",
+     "expect": [
+      "camp.tick-removal"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K037",
+     "report": "Stream looks clear giardia risk boil how long safe",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.6612
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.218
+    },
+    {
+     "id": "K038",
+     "report": "I forgot the water filter so I am boiling a pot on the camp stove rolling boil one minute should work right for safe drinking water tomorrow morning breakfast time please",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8227
+      ],
+      [
+       "camp.gear-checklist",
+       0.2931
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K039",
+     "report": "Lake water morning coffee should I boil then filter or filter then boil which order works best for safe drinking water without giardia risk tonight camping trip here please help me decide",
+     "expect": [
+      "camp.water-safe"
+     ],
+     "got": "camp.water-safe",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.water-safe",
+       0.8222
+      ],
+      [
+       "camp.gear-checklist",
+       0.5647
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.214
+    },
+    {
+     "id": "K040",
+     "report": "Weather forecast Pine Creek campground this weekend please help",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.9242
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.001
+    },
+    {
+     "id": "K041",
+     "report": "Phone weather app says sunny all weekend but campground ranger warned afternoon storms who should I believe for planning hiking trip tomorrow morning hike here now please help me",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.5678
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.002
+    },
+    {
+     "id": "K042",
+     "report": "Need reliable forecast high elevation campsite but all weather apps disagree completely today and tomorrow so unsure what to pack for weekend trip coming up soon really",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.weather-forecast",
+       0.6312
+      ],
+      [
+       "camp.gear-checklist",
+       0.6261
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.weather-forecast\"}",
+     "seconds": 0.498
+    },
+    {
+     "id": "K043",
+     "report": "Extra weather question NOAA fire weather watch red flag warning means what for campers planning trips this weekend",
+     "expect": [
+      "camp.weather-forecast"
+     ],
+     "got": "camp.weather-forecast",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4115
+      ],
+      [
+       "camp.weather-forecast",
+       0.3753
+      ],
+      [
+       "camp.campfire-build",
+       0.2615
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.weather-forecast\"}",
+     "seconds": 0.561
+    },
+    {
+     "id": "K044",
+     "report": "Campfire smoke asthma inhaler not helping much at all need advice right now please help",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4315
+      ],
+      [
+       "camp.campfire-build",
+       0.2638
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.campfire-build\"}",
+     "seconds": 0.526
+    },
+    {
+     "id": "K045",
+     "report": "Poison ivy spreading fast calamine gone any camp remedies work for itching swelling until home doctor tomorrow afternoon please help me out",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.003
+    },
+    {
+     "id": "K046",
+     "report": "Shoelace knot stuck fingers freezing help me please now",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.hypothermia",
+     "decided_by": "index",
+     "top": [
+      [
+       "camp.hypothermia",
+       0.8223
+      ],
+      [
+       "camp.knot-bowline",
+       0.3196
+      ]
+     ],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K047",
+     "report": "Bear spray expired twenty twenty one still good or trash it and buy new one before weekend trip next saturday morning early please help",
+     "expect": [
+      "camp.bear-encounter"
+     ],
+     "got": "camp.bear-encounter",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.bear-encounter",
+       0.318
+      ],
+      [
+       "camp.food-storage",
+       0.2958
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.bear-encounter\"}",
+     "seconds": 0.624
+    },
+    {
+     "id": "K048",
+     "report": "Propane tank making weird hissing noise valve stuck open maybe dangerous should we move away from fire right now before something bad happens tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4107
+      ],
+      [
+       "camp.campfire-build",
+       0.2605
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.campfire-build\"}",
+     "seconds": 0.577
+    },
+    {
+     "id": "K050",
+     "report": "Mosquitoes eating us alive DEET versus picaridin which works better kids adults all night long without reapplying constantly every hour please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.293
+    },
+    {
+     "id": "K051",
+     "report": "Forgot can opener any hacks opening beans without one using knife rock safely without cutting myself badly need help now please",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K052",
+     "report": "Camp chair broke duct tape fix or sit cooler rest weekend trip because no stores nearby anywhere close to here help me",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.food-storage",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.food-storage",
+       0.4719
+      ],
+      [
+       "camp.gear-checklist",
+       0.3198
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.food-storage\"}",
+     "seconds": 0.56
+    },
+    {
+     "id": "K053",
+     "report": "Neighbors generator loud all night quiet hours start ten right or eleven because need sleep badly tonight please help me",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "none",
+     "top": [],
+     "model_raw": "",
+     "seconds": 0.002
+    },
+    {
+     "id": "K055",
+     "report": "Storm drain backed up campsite flooding who call this hour ranger station closed water rising fast everywhere help me please",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.lightning",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.lightning",
+       0.4674
+      ],
+      [
+       "camp.water-safe",
+       0.4121
+      ],
+      [
+       "camp.weather-forecast",
+       0.1998
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.lightning\"}",
+     "seconds": 0.504
+    },
+    {
+     "id": "K056",
+     "report": "License plate fell trailer duct tape hold till home or need real fix before highway driving tomorrow morning early please help",
+     "expect": [
+      "none"
+     ],
+     "got": null,
+     "decided_by": "near-miss",
+     "top": [
+      [
+       "camp.fishing-license",
+       0.4126
+      ]
+     ],
+     "model_raw": "none.other-meanings",
+     "seconds": 0.003
+    },
+    {
+     "id": "K057",
+     "report": "Burned tongue hot cocoa blistered swallow ok or see doc tomorrow morning because really hurts bad swollen now help me",
+     "expect": [
+      "camp.minor-burn"
+     ],
+     "got": "camp.minor-burn",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.minor-burn",
+       0.3419
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.minor-burn\"}",
+     "seconds": 0.555
+    },
+    {
+     "id": "K060",
+     "report": "Fire drill school today kids hid closet crying teacher said practice but really scared shaking help me",
+     "expect": [
+      "none"
+     ],
+     "got": "camp.campfire-build",
+     "decided_by": "model",
+     "top": [
+      [
+       "camp.campfire-out",
+       0.4119
+      ],
+      [
+       "camp.campfire-build",
+       0.297
+      ]
+     ],
+     "model_raw": "{\"choice\": \"camp.campfire-build\"}",
+     "seconds": 0.508
+    }
+   ]
+  }
+ }
+}

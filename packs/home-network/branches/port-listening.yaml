@@ -1,0 +1,38 @@
+id: net.port-listening
+title: Is a port open on this computer
+kind: check
+slots:
+  port: port
+description: Check whether something on this computer listens on a port, and which program.
+patterns:
+- is port 8080 open
+- what is using port 3000
+- check if a port is open on this computer
+- which program is using port 22
+- is anything listening on port 80
+- what program has port 8080
+- is something running on port 443 here
+- check which ports are open on this machine
+- is the ssh port open on this pc
+keywords:
+- port
+- listening
+- open
+steps:
+- id: ls
+  argv:
+  - ss
+  - -ltnpH
+  - sport = :{port}
+rules:
+- step: ls
+  empty: true
+  say: Nothing on this computer is listening on port {port}.
+default: 'Port {port} is open on this computer:
+
+  {ls:all}'
+core:
+- - port
+  - listening
+  - open
+scope: computer

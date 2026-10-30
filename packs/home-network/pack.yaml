@@ -1,0 +1,156 @@
+name: home-network
+version: 0.2.0
+domain: home-network
+status: draft          # draft | unverified | reviewed (reviewed needs reviewed_by)
+safety_critical: false
+description: Home and small-office network help for a Linux computer (NetworkManager, systemd).
+# Branches with scope computer/router act only on THIS computer or the home router. If a message is about one of
+# these other devices (and doesn't mention this computer), those branches answer "not in my library".
+other_devices: [phone, iphone, android, ipad, tablet, fridge, refrigerator, microwave, toaster, drone, printer, camera,
+  receiver, satellite dish, thermostat, garage door, dongle, console, xbox, playstation, ps5, doorbell, smart speaker,
+  alexa, echo, chromecast, roku, firestick, fire stick, tv, smart tv, car, smartwatch, kindle, drill, couch, oil rig,
+  washing machine, photocopier, photocopy machine, copier, dishwasher, vacuum, robot vacuum, baby monitor, smart plug, bulb, bulbs]
+this_device: [computer, laptop, pc, desktop, linux, ubuntu, fedora, notebook, this machine]
+synonyms:
+  wifi:
+  - wi-fi
+  - wi fi
+  - wireless
+  - wlan
+  - wlan0
+  internet:
+  - online
+  - web
+  - the net
+  - net
+  router:
+  - modem
+  - gateway
+  - box
+  - internet box
+  site:
+  - website
+  - webpage
+  - web page
+  - page
+  - url
+  slow:
+  - sluggish
+  - crawling
+  - takes forever
+  - slow as
+  - dragging
+  broken:
+  - not working
+  - doesnt work
+  - isnt working
+  - stopped working
+  - dead
+  - down
+  ip:
+  - ip address
+  - ip addr
+  password:
+  - passcode
+  - passphrase
+  - key
+  printer:
+  - printing
+  - print
+  - printers
+  - printed
+  devices:
+  - device
+  - gadgets
+  - things connected
+  - connected devices
+  port:
+  - ports
+  vpn:
+  - wireguard
+  - openvpn
+  - tunnel
+  certificate:
+  - cert
+  - ssl
+  - https padlock
+  - not secure
+  - not private
+  - privacy error
+  - security warning
+  dns:
+  - name server
+  - nameserver
+  - domain name
+  lag:
+  - laggy
+  - lagging
+  - froze
+  - freezing
+  - freezes
+  - frozen
+  - choppy
+  - stutter
+  - stuttering
+  - glitchy
+  - glitching
+  - delay
+  - delayed
+  - buffering
+  - breaking up
+  weak:
+  - dead zone
+  - dead spot
+  - doesnt reach
+  - does not reach
+  - one bar
+  - bars
+  - far from the router
+  - upstairs
+  - downstairs
+  - other room
+  - back room
+  - bedroom
+  - garage
+  - basement
+  stealing:
+  - neighbors
+  - neighbours
+  - strangers
+  - someone else
+  - leeching
+  - mooching
+  - piggybacking
+  - unknown device
+  missing:
+  - doesnt show up
+  - not showing
+  - cant find
+  - cannot find
+  - disappeared
+  - gone
+  - not listed
+  guest:
+  - visitors
+  - babysitter
+  - customers
+  - company
+  - friends over
+  - guests
+  restart:
+  - reboot
+  - power cycle
+  - turn it off and on
+  - unplug
+  drops:
+  - dropping
+  - dropped
+  - disconnects
+  - disconnecting
+  - disconnected
+  - cutting out
+  - cuts out
+  - kicks me off
+  - kicking me off
+  - keeps losing
+  - losing connection

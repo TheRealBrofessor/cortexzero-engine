@@ -1,0 +1,62 @@
+id: net.renew-ip
+title: Renew my IP address
+kind: action
+risk: 1
+description: Restart networking to get a fresh address from the router.
+patterns:
+- renew my ip
+- failed to obtain ip address
+- get a new ip address
+- ip address conflict
+- my computer cant get an address from the router
+- get a fresh ip
+- ip conflict message
+- another device has the same ip
+- no valid ip configuration
+- limited connectivity no ip
+- renew the dhcp lease
+- release and renew my ip
+- lost internet after sleep renew ip
+- dhcp renewal failed
+- dhcp not working
+- no ip from dhcp
+steps:
+- id: 'off'
+  argv:
+  - nmcli
+  - networking
+  - 'off'
+- id: wait1
+  argv:
+  - sleep
+  - '2'
+- id: 'on'
+  argv:
+  - nmcli
+  - networking
+  - 'on'
+- id: wait2
+  argv:
+  - sleep
+  - '10'
+  timeout: 14
+default: Networking restarted and a new address was requested.
+verify:
+  id: route
+  argv:
+  - ip
+  - route
+  - show
+  - default
+  timeout: 5
+rules:
+- step: 'on'
+  rc_nonzero: true
+  say: Couldn't turn networking back on ({on}). Use the network menu to reconnect.
+core:
+- - ip
+  - dhcp
+  - lease
+  - renew
+  - address
+scope: computer

@@ -1,0 +1,38 @@
+id: net.router-restart
+title: Restart the router properly
+kind: answer
+description: How to restart a router or modem safely.
+patterns:
+- how do i restart my router
+- how to reset the internet box
+- restart the modem
+- power cycle router
+- how do i reboot the router
+- should i unplug the router
+- how to reset the modem safely
+- restart the wifi box
+- router lights blinking after a storm
+- router lights look weird
+- modem lights flashing orange
+keywords:
+- restart
+- reset
+text: '1. Unplug the router (and modem, if separate) from power.
+
+  2. Wait 30 seconds.
+
+  3. Plug the modem in first, wait until its lights settle (about 2 minutes), then the router.
+
+  4. Test with "no internet".
+
+  Don''t press the reset pinhole: that erases all settings.'
+core:
+- - router
+  - wifi
+  - internet
+- - restart
+  - reset
+  - lights
+  - blinking
+  - flashing
+scope: router

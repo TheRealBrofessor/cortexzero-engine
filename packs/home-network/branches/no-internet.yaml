@@ -1,0 +1,121 @@
+id: net.no-internet
+title: No internet or nothing loads
+kind: check
+description: 'Diagnose why this computer has no internet: link, address, router, internet, DNS.'
+patterns:
+- my internet is not working
+- wifi connected but nothing loads
+- no internet
+- connected but no internet
+- internet stopped working
+- nothing loads in the browser
+- internet is down
+- why cant i get online
+- the internet is broken and i dont know where to start
+- is the internet down or just me
+- internet isnt working at all
+- everything says no connection
+- the wifi icon has an exclamation mark
+- none of the apps load
+- pages just spin and never load
+- internet went out
+- we have no internet in the house
+- computer says no internet access
+- wifi is on but i cant browse
+- internet cut off suddenly
+- mobile data works but home wifi doesnt
+- phone works but laptop has no internet
+- hotspot works but home wifi doesnt
+- internet dies completely when i plug in the cable
+- laptop keeps losing internet every hour
+keywords:
+- internet
+- broken
+- loads
+- online
+steps:
+- id: link
+  argv:
+  - ip
+  - -br
+  - link
+  extract: ^(?!lo\b)(\S+)\s+UP\b
+  first_only: true
+- id: addr
+  argv:
+  - ip
+  - '-4'
+  - -br
+  - addr
+  extract: ^(?!lo\b)\S+\s+\S+\s+(\d+\.\d+\.\d+\.\d+/\d+)
+  first_only: true
+- id: gw
+  argv:
+  - ip
+  - route
+  - show
+  - default
+  extract: via (\S+)
+  first_only: true
+- id: gwping
+  argv:
+  - ping
+  - -c
+  - '2'
+  - -W
+  - '2'
+  - '{gw}'
+  timeout: 8
+- id: inet
+  argv:
+  - ping
+  - -c
+  - '2'
+  - -W
+  - '2'
+  - 1.1.1.1
+  timeout: 8
+- id: dns
+  argv:
+  - getent
+  - hosts
+  - example.com
+  timeout: 8
+rules:
+- step: link
+  empty: true
+  say: No network connection is up on this computer (Wi-Fi off or cable unplugged). Turn Wi-Fi on or plug the cable
+    in, then ask again.
+- step: addr
+  empty: true
+  say: 'You''re connected, but this computer has no IP address from the router. Try: "renew my IP".'
+- step: gwping
+  rc_nonzero: true
+  say: 'Your router ({gw}) isn''t answering. Restart it: unplug for 30 seconds, plug back in, wait 2 minutes.'
+- step: inet
+  rc_nonzero: true
+  say: Your router answers, but the internet beyond it doesn't. The problem is the router's internet line or your
+    provider. Restart the modem/router; if it continues, call your provider.
+- step: dns
+  rc_nonzero: true
+  say: 'The internet works, but website names don''t resolve (a DNS problem). Try: "flush DNS", or switch to a public
+    DNS like 1.1.1.1.'
+default: 'Everything checks out: connection up, router ({gw}) answers, internet reachable, DNS works. If one site
+  fails, ask "is example.com down?"'
+core:
+- - internet
+  - broken
+  - loads
+  - load
+  - offline
+  - connection
+  - connected
+  - websites
+  - site
+  - nothing
+  - wifi
+  - browse
+  - icon
+  - exclamation
+  - mobile
+  - hotspot

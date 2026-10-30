@@ -1,0 +1,73 @@
+id: net.packet-loss
+title: Packet loss and lag check
+kind: check
+description: Measure packet loss and delay to the internet (video calls freezing, game lag).
+patterns:
+- my video calls freeze
+- is there packet loss
+- games lag
+- check my ping
+- high latency
+- everything online feels delayed
+- my calls keep breaking up
+- video calls keep freezing
+- zoom calls are choppy
+- my game keeps lagging
+- calls keep dropping
+- connection stutters during calls
+- streams keep buffering then catching up
+- voice cuts out on calls
+keywords:
+- lag
+- slow
+- ping
+- freeze
+- latency
+steps:
+- id: loss
+  argv:
+  - ping
+  - -c
+  - '20'
+  - -i
+  - '0.2'
+  - -W
+  - '2'
+  - 1.1.1.1
+  extract: (\d+(?:\.\d+)?% packet loss)
+  first_only: true
+  timeout: 15
+- id: rtt
+  argv:
+  - ping
+  - -c
+  - '10'
+  - -i
+  - '0.2'
+  - -W
+  - '2'
+  - 1.1.1.1
+  extract: = [\d.]+/([\d.]+)/[\d.]+/([\d.]+)
+  fmt: '{1} ms average, {2} ms jitter'
+  timeout: 10
+rules:
+- step: loss
+  empty: true
+  say: I couldn't measure packet loss (no reply from 1.1.1.1). Try "no internet" first.
+- step: loss
+  say: 'Packet loss detected ({loss}); that causes freezing and lag. Move closer to the router or use a cable, then
+    retest. Delay: {rtt}.'
+  matches: (?<![\d.])(?:[1-9]\d*(?:\.\d+)?|0\.\d*[1-9]\d*)% packet loss
+default: 'No packet loss. Delay to the internet: {rtt}. Under ~50 ms is good for calls and games.'
+core:
+- - lag
+  - ping
+  - packet
+  - latency
+  - loss
+  - jitter
+  - drops
+  - slow
+  - freeze
+  - stutters
+  - calls

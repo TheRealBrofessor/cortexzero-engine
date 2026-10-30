@@ -1,0 +1,36 @@
+id: net.dns-which
+title: Which DNS server am I using
+kind: check
+description: Show the DNS servers this computer uses.
+patterns:
+- which dns server am i using
+- what dns do i have
+- show my dns settings
+- what is my dns
+- dns server address
+- what dns servers does this computer use
+- show the dns this machine uses
+- which name servers am i on
+steps:
+- id: dns
+  argv:
+  - resolvectl
+  - status
+  extract: (?:Current DNS Server|DNS Servers):\s*(.+)$
+- id: conf
+  argv:
+  - cat
+  - /etc/resolv.conf
+  extract: ^nameserver\s+(\S+)
+default: 'DNS servers in use: {dns:all}'
+rules:
+- step: dns
+  empty: true
+  say: 'DNS servers listed in /etc/resolv.conf: {conf:all}'
+core:
+- - dns
+  - resolver
+  - nameserver
+  - name
+  - servers
+scope: computer

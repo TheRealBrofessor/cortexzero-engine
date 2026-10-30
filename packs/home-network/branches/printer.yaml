@@ -1,0 +1,36 @@
+id: net.printer
+title: Find my printer
+kind: check
+description: List printers this computer knows and their addresses.
+patterns:
+- where is my printer on the network
+- my computer cant find the printer
+- printer stopped printing
+- find my printers ip address
+- printer not showing up
+- printer wont show up
+- computer cant find the printer
+- printer not on the network
+- printer disappeared from my computer
+- cant print to the wireless printer
+keywords:
+- printer
+steps:
+- id: lp
+  argv:
+  - lpstat
+  - -v
+  max_lines: 10
+rules:
+- step: lp
+  missing: device
+  say: No printers are set up on this computer. Turn the printer on, connect it to the same Wi-Fi, then add it in
+    Settings → Printers.
+default: 'Printers on this computer:
+
+  {lp:all}
+
+  If one stopped working, power-cycle it and check it''s on the same Wi-Fi.'
+# core: the branch can only win if each group has a word in the message (synonyms count)
+core:
+- ["printer"]

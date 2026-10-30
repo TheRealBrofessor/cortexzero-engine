@@ -1,0 +1,17 @@
+runpod/ft-out/
+runpod/cache/
+runpod/.state.json
+bench/results/
+__pycache__/
+*.egg-info/
+
+# private work-session files (not part of the project)
+MISSION.md
+HANDOFF.md
+bin/
+.venv/
+runpod/*.log
+
+# safety-critical draft packs: held back until reviewed by a qualified person
+packs/family-camping/
+packs/tower-tech/

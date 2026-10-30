@@ -1,0 +1,221 @@
+# Labeller disagreements: owner review, not used for scoring.
+- id: t013
+  report: need to forward a port for my minecraft server friends cant join keeps saying connection refused followed
+    a guide online but no luck still blocked maybe firewall is blocking it
+  labeller_a:
+  - net.firewall-status
+  - net.port-forward
+  labeller_b:
+  - net.port-forward
+- id: t029
+  report: internet company says they see no outage but my whole block is down whats up
+  labeller_a:
+  - none
+  labeller_b:
+  - net.no-internet
+- id: t032
+  report: dad's ipad wont get an ip address just says obtaining forever other devices fine
+  labeller_a:
+  - net.no-internet
+  labeller_b:
+  - net.renew-ip
+- id: t037
+  report: my smart tv keeps disconnecting from wifi every night around midnight its so annoying
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
+- id: t040
+  report: channel interference from neighbors microwave kills wifi every lunch time any fix besides moving router
+    tried changing channels still happens every day at noon exactly
+  labeller_a:
+  - net.wifi-networks
+  - net.wifi-signal
+  labeller_b:
+  - net.wifi-networks
+- id: t062
+  report: smart tv netflix keeps bufferin but internet ok otherwise
+  labeller_a:
+  - none
+  labeller_b:
+  - net.packet-loss
+- id: t068
+  report: my work laptop wont get an ip address says no valid configuration ethernet cable is plugged in lights
+    blinking but network settings show unidentified network tried different cable same issue
+  labeller_a:
+  - net.no-internet
+  labeller_b:
+  - net.renew-ip
+- id: t069
+  report: why is netflix so slow tonight
+  labeller_a:
+  - none
+  labeller_b:
+  - net.packet-loss
+- id: t077
+  report: firewall between apartments blocks noise from neighbors upstairs now
+  labeller_a:
+  - none
+  labeller_b:
+  - net.firewall-status
+- id: t082
+  report: the internet feels super slow tonight videos buffer constantly speed test on my phone shows normal speeds
+    but computer is crawling takes forever to open anything even simple pages won't load properly
+  labeller_a:
+  - net.packet-loss
+  - net.speed
+  labeller_b:
+  - net.packet-loss
+- id: t084
+  report: connection keeps dropping when i plug in usb hub with external drives think its power related hub has
+    its own power supply though but maybe not enough for both drives
+  labeller_a:
+  - net.ethernet
+  labeller_b:
+  - none
+- id: t089
+  report: playstation network says nat type 3 strict games lag party chat breaks think i need to open ports but
+    dont know which ones sony documentation is confusing and outdated
+  labeller_a:
+  - none
+  labeller_b:
+  - net.port-forward
+- id: t093
+  report: ps5 nat type strict need open nat for games
+  labeller_a:
+  - none
+  labeller_b:
+  - net.port-forward
+- id: t095
+  report: video calls keep freezing and my game ping spikes to 300 something wrong with line
+  labeller_a:
+  - net.packet-loss
+  - net.traceroute
+  labeller_b:
+  - net.packet-loss
+- id: t097
+  report: smart tv keeps disconnecting from wifi during shows have to go to settings and reconnect every time super
+    annoying happens like three times per movie other devices stay connected fine
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
+- id: t102
+  report: router firmware update bricked it power light blinks orange tried reset button nothing happens manufacturer
+    says send it in but need internet now cant wait weeks for repair
+  labeller_a:
+  - none
+  labeller_b:
+  - net.router-restart
+- id: t103
+  report: phone wont connect to wifi but laptop works fine
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
+- id: t104
+  report: my internet been crawling all day videos keep buffering and the kids are yelling
+  labeller_a:
+  - net.speed
+  labeller_b:
+  - net.packet-loss
+- id: t106
+  report: websites loading old vershuns help
+  labeller_a:
+  - net.dns-flush
+  labeller_b:
+  - none
+- id: t114
+  report: alexa keeps saying trouble connecting to internet but wifi works on everything else
+  labeller_a:
+  - none
+  labeller_b:
+  - net.no-internet
+- id: t123
+  report: ps5 nat type 3 strict cant join party chats says i need port forwarding help
+  labeller_a:
+  - none
+  labeller_b:
+  - net.port-forward
+- id: t141
+  report: phone wont conect to wifi
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
+- id: t150
+  report: port on my switch shows blinking amber not green manual says connection issue but cable tests fine works
+    on different port so not the cable maybe the switch port is dead
+  labeller_a:
+  - net.ethernet
+  labeller_b:
+  - none
+- id: t153
+  report: trying to reach a website and it times out but downforeveryone says its up could be my dns or maybe the
+    site blocks my ip how do i check which one it is
+  labeller_a:
+  - net.dns-which
+  - net.site-check
+  labeller_b:
+  - net.site-check
+- id: t159
+  report: smart tv netflix buffering again
+  labeller_a:
+  - none
+  labeller_b:
+  - net.packet-loss
+- id: t171
+  report: wifi keeps dropping on my phone turning it off and on fixes it temporarily
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
+- id: t172
+  report: bought a new router but the wifi signal doesnt reach the backyard like the old one
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-signal
+- id: t175
+  report: internet feels slow but speed test says its fine
+  labeller_a:
+  - net.packet-loss
+  - net.speed
+  labeller_b:
+  - net.packet-loss
+- id: t176
+  report: my local ip changed again and port forwarding stopped working need to renew or set static so i dont have
+    to redo it every time the lease expires on me
+  labeller_a:
+  - net.port-forward
+  - net.renew-ip
+  labeller_b:
+  - net.renew-ip
+- id: t183
+  report: trying to host a game server and need to know if port 25565 is actually open on my machine friends get
+    connection timed out error even after i set up port forwarding
+  labeller_a:
+  - net.port-forward
+  - net.port-listening
+  labeller_b:
+  - net.port-listening
+- id: t187
+  report: cant remember the wifi password changed it months ago now guest needs it and the sticker on router is
+    worn off completely unreadable tried looking in settings but its hidden
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-password-change
+- id: t194
+  report: ps5 says nat type strict um
+  labeller_a:
+  - none
+  labeller_b:
+  - net.port-forward
+- id: t199
+  report: um my phone wont connect to the wifi keeps saying authentication problem even with right password worked
+    fine yesterday no changes made tried forgetting network still fails every time
+  labeller_a:
+  - none
+  labeller_b:
+  - net.wifi-reconnect
